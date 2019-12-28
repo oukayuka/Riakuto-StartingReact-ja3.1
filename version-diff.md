@@ -2,7 +2,7 @@
 
 ## 初版から第2版への差分
 
-- Create React App 本家が TypeScript を直接サポートし、create-react-app-typescript はパッケージそのものが非推奨になったため、create-react-app-typescript を使用していた部分を create-react-app に入れ替えた。
+- Create React App 本家が TypeScript を直接サポートし、[create-react-app-typescript](https://github.com/wmonk/create-react-app-typescript) はパッケージそのものが非推奨になったため、create-react-app-typescript を使用していた部分を create-react-app に入れ替えた。
 - 「2-5. 便利な配列やオブジェクのトリテラル」に、分割代入についての説明を追加。
 - 「3-5. クロージャ」の章を追加。
 - 「3-6. ジェネレータ」の章を追加。
@@ -14,12 +14,15 @@
 - Hooks が導入され Recompose の開発中止が宣告されたため、第8章の内容を「合成するぞ Recompose」から「Hooks で関数コンポーネントを強化する」に置き換える形で刷新。
 - 「10-3. Reduxの使い方」で、最新のReduxおよびReact Reduxに対応した型解決の記述法に切り替えた。
 - TypeScript FSAの更新が滞っているため、「10-4. Flux Standard Action」の内容をTypeScript FSAを使わない手法を使ったものに書き換えた。
-- 「10-5. Redux DevTools」の内容を『りあクト！ TypeScriptで極める現場のReact開発』に委譲。
+- 「10-5. Redux DevTools」の内容を[『りあクト！ TypeScriptで極める現場のReact開発』](https://oukayuka.booth.pm/items/1312815)に委譲。
 - 「第11章 Reduxで非同期処理を扱う」の内容を追加。
-- その他使用している主なソフトウェアを、2019年3月時点の最新バージョンにアップデート。
+- その他使用している主なパッケージを、2019年3月時点の最新バージョンにアップデート。
 
 <br />
 
 ## 第2版から第2.1版への差分
 
 - 「1-1. 環境構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[nodenv-update](https://github.com/nodenv/nodenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入。
+- 「2-6. 非同期処理を扱う」の3つのサンプルコードを全て刷新した。
+
+- その他使用している主なパッケージを、2020年1月時点の最新バージョンにアップデート。
