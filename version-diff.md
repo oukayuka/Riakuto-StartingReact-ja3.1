@@ -24,5 +24,6 @@
 
 - 「1-1. 環境構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[nodenv-update](https://github.com/nodenv/nodenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入。
 - 「2-6. 非同期処理を扱う」の3つのサンプルコードを全て刷新した。
+- 「3-6. ジェネレータ」の章を削除。
 
 - その他使用している主なパッケージを、2020年1月時点の最新バージョンにアップデート。
