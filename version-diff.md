@@ -25,5 +25,9 @@
 - 「1-1. 環境構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[nodenv-update](https://github.com/nodenv/nodenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入。
 - 「2-6. 非同期処理を扱う」の3つのサンプルコードを全て刷新した。
 - 「3-6. ジェネレータ」の章を削除。
+- 「4-2. 型のバリエーション」の章名を「4-2. プリミティブ型」に変更。Enum 型についての記述を追加。
+- 「4-3. 配列とオブジェクトの型」で `interface` より `type` での型宣言を使うことを推奨するように記述を変更。
+- 「4-5. コンパイル設定」で `incremental` と `baseUrl` オプションの説明を追加。
+- 「4-6. モジュールの型定義」で typesync の説明を追加。
 
 - その他使用している主なパッケージを、2020年1月時点の最新バージョンにアップデート。
