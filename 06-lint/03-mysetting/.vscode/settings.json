@@ -1,0 +1,23 @@
+{
+  "css.validate": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.codeActionsOnSaveTimeout": 2000,
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "eslint.enable": true,
+  "eslint.packageManager": "yarn",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "stylelint.autoFixOnSave": true,
+  "stylelint.configOverrides": {
+    "ignoreFiles": ["node_modules/**/*.*"]
+  },
+  "stylelint.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
+}
