@@ -13,6 +13,11 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:import/warnings',
     'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+    'prettier/standard',
   ],
   globals: {
     Atomics: 'readonly',
@@ -30,15 +35,12 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'jsx-a11y',
+    'prettier',
     'react',
     'react-hooks',
   ],
   root: true,
   rules: {
-    'no-var': 'error',
-    'object-shorthand': ['error', 'always'],
-    'prefer-arrow-callback': 'error',
-    'prefer-const': 'error',
     '@typescript-eslint/indent': ['error', 2],
     'import/extensions': [
       'error',
@@ -53,9 +55,10 @@ module.exports = {
     'react/jsx-filename-extension': [
       'error',
       {
-        "extensions": ['.jsx', '.tsx']
+        "extensions": ['.jsx', '.tsx'],
       },
     ],
+    'react/jsx-props-no-spreading': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
   },
