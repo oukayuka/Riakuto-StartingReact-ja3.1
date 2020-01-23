@@ -35,10 +35,13 @@ module.exports = {
   ],
   root: true,
   rules: {
-    'no-var': 'error',
-    'object-shorthand': ['error', 'always'],
-    'prefer-arrow-callback': 'error',
-    'prefer-const': 'error',
+    // NOTE: for react-env.d.ts
+    // https://github.com/facebook/create-react-app/issues/6560
+    'spaced-comment': [
+      'error',
+      'always',
+      { markers: ['/'] },
+    ],
     '@typescript-eslint/indent': ['error', 2],
     'import/extensions': [
       'error',
@@ -53,7 +56,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       'error',
       {
-        "extensions": ['.jsx', '.tsx']
+        "extensions": ['.jsx', '.tsx'],
       },
     ],
     'react-hooks/rules-of-hooks': 'error',

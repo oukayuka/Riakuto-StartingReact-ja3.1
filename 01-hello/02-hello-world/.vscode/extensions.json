@@ -7,10 +7,10 @@
     "coenraads.bracket-pair-colorizer",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "hex-ci.stylelint-plus",
     "msjsdiag.debugger-for-chrome",
     "ms-vsliveshare.vsliveshare",
     "oderwat.indent-rainbow",
+    "stylelint.vscode-stylelint",
     "VisualStudioExptTeam.vscodeintellicode",
     "vscode-icons-team.vscode-icons"
   ],
