@@ -6,17 +6,17 @@ module.exports = {
     'jest/globals': true,
   },
   extends: [
-    'airbnb',
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:import/errors',
-    'plugin:import/typescript',
-    'plugin:import/warnings',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:jest/recommended',
     'plugin:jest/style',
-    'plugin:react/recommended',
+    'airbnb',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'prettier',
     'prettier/@typescript-eslint',
@@ -33,7 +33,6 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 2019,
-    project: './tsconfig.json',
     sourceType: 'module',
   },
   plugins: [
@@ -56,7 +55,6 @@ module.exports = {
         markers: ['/'],
       },
     ],
-    '@typescript-eslint/indent': ['error', 2],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -93,7 +91,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       'error',
       {
-        "extensions": ['.jsx', '.tsx',],
+        "extensions": ['.jsx', '.tsx'],
       },
     ],
     'react/jsx-props-no-spreading': 'off',

@@ -10,5 +10,6 @@ module.exports = {
     '**/node_modules/**',
   ],
   rules: {
+    'string-quotes': 'single',
   },
 };

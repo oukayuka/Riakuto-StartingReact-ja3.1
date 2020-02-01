@@ -6,13 +6,13 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
     'airbnb',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
     'prettier',
     'prettier/@typescript-eslint',
@@ -29,7 +29,6 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 2019,
-    project: './tsconfig.json',
     sourceType: 'module',
   },
   plugins: [
@@ -41,12 +40,14 @@ module.exports = {
   ],
   root: true,
   rules: {
-    // NOTE: for react-env.d.ts
+    // NOTE: for react-app-env.d.ts
     // https://github.com/facebook/create-react-app/issues/6560
     'spaced-comment': [
       'error',
       'always',
-      { markers: ['/'] },
+      {
+        markers: ['/'],
+      },
     ],
     'import/extensions': [
       'error',

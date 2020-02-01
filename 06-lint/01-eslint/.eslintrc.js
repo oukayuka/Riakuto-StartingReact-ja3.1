@@ -6,13 +6,13 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
     'airbnb',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
   globals: {
     Atomics: 'readonly',
@@ -24,7 +24,6 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 2019,
-    project: './tsconfig.json',
     sourceType: 'module',
   },
   plugins: [
