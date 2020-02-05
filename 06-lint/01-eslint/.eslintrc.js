@@ -41,6 +41,12 @@ module.exports = {
       'always',
       { markers: ['/'] },
     ],
+    '@typescript-eslint/explicit-function-return-type': [
+      'warn',
+      {
+        allowExpressions: true,
+      },
+    ],
     '@typescript-eslint/indent': ['error', 2],
     'import/extensions': [
       'error',

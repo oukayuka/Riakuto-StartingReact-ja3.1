@@ -55,6 +55,12 @@ module.exports = {
         markers: ['/'],
       },
     ],
+    '@typescript-eslint/explicit-function-return-type': [
+      'warn',
+      {
+        allowExpressions: true,
+      },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
