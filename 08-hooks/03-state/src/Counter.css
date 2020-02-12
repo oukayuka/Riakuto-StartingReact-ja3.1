@@ -1,0 +1,7 @@
+.number-board {
+  margin-top: 15px !important;
+}
+
+.number-board > .value > .denominator {
+  font-size: 3rem;
+}

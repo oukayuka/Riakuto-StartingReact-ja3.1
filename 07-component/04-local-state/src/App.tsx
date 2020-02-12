@@ -18,9 +18,8 @@ class App extends Component<{}, AppState> {
   }
 
   increment(): void {
-    this.setState(prevState => ({
-      count: prevState.count + 1,
-    }));
+    this.setState({ count: this.state.count + 1});
+    setTimeout(() => this.setState({ count: this.state.count + 1}), 1000);
   }
 
   render(): JSX.Element {
