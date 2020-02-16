@@ -48,6 +48,14 @@ module.exports = {
   rules: {
     // NOTE: for react-app-env.d.ts
     // https://github.com/facebook/create-react-app/issues/6560
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return',
+      },
+    ],
     'spaced-comment': [
       'error',
       'always',
@@ -112,4 +120,11 @@ module.exports = {
       },
     },
   ],
+  'settings': {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+      },
+    },
+  },
 };

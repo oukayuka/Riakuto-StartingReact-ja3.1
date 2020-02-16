@@ -1,0 +1,7 @@
+.number-board {
+  margin-top: 15px !important;
+}
+
+.number-board > .prime-number {
+  color: #f88 !important;
+}
