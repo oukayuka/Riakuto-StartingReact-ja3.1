@@ -1,5 +1,5 @@
 {
-  "name": "max-counter-hooks",
+  "name": "countdown-timer-custom-hooks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,8 +45,8 @@
     "@types/stylelint": "^9.10.1",
     "@types/testing-library__jest-dom": "^5.0.1",
     "@types/testing-library__react": "^9.1.2",
-    "@typescript-eslint/eslint-plugin": "^2.19.2",
-    "@typescript-eslint/parser": "^2.19.2",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
@@ -57,10 +57,10 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "husky": "^4.2.3",
+    "husky": "^4.2.0",
     "lint-staged": "^10.0.2",
     "prettier": "^1.19.1",
-    "stylelint": "^13.2.0",
+    "stylelint": "^13.0.0",
     "stylelint-config-recess-order": "^2.0.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0"

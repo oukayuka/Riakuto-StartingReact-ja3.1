@@ -17,7 +17,7 @@ type TimerProps = {
 const Timer: FC<TimerProps> = ({ limit }) => {
   const [timeLeft, setTimeLeft] = useState(limit);
   const primes = useMemo(() => getPrimes(limit), [limit]);
-  const timerId = useRef<NodeJS.Timeout | null>(null);
+  const timerId = useRef<NodeJS.Timeout>();
   const reset = useCallback(() => setTimeLeft(limit), [limit]);
   const tick = (): void => setTimeLeft(prevTime => prevTime - 1);
 
