@@ -1,4 +1,4 @@
-{
+i{
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -14,7 +14,7 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "npm.packageManager": "yarn",
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsdk": "./node_modules/typescript/lib",
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   }
