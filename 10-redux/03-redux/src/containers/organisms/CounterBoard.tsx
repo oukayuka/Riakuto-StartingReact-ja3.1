@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { add, decrement, increment } from 'actions';
 import { CounterState } from 'reducer';
-import Counter from 'components/organisms/CounterBoard';
+import CounterBoard from 'components/organisms/CounterBoard';
 
-const EnhancedCounter: FC = () => {
+const EnhancedCounterBoard: FC = () => {
   const count = useSelector<CounterState, number>(state => state.count);
   const dispatch = useDispatch();
 
   return (
-    <Counter
+    <CounterBoard
       count={count}
       add={(amount: number) => dispatch(add(amount))}
       decrement={() => dispatch(decrement())}
@@ -19,4 +19,4 @@ const EnhancedCounter: FC = () => {
   );
 };
 
-export default EnhancedCounter;
+export default EnhancedCounterBoard;

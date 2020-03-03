@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import ColorfulBeads from 'containers/molecules/ColorfulBeads';
-import Counter from 'containers/organisms/CounterBoard';
+import CounterBoard from 'containers/organisms/CounterBoard';
 
 import './App.css';
 
@@ -10,7 +10,7 @@ const App: FC = () => (
     <header>
       <h1>ビーズカウンター</h1>
     </header>
-    <Counter />
+    <CounterBoard />
     <ColorfulBeads />
   </div>
 );

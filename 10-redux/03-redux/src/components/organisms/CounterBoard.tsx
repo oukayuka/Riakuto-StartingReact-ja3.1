@@ -3,14 +3,14 @@ import { Button, Card, Statistic } from 'semantic-ui-react';
 import './CounterBoard.css';
 
 const BULK_UNIT = 10;
-interface CounterProps {
+interface CounterBoardProps {
   count?: number;
   add?: (amount: number) => void;
   decrement?: () => void;
   increment?: () => void;
 }
 
-const Counter: FC<CounterProps> = ({
+const Counter: FC<CounterBoardProps> = ({
   count = 0,
   add = () => undefined,
   decrement = () => undefined,
