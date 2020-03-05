@@ -20,7 +20,7 @@
 
 <br />
 
-## 第2版から第2.5版への差分
+## 第2版から第3版への差分
 
 - 「1-1. 環境構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[nodenv-update](https://github.com/nodenv/nodenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入
 - 「2-6. 非同期処理を扱う」の3つのサンプルコードを全て刷新し、Promise クラスの `.then()` メソッドについてのくわしい説明を追加
@@ -43,5 +43,6 @@
 - 「9-3. React Router の使い方」を、サンプルコードを利用した説明の部分を「9-4. React Router をアプリケーションに適用する」として独立させ、自身は純粋な使い方の解説としてより詳細な内容に
 - 「10-2. Redux の登場」で、登場時の状況の描写をより詳細に
 - 「10-3. Redux の使い方」の内容とサンプルコードを HOC から Hooks インターフェースを使ったものに更新
+- 「10-4. Redux 公式スタイルガイド」「10-5. Redux Toolkit を使って楽をしよう」「10-6. Redux と useReducer と State Hook の正体」を新規に追加
 - その他使用している主なパッケージを、2020年1月時点の最新バージョンにアップデート
 
