@@ -16,7 +16,7 @@ const EnhancedMembers: FC = () => {
     dispatch(userSlice.actions.getMembersStarted({ orgCode }));
   }, [orgCode, dispatch]);
 
-  return <Members orgCode={orgCode} users={users} isLoading={isLoading} />;
+  return <Members {...{ orgCode, users, isLoading }} />;
 };
 
 export default EnhancedMembers;

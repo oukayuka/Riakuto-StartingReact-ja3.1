@@ -1,0 +1,18 @@
+#root {
+  max-width: 930px;
+  margin: 2.5em auto 0;
+}
+
+.container {
+  width: 700px !important;
+  max-width: none !important;
+  font-size: 1rem !important;
+}
+
+.app-header {
+  padding: 20px;
+  margin-bottom: 4em;
+  color: white;
+  text-align: center;
+  background-color: #222;
+}

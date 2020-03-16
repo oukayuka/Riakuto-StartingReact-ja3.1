@@ -69,6 +69,15 @@ module.exports = {
         allowExpressions: true,
       },
     ],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        'vars': 'all',
+        'args': 'after-used',
+        'ignoreRestSiblings': false,
+        'varsIgnorePattern': '_',
+      },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -108,7 +117,14 @@ module.exports = {
         "extensions": ['.jsx', '.tsx'],
       },
     ],
-    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-props-no-spreading': [
+      'error',
+      {
+        html: 'enforce',
+        custom: 'enforce',
+        explicitSpread: 'ignore',
+      },
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
   },
