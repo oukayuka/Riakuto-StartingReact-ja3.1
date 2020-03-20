@@ -1,0 +1,19 @@
+#root {
+  max-width: 930px;
+  margin: 2.5em auto 0;
+}
+
+.container {
+  width: 700px !important;
+  max-width: none !important;
+  font-size: 1rem !important;
+}
+
+hr {
+  margin: 2rem 0 1rem;
+}
+
+.themed-button {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
