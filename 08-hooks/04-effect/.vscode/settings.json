@@ -1,4 +1,4 @@
-i{
+{
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -8,6 +8,9 @@ i{
   },
   "editor.formatOnSave": false,
   "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "semanticHighlighting": true
+  },
   "editor.wordWrap": "on",
   "eslint.enable": true,
   "eslint.packageManager": "yarn",
