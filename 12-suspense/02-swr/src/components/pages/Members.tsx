@@ -6,6 +6,7 @@ import { Divider } from 'semantic-ui-react';
 import Spinner from 'components/molecules/Spinner';
 import HomeButton from 'components/molecules/HomeButton';
 import MemberList from 'containers/oraganisms/MemberList';
+import ErrorBoundary from 'ErrorBoundary';
 
 const Members: FC<{ orgCode: string }> = ({ orgCode = 'UnknownCompany' }) => {
   const title = `${capitalize(orgCode)} の開発メンバー`;
@@ -18,9 +19,11 @@ const Members: FC<{ orgCode: string }> = ({ orgCode = 'UnknownCompany' }) => {
       <header className="app-header">
         <h1>{title}</h1>
       </header>
-      <Suspense fallback={<Spinner />}>
-        <MemberList orgCode={orgCode} />
-      </Suspense>
+      <ErrorBoundary unfoundMessage={`‘${orgCode}’ という会社は見つかりません`}>
+        <Suspense fallback={<Spinner />}>
+          <MemberList orgCode={orgCode} />
+        </Suspense>
+      </ErrorBoundary>
       <Divider hidden />
       <HomeButton />
     </>

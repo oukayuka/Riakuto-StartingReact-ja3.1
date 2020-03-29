@@ -3,7 +3,6 @@ import { Redirect, Route, Switch } from 'react-router';
 
 import Home from 'containers/pages/Home';
 import Members from 'containers/pages/Members';
-import Devtools from './Devtools';
 import './App.css';
 
 const App: FC = () => (
@@ -13,7 +12,6 @@ const App: FC = () => (
       <Route path="/:orgCode/members" component={Members} />
       <Redirect to="/" />
     </Switch>
-    <Devtools />
   </>
 );
 

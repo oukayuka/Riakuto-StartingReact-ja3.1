@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import {
-  ReactQueryConfigProvider,
-  ReactQueryProviderConfig,
-} from 'react-query';
+import { ConfigInterface, SWRConfig } from 'swr';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -12,15 +9,16 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
-const queryConfig: ReactQueryProviderConfig = {
+const swrConfig: ConfigInterface = {
   suspense: true,
+  shouldRetryOnError: false,
 };
 
 ReactDOM.render(
   <BrowserRouter>
-    <ReactQueryConfigProvider config={queryConfig}>
+    <SWRConfig value={swrConfig}>
       <App />
-    </ReactQueryConfigProvider>
+    </SWRConfig>
   </BrowserRouter>,
   document.getElementById('root') as HTMLElement,
 );
