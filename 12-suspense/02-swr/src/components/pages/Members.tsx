@@ -20,7 +20,7 @@ const Members: FC<{ orgCode: string }> = ({ orgCode = 'UnknownCompany' }) => {
         <h1>{title}</h1>
       </header>
       <ErrorBoundary unfoundMessage={`‘${orgCode}’ という会社は見つかりません`}>
-        <Suspense fallback={<Spinner />}>
+        <Suspense fallback={<Spinner size="big" />}>
           <MemberList orgCode={orgCode} />
         </Suspense>
       </ErrorBoundary>
