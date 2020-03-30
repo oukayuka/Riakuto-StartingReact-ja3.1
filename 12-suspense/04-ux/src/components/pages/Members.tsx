@@ -22,13 +22,12 @@ const SUSPENSE_CONFIG: SuspenseConfig = {
   busyDelayMs: 100,
   busyMinDurationMs: 700,
 };
-
 type Props = {
   orgCodes: string[];
   prefetch?: (orgCode: string) => void;
 };
 
-const Members: FC<Props> = ({ orgCodes = [], prefetch = () => undefined }) => {
+const Members: FC<Props> = ({ orgCodes, prefetch = () => undefined }) => {
   const [orgCode, setOrgCode] = useState('');
   const [input, setInput] = useState('');
   const [startTransition, isPending] = useTransition(SUSPENSE_CONFIG);

@@ -15,6 +15,7 @@ const MemberList: FC<MemberListProps> = ({ users = [] }) => (
           key={user.id}
           href={`https://github.com/${user.login}`}
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Card.Content>
             <Image floated="right" size="mini" src={user.avatar_url} />
