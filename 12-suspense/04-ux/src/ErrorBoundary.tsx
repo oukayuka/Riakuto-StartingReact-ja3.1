@@ -1,18 +1,18 @@
-import React, { PureComponent, ReactNode } from 'react';
+import React, { ErrorInfo, PureComponent, ReactNode } from 'react';
 import ky from 'ky';
 import { Message } from 'semantic-ui-react';
 
-type ErrorBoundaryInfo = {
-  componentStack: string;
-};
-
+type StatusMessages = { [status: number]: string };
 type Props = {
-  unfoundMessage?: string;
+  statusMessages?: StatusMessages;
+  onError?: () => void;
 };
-
 type State = {
   hasError: boolean;
   error: Error | null;
+};
+const DEFAULT_MESSAGES: StatusMessages = {
+  0: 'サーバエラーです',
 };
 
 class ErrorBoundary extends PureComponent<Props, State> {
@@ -29,25 +29,26 @@ class ErrorBoundary extends PureComponent<Props, State> {
     error,
   });
 
-  componentDidCatch = (error: Error, info: ErrorBoundaryInfo): void => {
+  componentDidCatch = (error: Error, info: ErrorInfo): void => {
+    const { onError } = this.props;
+    if (onError) onError();
+
     console.error(error, info); // eslint-disable-line no-console
   };
 
   render = (): JSX.Element | ReactNode => {
-    const { children, unfoundMessage = 'Not Found' } = this.props;
+    const { children, statusMessages = {} } = this.props;
     const { hasError, error } = this.state;
+    const messages = { ...DEFAULT_MESSAGES, ...statusMessages };
 
     if (hasError) {
-      const httpError = error as ky.HTTPError;
+      const statusCode = (error as ky.HTTPError)?.response?.status;
 
-      if (httpError?.response?.status === 404) {
-        return <Message warning>{unfoundMessage}</Message>;
-      }
-      if (httpError?.response?.status === 403) {
-        return <Message error>API のリクエスト制限を超えました</Message>;
+      if (statusCode && Object.keys(messages).includes(String(statusCode))) {
+        return <Message warning>{messages[statusCode]}</Message>;
       }
 
-      return <Message error>サーバエラーです</Message>;
+      return <Message error>{messages[0]}</Message>;
     }
 
     return children;

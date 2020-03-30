@@ -4,8 +4,9 @@ import React, {
   Suspense,
   SuspenseConfig,
   SuspenseList,
-  useTransition,
+  useRef,
   useState,
+  useTransition,
 } from 'react';
 import { Button, Divider, Input, Menu } from 'semantic-ui-react';
 import capitalize from 'lodash/capitalize';
@@ -31,6 +32,7 @@ const Members: FC<Props> = ({ orgCodes = [], prefetch = () => undefined }) => {
   const [orgCode, setOrgCode] = useState('');
   const [input, setInput] = useState('');
   const [startTransition, isPending] = useTransition(SUSPENSE_CONFIG);
+  const ebKey = useRef(0);
 
   const menuItems = orgCodes.map((code) => ({
     key: code,
@@ -60,7 +62,7 @@ const Members: FC<Props> = ({ orgCodes = [], prefetch = () => undefined }) => {
   return (
     <>
       <header className="app-header">
-        <h1>会社メンバーリスト</h1>
+        <h1>組織メンバーリスト</h1>
       </header>
       <form className="search-form" onSubmit={handleSubmit}>
         <Input
@@ -79,8 +81,13 @@ const Members: FC<Props> = ({ orgCodes = [], prefetch = () => undefined }) => {
       <Divider />
       <div className={isPending ? 'loading' : ''}>
         <ErrorBoundary
-          unfoundMessage={`‘${orgCode}’ という会社は見つかりません`}
-          key={orgCode}
+          statusMessages={{
+            404: `‘${orgCode}’ というコードの組織は見つかりません`,
+          }}
+          onError={() => {
+            ebKey.current += 1;
+          }}
+          key={ebKey.current}
         >
           <SuspenseList revealOrder="forwards">
             <Suspense fallback={<Spinner size="small" />}>
