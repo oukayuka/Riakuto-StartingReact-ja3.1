@@ -12,7 +12,7 @@ const getMembers = async (
     ...options,
   };
   const response = await ky.get(`orgs/${orgCode}/members`, mergedOptions);
-  const members: User[] = (await response.json()) || [];
+  const members: User[] = await response.json();
 
   return members;
 };

@@ -17,7 +17,7 @@ const getMembers = async (
     return (new ky.HTTPError(response) as unknown) as User[];
   }
 
-  const members: User[] = (await response.json()) || [];
+  const members: User[] = await response.json();
 
   return members;
 };
