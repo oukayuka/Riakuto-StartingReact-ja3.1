@@ -6,7 +6,7 @@ import './App.css';
 
 const App: FC = () => (
   <>
-    <Members enablePrefetch />
+    <Members enablePrefetch={false} />
     <Devtools />
   </>
 );
