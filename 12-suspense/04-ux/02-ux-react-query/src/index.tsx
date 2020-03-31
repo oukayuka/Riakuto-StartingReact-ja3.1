@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ConfigInterface, SWRConfig } from 'swr';
+import {
+  ReactQueryConfigProvider,
+  ReactQueryProviderConfig,
+} from 'react-query';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -8,17 +11,17 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
-const swrConfig: ConfigInterface = {
-  dedupingInterval: 60000,
-  shouldRetryOnError: false,
+const queryConfig: ReactQueryProviderConfig = {
+  retry: 0,
+  staleTime: 60000,
   suspense: true,
 };
 
 const root = document.getElementById('root') as HTMLElement;
 ReactDOM.createRoot(root).render(
-  <SWRConfig value={swrConfig}>
+  <ReactQueryConfigProvider config={queryConfig}>
     <App />
-  </SWRConfig>,
+  </ReactQueryConfigProvider>,
 );
 
 serviceWorker.unregister();

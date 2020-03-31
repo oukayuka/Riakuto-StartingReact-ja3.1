@@ -1,0 +1,23 @@
+.ui.items {
+  margin: 1.5rem 0 2.75rem !important;
+}
+
+.ui.items > .item .extra {
+  color: #223 !important;
+}
+
+.ui.items > .item a {
+  color: #223;
+}
+
+.ui.items > .item a:hover {
+  text-decoration: underline;
+}
+
+.ui.basic.label {
+  padding: 0.25rem 0.33rem !important;
+}
+
+.item .extra > span {
+  margin-right: 1rem !important;
+}

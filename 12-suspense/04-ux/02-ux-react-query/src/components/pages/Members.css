@@ -1,0 +1,18 @@
+.ui.text.menu .item {
+  font-size: 1.25rem;
+}
+
+.loading {
+  opacity: 0.6;
+  transition: opacity 0s;
+  transition-delay: 0.15s;
+}
+
+.search-form > .ui.input {
+  width: 22rem;
+  margin-right: 0.5rem;
+}
+
+.ui.divider {
+  margin-bottom: 2.5rem !important;
+}

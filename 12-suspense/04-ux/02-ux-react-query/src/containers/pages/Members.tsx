@@ -1,5 +1,5 @@
-import React, { FC, useState } from 'react';
-import { mutate } from 'swr';
+import React, { FC } from 'react';
+import { queryCache } from 'react-query';
 
 import orgCodes from 'data/org-codes';
 import getOrganization from 'domains/github/services/get-organization';
@@ -9,23 +9,21 @@ import Members from 'components/pages/Members';
 const EnhancedMembers: FC<{ enablePrefetch?: boolean }> = ({
   enablePrefetch = false,
 }) => {
-  const [fetchedCodes, setFetchedCodes] = useState<string[]>([]);
   const prefetch = (orgCode: string): void => {
     const load = async (): Promise<void> => {
       try {
         await Promise.all([
-          mutate(orgCode, getOrganization(orgCode), false),
-          mutate([orgCode, 'members'], getMembers(orgCode), false),
+          queryCache.prefetchQuery(orgCode, getOrganization),
+          queryCache.prefetchQuery([orgCode, 'members'], (code, _) =>
+            getMembers(code),
+          ),
         ]);
       } catch (error) {
         console.error(error); // eslint-disable-line no-console
       }
     };
 
-    if (!fetchedCodes.includes(orgCode)) {
-      load();
-      setFetchedCodes(fetchedCodes.concat([orgCode]));
-    }
+    load();
   };
   const props = enablePrefetch ? { orgCodes, prefetch } : { orgCodes };
 
