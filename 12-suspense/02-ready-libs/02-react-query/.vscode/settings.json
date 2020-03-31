@@ -1,0 +1,24 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "semanticHighlighting": true
+  },
+  "editor.wordWrap": "on",
+  "eslint.enable": true,
+  "eslint.packageManager": "yarn",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "npm.packageManager": "yarn",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
+}
