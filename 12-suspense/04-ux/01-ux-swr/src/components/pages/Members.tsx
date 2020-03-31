@@ -18,7 +18,7 @@ import MemberList from 'containers/oraganisms/MemberList';
 import './Members.css';
 
 const SUSPENSE_CONFIG: SuspenseConfig = {
-  timeoutMs: 1000,
+  timeoutMs: 2000,
   busyDelayMs: 100,
   busyMinDurationMs: 700,
 };

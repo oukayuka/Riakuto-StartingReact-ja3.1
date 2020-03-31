@@ -6,13 +6,13 @@ import { Organization } from '../models/organization';
 const getOrganization = async (
   orgCode: string,
   options?: KyOptions,
-): Promise<Organization | null> => {
+): Promise<Organization> => {
   const mergedOptions = {
     ...DEFAULT_API_OPTIONS,
     ...options,
   };
   const response = await ky.get(`orgs/${orgCode}`, mergedOptions);
-  const org: Organization = (await response.json()) || [];
+  const org: Organization = await response.json();
 
   return org;
 };

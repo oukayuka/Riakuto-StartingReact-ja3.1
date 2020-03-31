@@ -1,5 +1,5 @@
 {
-  "name": "staff-list-ux",
+  "name": "staff-list-ux-swr",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
