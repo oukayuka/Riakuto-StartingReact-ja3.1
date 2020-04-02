@@ -5,8 +5,8 @@
   "dependencies": {
     "@types/jest": "25.1.4",
     "@types/node": "13.9.8",
-    "@types/react": "16.9.29",
-    "@types/react-dom": "16.9.5",
+    "@types/react": "16.9.31",
+    "@types/react-dom": "16.9.6",
     "ky": "^0.19.0",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
@@ -19,7 +19,7 @@
     "semantic-ui-react": "^0.88.2",
     "swr": "^0.2.0",
     "typescript": "3.8.3",
-    "uuidv4": "^6.0.5"
+    "uuidv4": "^6.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,11 +51,11 @@
     "@types/lodash": "^4.14.149",
     "@types/prettier": "^1.19.0",
     "@types/react-helmet": "^5.0.15",
-    "@types/react-router": "^5.1.4",
+    "@types/react-router": "^5.1.5",
     "@types/react-router-dom": "^5.1.3",
     "@types/stylelint": "^9.10.1",
     "@types/testing-library__jest-dom": "^5.0.2",
-    "@types/testing-library__react": "^10.0.0",
+    "@types/testing-library__react": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "eslint": "^6.8.0",
@@ -69,7 +69,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "husky": "^4.2.0",
-    "lint-staged": "^10.1.0",
+    "lint-staged": "^10.1.1",
     "prettier": "^2.0.2",
     "stylelint": "^13.2.1",
     "stylelint-config-recess-order": "^2.0.3",
