@@ -3,11 +3,7 @@ import { Card, Image } from 'semantic-ui-react';
 
 import { User } from 'domains/github/models/user';
 
-export interface MemberListProps {
-  users: User[];
-}
-
-const MemberList: FC<MemberListProps> = ({ users = [] }) => (
+const MemberList: FC<{ users: User[] }> = ({ users = [] }) => (
   <>
     <Card.Group>
       {users.map((user) => (
