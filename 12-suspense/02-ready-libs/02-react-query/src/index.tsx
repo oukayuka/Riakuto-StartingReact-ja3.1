@@ -7,6 +7,7 @@ import {
 } from 'react-query';
 
 import App from './App';
+import Devtools from './Devtools';
 import * as serviceWorker from './serviceWorker';
 
 import 'semantic-ui-css/semantic.min.css';
@@ -21,6 +22,7 @@ ReactDOM.render(
   <BrowserRouter>
     <ReactQueryConfigProvider config={queryConfig}>
       <App />
+      {process.env.NODE_ENV === 'development' && <Devtools />}
     </ReactQueryConfigProvider>
   </BrowserRouter>,
   document.getElementById('root') as HTMLElement,
