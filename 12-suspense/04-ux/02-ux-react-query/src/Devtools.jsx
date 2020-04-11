@@ -2,11 +2,5 @@ import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { ReactQueryDevtools } from 'react-query-devtools';
 
-const Devtools = () =>
-  process.env.NODE_ENV === 'development' ? (
-    <ReactQueryDevtools initialIsOpen={false} />
-  ) : (
-    <div />
-  );
-
+const Devtools = () => <ReactQueryDevtools initialIsOpen={false} />;
 export default Devtools;
