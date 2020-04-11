@@ -14,8 +14,7 @@ const swrConfig: ConfigInterface = {
   suspense: true,
 };
 
-const root = document.getElementById('root') as HTMLElement;
-ReactDOM.createRoot(root).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <SWRConfig value={swrConfig}>
     <App />
   </SWRConfig>,
