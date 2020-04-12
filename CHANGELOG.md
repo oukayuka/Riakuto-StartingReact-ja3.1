@@ -1,6 +1,6 @@
 # 各版における内容の変更
 
-## 初版から第2版への差分
+## 第2版（2019-04-14）
 
 - Create React App 本家が TypeScript を直接サポートし、[create-react-app-typescript](https://github.com/wmonk/create-react-app-typescript) はパッケージそのものが非推奨になったため、create-react-app-typescript を使用していた部分を create-react-app に入れ替えた
 - 「2-5. 便利な配列やオブジェクのトリテラル」に、分割代入についての説明を追加
@@ -20,9 +20,12 @@
 
 <br />
 
-## 第2版から第3版への差分
+## 第3版（2020-04-20）
 
-- 「1-1. 環境構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[nodenv-update](https://github.com/nodenv/nodenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入
+#### 第1章 こんにちはReact
+
+- 「1-1. 環境構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[anyenv-update](https://github.com/znz/anyenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入
+- 「1-2. Hello, World!」にて、Create React App バージョン 3.4.1 からデフォルトで有効になった React の strict モードについての説明を追加
 - 「2-6. 非同期処理を扱う」の3つのサンプルコードを全て刷新し、Promise クラスの `.then()` メソッドについてのくわしい説明を追加
 - 「3-6. ジェネレータ」の章を削除
 - 「4-2. 型のバリエーション」の章名を「4-2. プリミティブ型」に変更。Enum 型についての記述を追加
