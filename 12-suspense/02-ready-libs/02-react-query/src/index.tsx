@@ -15,6 +15,7 @@ import './index.css';
 
 const queryConfig: ReactQueryProviderConfig = {
   suspense: true,
+  useErrorBoundary: true,
   retry: 0,
 };
 
