@@ -1,6 +1,6 @@
 import ky, { Options as KyOptions } from 'ky';
 
-import { Result, Success, Failure } from 'utils/result';
+import { Result, Success, Failure } from 'utils/result-type';
 import { DEFAULT_API_OPTIONS } from './constants';
 import { User } from '../models/user';
 
