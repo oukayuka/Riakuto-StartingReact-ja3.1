@@ -1,20 +1,19 @@
 import React, { FC } from 'react';
 import { useQuery } from 'react-query';
-import ky from 'ky';
 
+import { Success, withResult } from 'utils/result-type';
 import OrgInfo from 'components/organisms/OrgInfo';
 import getOrganization from 'domains/github/services/get-organization';
 
 const EnhancedOrgInfo: FC<{ orgCode: string }> = ({ orgCode }) => {
-  const { data: org = null } = useQuery(
+  const { data = new Success(null) } = useQuery(
     orgCode.length > 2 ? orgCode : null,
-    getOrganization,
+    withResult(getOrganization),
   );
-  if (((org as unknown) as ky.HTTPError)?.response) {
-    throw org;
-  }
 
-  return <OrgInfo org={org} />;
+  if (data.isError()) throw data.error;
+
+  return <OrgInfo org={data.value} />;
 };
 
 export default EnhancedOrgInfo;

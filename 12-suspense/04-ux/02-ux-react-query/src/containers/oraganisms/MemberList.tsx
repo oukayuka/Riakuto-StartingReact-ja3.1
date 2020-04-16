@@ -1,20 +1,19 @@
 import React, { FC } from 'react';
 import { useQuery } from 'react-query';
-import ky from 'ky';
 
+import { Success, withResult } from 'utils/result-type';
 import MemberList from 'components/organisms/MemberList';
 import getMembers from 'domains/github/services/get-members';
 
 const EnhancedMemberList: FC<{ orgCode: string }> = ({ orgCode }) => {
-  const { data: users = [] } = useQuery(
+  const { data = new Success([]) } = useQuery(
     orgCode.length > 2 ? [orgCode, 'members'] : null,
-    (code, _) => getMembers(code),
+    (code, _) => withResult(getMembers)(code),
   );
-  if (((users as unknown) as ky.HTTPError)?.response) {
-    throw users;
-  }
 
-  return <MemberList users={users} />;
+  if (data.isError()) throw data.error;
+
+  return <MemberList users={data.value} />;
 };
 
 export default EnhancedMemberList;

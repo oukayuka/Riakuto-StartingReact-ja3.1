@@ -12,11 +12,6 @@ const getOrganization = async (
     ...options,
   };
   const response = await ky.get(`orgs/${orgCode}`, mergedOptions);
-
-  if (!response.ok) {
-    return (new ky.HTTPError(response) as unknown) as Organization;
-  }
-
   const org: Organization = await response.json();
 
   return org;
