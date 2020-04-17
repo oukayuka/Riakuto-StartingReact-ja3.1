@@ -16,6 +16,7 @@ const queryConfig: ReactQueryProviderConfig = {
   retry: 0,
   staleTime: 60000,
   suspense: true,
+  useErrorBoundary: true,
 };
 
 const root = document.getElementById('root') as HTMLElement;
