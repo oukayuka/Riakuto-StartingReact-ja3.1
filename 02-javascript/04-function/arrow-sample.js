@@ -7,7 +7,7 @@ function plusOne(n) {
 const plusOneArrow1 = (n) => { return n + 1; };
 
 // アロー関数の宣言その2
-const plusOneArrow2 = n => n + 1;
+const plusOneArrow2 = (n) => n + 1;
 
 console.log(plusOne(1));
 console.log(plusOneArrow1(1));
