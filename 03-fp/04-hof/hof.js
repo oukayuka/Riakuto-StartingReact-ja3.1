@@ -1,6 +1,6 @@
-const hof = (adds, fn) => {
-  return n => fn(n + adds);
+const withSurplus = (fn, surplus) => {
+  return (n) => fn(n + surplus);
 };
 
-const plusOneDouble = hof(1, n => n * 2);
-console.log(plusOneDouble(4));
+const plusOneAndDouble = withSurplus((n) => n * 2, 1);
+console.log(plusOneAndDouble(4));
