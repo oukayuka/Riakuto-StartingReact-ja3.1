@@ -7,6 +7,7 @@ interface User {
 interface User {
   gender: 'm' | 'f';
 }
+
 const user: User = {
   name: 'jane',
   age: 27,
