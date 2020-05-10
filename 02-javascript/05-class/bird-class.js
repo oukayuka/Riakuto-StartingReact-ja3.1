@@ -22,9 +22,9 @@ class FlyableBird extends Bird {
   };
 }
 
-const bd1 = new Bird('ペンギン');
-bd1.chirp();
+const penguin = new Bird('ペンギン');
+penguin.chirp();
 Bird.explain('カラス');
 
-const bd2 = new FlyableBird('スズメ');
-bd2.fly();
+const hawk = new FlyableBird('タカ');
+hawk.fly();
