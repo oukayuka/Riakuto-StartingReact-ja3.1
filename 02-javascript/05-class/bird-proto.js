@@ -11,8 +11,8 @@ Bird.explain = function(name) {
   console.log(`${name}は翼があって卵を生みます`);
 };
 
-function FlyableBird(...args) {
-  Bird.apply(this, args);
+function FlyableBird(name) {
+  Bird.call(this, name);
   this.fly = function() {
     console.log(`${this.name}が飛びました`);
   };
