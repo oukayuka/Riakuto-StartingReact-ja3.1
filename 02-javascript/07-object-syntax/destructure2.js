@@ -2,18 +2,18 @@ const response = {
   data: [
     {
       id: 1,
-      name: 'John Doe',
-      email: 'john-d@mymail.com',
+      name: 'Patty Rabbit',
+      email: 'patty@maple.town',
     },
     {
       id: 2,
-      name: 'Jane Roe',
-      email: 'janeroe@supermail.com',
+      name: 'Rolley Cocker',
+      email: 'rolley@palm.town',
     },
     {
       id: 3,
-      name: 'Joe Bloggs',
-      email: 'joe-blg@coolmail.com',
+      name: 'Bobby Bear',
+      email: 'bobby@maple.town',
     },
   ],
 };

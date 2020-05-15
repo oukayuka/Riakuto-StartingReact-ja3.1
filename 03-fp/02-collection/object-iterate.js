@@ -1,8 +1,8 @@
 const user = {
-  id: 4,
-  name: 'Patricia Lebsack',
-  username: 'patleb',
-  email: 'patleb@abcmail.biz',
+  id: 3,
+  name: 'Bobby Kumanov',
+  username: 'bobby',
+  email: 'bobby@maple.town',
 };
 
 console.log(Object.keys(user));

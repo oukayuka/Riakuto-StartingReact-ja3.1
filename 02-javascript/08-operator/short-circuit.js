@@ -1,6 +1,6 @@
-const hello = undefined || null || 0 || '' || 'Hello!';
-const chao = 'Bonjour' && 100 && 'Chao';
+const hello = undefined || null || 0 || NaN || '' || 'Hello!';
+const chao = ' ' && 100 && [] && {} && 'Chao!';
 
-false && console.log(hello, 'with false');
-true && console.log(hello, 'with true');
-console.log(chao);
+false && console.log('1.', hello);
+true && console.log('2.', hello);
+false || console.log('3.', chao);

@@ -1,6 +1,6 @@
 const isSucceeded = true;
 
-const p = new Promise((resolve, reject) => {
+const promise = new Promise((resolve, reject) => {
   if (isSucceeded) {
     resolve('Success');
   } else {
@@ -8,7 +8,7 @@ const p = new Promise((resolve, reject) => {
   }
 });
 
-p.then((value) => {
+promise.then((value) => {
     console.log('1.', value);
 
     return 'Succees again';

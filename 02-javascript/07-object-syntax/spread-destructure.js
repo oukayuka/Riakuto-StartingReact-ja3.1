@@ -1,8 +1,8 @@
 const person = {
   id: 1,
-  name: 'John Doe',
-  email: 'john-d@mymail.com',
-  age: 30,
+  name: 'Patty Rabbit',
+  email: 'patty@maple.town',
+  age: 8,
 };
 const { id, ...personWithoutId } = person;
 

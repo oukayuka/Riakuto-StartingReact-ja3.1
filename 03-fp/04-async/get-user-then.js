@@ -11,6 +11,8 @@ const getUser = (userId) =>
     },
   );
 
+console.log('-- Start --');
+
 getUser(2)
   .then((user) => {
     console.log(user);

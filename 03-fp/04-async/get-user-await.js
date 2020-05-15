@@ -12,6 +12,8 @@ const getUser = async (userId) => {
   return response.json();
 };
 
+console.log('-- Start --');
+
 const main = async () => {
   try {
     const user = await getUser(2);
