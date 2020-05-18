@@ -4,9 +4,11 @@
 
 #### 第1章&nbsp; こんにちは React
 
-- 「1-1. 環境構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[anyenv-update](https://github.com/znz/anyenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入
+- 「1-1. 基本環境の構築」にて Node.js そのものと、インストールが必要な理由についての説明を追加
+- 同じく「1-1. 基本環境の構築」にて、非推奨になった [ndenv](https://github.com/riywo/ndenv) を [nodenv](https://github.com/nodenv/nodenv) に置き換えた。併せて、[anyenv-update](https://github.com/znz/anyenv-update) と [nodenv-default-packages](https://github.com/nodenv/nodenv-default-packages) のふたつのプラグインを導入
 - 同じく「1-1. 環境構築」にて、`yarn upgrade-interactive` コマンドの説明を追加
-- 「1-2. Hello, World!」にて、Create React App バージョン 3.4.1 からデフォルトで有効になった React の strict モードについての説明を追加
+- 「1-2. Hello, World!」を「1-2. プロジェクトを作成する」に再編成。Create React App についての詳細な説明を追加し、Yarn コマンドの説明については次の節に委譲した
+- 「1-3. アプリを管理するためのコマンドやスクリプト」節を新規に追加。Yarn コマンドに加え、npm-scripts や react-scripts についても詳細に説明
 
 #### 第2章&nbsp; エッジでディープな JavaScript の世界
 

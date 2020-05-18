@@ -1,6 +1,5 @@
 import times, { plus } from './math.js';
-// import _ from 'lodash';
-import { min, max } from 'lodash';
+import _ from 'lodash';
 
 console.log(plus(5));
 console.log(times(4));
