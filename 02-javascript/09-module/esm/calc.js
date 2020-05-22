@@ -1,4 +1,4 @@
-import times, { plus } from './math.js';
+import times, { plus } from './modules/math.js';
 import _ from 'lodash';
 
 console.log(plus(5));

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ES Module Test</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script type="module">
+import uniq from 'https://dev.jspm.io/lodash-es/uniq.js';
+
+const arr = [12, 2, 2, 2, 9, 5, 12, 11, 15, 8, 9, 8];
+const elems = uniq(arr)
+  .sort((n, m) => n < m ? -1 : 1)
+  .map(n => `<li>${n}</li>`)
+  .join('');
+document.getElementById('list').innerHTML = elems;
+</script>
+  </body>
+</html>
