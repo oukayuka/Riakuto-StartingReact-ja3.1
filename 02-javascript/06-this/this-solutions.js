@@ -4,7 +4,7 @@ class Person {
   }
 
   greet1() {
-    const doIt = function() {
+    const doIt = function () {
       console.log(`Hi, I'm ${this.name}`);
     };
     const bindedDoIt = doIt.bind(this);
@@ -12,7 +12,7 @@ class Person {
   }
 
   greet2() {
-    const doIt = function() {
+    const doIt = function () {
       console.log(`Hi, I'm ${this.name}`);
     };
     doIt.call(this);
@@ -20,7 +20,7 @@ class Person {
 
   greet3() {
     const _this = this;
-    const doIt = function() {
+    const doIt = function () {
       console.log(`Hi, I'm ${_this.name}`);
     };
     doIt();

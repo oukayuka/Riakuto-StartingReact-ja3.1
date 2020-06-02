@@ -1,19 +1,19 @@
 function Bird(name) {
   this.name = name;
-  this.chirp = function() {
+  this.chirp = function () {
     console.log(`${this.name}が鳴きました`);
   };
 
   return this;
 }
 
-Bird.explain = function(name) {
+Bird.explain = function (name) {
   console.log(`${name}は翼があって卵を生みます`);
 };
 
 function FlyableBird(name) {
   Bird.call(this, name);
-  this.fly = function() {
+  this.fly = function () {
     console.log(`${this.name}が飛びました`);
   };
 

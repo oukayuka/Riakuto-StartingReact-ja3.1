@@ -1,4 +1,4 @@
-const Person = function(name) {
+const Person = function (name) {
   this.name = name;
   return this;
 };

@@ -48,6 +48,13 @@ module.exports = {
   rules: {
     // NOTE: for react-app-env.d.ts
     // https://github.com/facebook/create-react-app/issues/6560
+    'lines-between-class-members': [
+      'error',
+      'always',
+      {
+        exceptAfterSingleLine: true
+      }
+    ],
     'padding-line-between-statements': [
       'error',
       {

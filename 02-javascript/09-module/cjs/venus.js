@@ -1,8 +1,8 @@
-exports.transform = function() {
+exports.transform = function () {
   console.log('Venus power, make up!');
 };
 
-const finish = function() {
+const finish = function () {
   console.log('Crescent beam!');
 };
 exports.finish = finish;

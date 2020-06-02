@@ -4,7 +4,7 @@ class Person {
   }
 
   greet () {
-    const doIt = function() {
+    const doIt = function () {
       console.log(`Hi, I'm ${this.name}`);
     };
     doIt();

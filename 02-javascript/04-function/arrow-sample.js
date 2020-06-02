@@ -1,4 +1,4 @@
-const plusOne = function(n) {
+const plusOne = function (n) {
   return n + 1;
 }
 
