@@ -1,0 +1,11 @@
+.App {
+  font-size: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.story {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 4rem 20%;
+}
