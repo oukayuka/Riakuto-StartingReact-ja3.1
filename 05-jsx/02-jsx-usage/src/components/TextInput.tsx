@@ -5,7 +5,7 @@ const TextInput: React.FunctionComponent = () => {
 
   const handleClick = (): void => {
     console.log(inputRef.current);
-    inputRef.current?.focus();
+    if (inputRef.current) inputRef.current.focus();
   };
 
   return (
