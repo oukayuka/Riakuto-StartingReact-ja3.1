@@ -4,15 +4,14 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
     'airbnb',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
     'prettier',
     'prettier/@typescript-eslint',
@@ -28,11 +27,14 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
     sourceType: 'module',
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     '@typescript-eslint',
+    'import',
     'jsx-a11y',
     'prettier',
     'react',
@@ -40,18 +42,27 @@ module.exports = {
   ],
   root: true,
   rules: {
-    // NOTE: for react-env.d.ts
+    'lines-between-class-members': [
+      'error',
+      'always',
+      {
+        exceptAfterSingleLine: true
+      }
+    ],
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return',
+      },
+    ],
+    // NOTE: for triple-slash dirctives within `react-app-env.d.ts`
     // https://github.com/facebook/create-react-app/issues/6560
     'spaced-comment': [
       'error',
       'always',
       { markers: ['/'] },
-    ],
-    '@typescript-eslint/explicit-function-return-type': [
-      'warn',
-      {
-        allowExpressions: true,
-      },
     ],
     'import/extensions': [
       'error',
@@ -69,8 +80,13 @@ module.exports = {
         "extensions": ['.jsx', '.tsx'],
       },
     ],
-    'react/prop-types': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
   },
+  'overrides': [
+    {
+      'files': ['*.tsx'],
+      'rules': {
+        'react/prop-types': 'off',
+      },
+    },
+  ],
 };
