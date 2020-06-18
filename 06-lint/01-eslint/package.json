@@ -1,5 +1,5 @@
 {
-  "name": "hello-patty",
+  "name": "hello-world",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
-    "preinstall": "typesync"
+    "postinstall": "typesync"
   },
   "eslintConfig": {
     "extends": "react-app"
