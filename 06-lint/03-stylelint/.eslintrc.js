@@ -57,13 +57,6 @@ module.exports = {
         next: 'return',
       },
     ],
-    // NOTE: for triple-slash dirctives within `react-app-env.d.ts`
-    // https://github.com/facebook/create-react-app/issues/6560
-    'spaced-comment': [
-      'error',
-      'always',
-      { markers: ['/'] },
-    ],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -78,6 +71,14 @@ module.exports = {
       'error',
       {
         "extensions": ['.jsx', '.tsx'],
+      },
+    ],
+    'react/jsx-props-no-spreading': [
+      'error',
+      {
+        html: 'enforce',
+        custom: 'enforce',
+        explicitSpread: 'ignore',
       },
     ],
   },
