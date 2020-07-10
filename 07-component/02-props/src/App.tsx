@@ -6,35 +6,41 @@ const App: FC = () => {
   const characters: Character[] = [
     {
       id: 1,
-      name: '日向 翔陽',
-      age: 16,
-      height: 162.8,
+      name: '桜木花道',
+      grade: 1,
+      height: 189.2,
     },
     {
       id: 2,
-      name: '影山 飛雄',
-      age: 16,
-      height: 180.6,
+      name: '流川 楓',
+      grade: 1,
+      height: 187,
     },
     {
       id: 3,
-      name: '澤村 大地',
-      age: 18,
-      height: 176.6,
+      name: '宮城リョータ',
+      grade: 2,
+      height: 168,
     },
     {
       id: 4,
-      name: '西谷 夕',
-      age: 17,
+      name: '三井 寿',
+      grade: 3,
+    },
+    {
+      id: 5,
+      name: '赤木剛憲',
+      grade: 3,
+      height: 197,
     },
   ];
 
   return (
     <div className="container">
       <header>
-        <h1>ハイキュー!! 登場人物</h1>
+        <h1>SLAM DUNK 登場人物</h1>
       </header>
-      <CharacterList school="烏野高校" characters={characters} />
+      <CharacterList school="湘北高校" characters={characters} />
     </div>
   );
 };

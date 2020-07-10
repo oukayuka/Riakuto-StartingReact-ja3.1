@@ -3,12 +3,12 @@ import { Button, Card, Statistic } from 'semantic-ui-react';
 
 import './App.css';
 
-type AppState = {
+type State = {
   count: number;
 };
 
-class App extends Component<{}, AppState> {
-  constructor(props: {}) {
+class App extends Component<unknown, State> {
+  constructor(props: unknown) {
     super(props);
     this.state = { count: 0 };
   }
@@ -18,8 +18,7 @@ class App extends Component<{}, AppState> {
   }
 
   increment(): void {
-    this.setState({ count: this.state.count + 1});
-    setTimeout(() => this.setState({ count: this.state.count + 1}), 1000);
+    this.setState((state) => ({ count: state.count + 1 }));
   }
 
   render(): JSX.Element {

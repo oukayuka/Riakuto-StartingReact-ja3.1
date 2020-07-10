@@ -4,14 +4,14 @@ import './App.css';
 
 const LIMIT = 60;
 
-type AppState = {
+type State = {
   timeLeft: number;
 };
 
-class App extends Component<{}, AppState> {
-  timerId?: NodeJS.Timer;
+class App extends Component<unknown, State> {
+  timerId: NodeJS.Timer | null = null;
 
-  constructor(props: {}) {
+  constructor(props: unknown) {
     super(props);
     this.state = { timeLeft: LIMIT };
   }
@@ -21,7 +21,7 @@ class App extends Component<{}, AppState> {
   };
 
   tick = (): void => {
-    this.setState(prevState => ({ timeLeft: prevState.timeLeft - 1 }));
+    this.setState((prevState) => ({ timeLeft: prevState.timeLeft - 1 }));
   };
 
   componentDidMount = (): void => {
@@ -34,10 +34,10 @@ class App extends Component<{}, AppState> {
   };
 
   componentWillUnmount = (): void => {
-    clearInterval(this.timerId as NodeJS.Timer);
+    if (this.timerId) clearInterval(this.timerId);
   };
 
-  render(): JSX.Element {
+  render = (): JSX.Element => {
     const { timeLeft } = this.state;
 
     return (
@@ -59,7 +59,7 @@ class App extends Component<{}, AppState> {
         </Card>
       </div>
     );
-  }
+  };
 }
 
 export default App;

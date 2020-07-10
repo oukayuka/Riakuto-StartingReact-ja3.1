@@ -4,28 +4,28 @@ import { Header, Icon, Item } from 'semantic-ui-react';
 export type Character = {
   id: number;
   name: string;
-  age: number;
+  grade: number;
   height?: number;
 };
 
-type CharacterListProps = {
+type Props = {
   school: string;
   characters: Character[];
 };
 
-const CharacterList: FC<CharacterListProps> = props => {
+const CharacterList: FC<Props> = (props) => {
   const { school, characters } = props;
 
   return (
     <>
       <Header as="h2">{school}</Header>
       <Item.Group>
-        {characters.map(character => (
-          <Item>
+        {characters.map((character) => (
+          <Item key={character.id}>
             <Icon name="user circle" size="huge" />
             <Item.Content>
               <Item.Header>{character.name}</Item.Header>
-              <Item.Meta>{character.age}歳</Item.Meta>
+              <Item.Meta>{character.grade}年生</Item.Meta>
               <Item.Meta>
                 {character.height ? character.height : '???'}
                 cm
