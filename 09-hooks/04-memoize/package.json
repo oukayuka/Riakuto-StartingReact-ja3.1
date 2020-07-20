@@ -1,19 +1,21 @@
 {
-  "name": "hello-world",
+  "name": "countdown-timer-hooks-memoize",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.10.1",
     "@testing-library/react": "^10.3.0",
     "@testing-library/user-event": "^12.0.2",
-    "@types/jest": "26.0.0",
-    "@types/node": "14.0.13",
-    "@types/react": "16.9.36",
+    "@types/jest": "26.0.4",
+    "@types/node": "14.0.23",
+    "@types/react": "16.9.43",
     "@types/react-dom": "16.9.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "typescript": "3.9.5"
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "typescript": "3.9.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -54,7 +56,7 @@
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prefer-arrow": "^1.2.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
