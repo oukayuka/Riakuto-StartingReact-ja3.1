@@ -52,7 +52,16 @@ module.exports = {
         next: 'return',
       },
     ],
-    '@typescript-eslint/indent': ['error', 2],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        'vars': 'all',
+        'args': 'after-used',
+        'argsIgnorePattern': '_',
+        'ignoreRestSiblings': false,
+        'varsIgnorePattern': '_',
+      },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
