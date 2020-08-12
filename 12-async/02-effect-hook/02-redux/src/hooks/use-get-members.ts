@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { User } from 'domains/github/models/user';
-import { userSlice, UserState } from 'redux/user';
-import getMembers from 'domains/github/services/get-members';
+import { User, getMembers } from 'domains/github';
+import { userSlice, UserState } from 'features/user';
 
 type ReturnValue = {
   users: User[];
   isLoading: boolean;
 };
 
-const useMembersGot = (orgCode: string): ReturnValue => {
+const useGetMembers = (orgCode: string): ReturnValue => {
   const [isLoading, setIsLoading] = useState(false);
-  const users = useSelector<UserState, User[]>(state => state.users);
+  const users = useSelector<UserState, User[]>((state) => state.users);
   const dispatch = useDispatch();
 
   useEffect(() => {
     let isUnmounted = false;
+    const { membersGotten } = userSlice.actions;
 
     const load = async (): Promise<void> => {
       setIsLoading(true);
@@ -25,7 +25,7 @@ const useMembersGot = (orgCode: string): ReturnValue => {
         const users = await getMembers(orgCode); // eslint-disable-line no-shadow
 
         if (!isUnmounted) {
-          dispatch(userSlice.actions.membersGot({ users }));
+          dispatch(membersGotten({ users }));
         }
       } catch (err) {
         throw new Error(`organization '${orgCode}' not exists`);
@@ -34,7 +34,7 @@ const useMembersGot = (orgCode: string): ReturnValue => {
       }
     };
 
-    load();
+    void load();
 
     return () => {
       isUnmounted = true;
@@ -44,4 +44,4 @@ const useMembersGot = (orgCode: string): ReturnValue => {
   return { users, isLoading };
 };
 
-export default useMembersGot;
+export default useGetMembers;

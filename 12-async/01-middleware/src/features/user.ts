@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { User } from 'domains/github/models/user';
+import { User } from 'domains/github';
 import { SucceededPayload, FailedPayload } from './payload-types';
 
 export type UserState = {

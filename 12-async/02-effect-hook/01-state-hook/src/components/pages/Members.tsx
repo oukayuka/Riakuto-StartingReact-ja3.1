@@ -3,18 +3,18 @@ import { Helmet } from 'react-helmet';
 import capitalize from 'lodash/capitalize';
 import { Divider } from 'semantic-ui-react';
 
-import { User } from 'domains/github/models/user';
+import { User } from 'domains/github';
 import Spinner from 'components/molecules/Spinner';
 import HomeButton from 'components/molecules/HomeButton';
 import MemberList from 'components/organisms/MemberList';
 
-export interface MembersProps {
+type Props = {
   orgCode: string;
   users: User[];
   isLoading?: boolean;
-}
+};
 
-const Members: FC<MembersProps> = ({
+const Members: FC<Props> = ({
   orgCode = 'UnknownCompany',
   users = [],
   isLoading = false,

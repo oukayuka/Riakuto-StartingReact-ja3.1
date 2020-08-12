@@ -1,9 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
-import { User } from 'domains/github/models/user';
+import { User, getMembers } from 'domains/github';
 import Members from 'components/pages/Members';
-import getMembers from 'domains/github/services/get-members';
 
 const EnhancedMembers: FC = () => {
   const { orgCode = '' } = useParams();
@@ -24,7 +23,7 @@ const EnhancedMembers: FC = () => {
       }
     };
 
-    load();
+    void load();
   }, [orgCode]);
 
   return <Members {...{ orgCode, users, isLoading }} />;

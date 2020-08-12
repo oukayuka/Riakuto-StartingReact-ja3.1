@@ -17,7 +17,7 @@ const getMembers = async (
   if (!response.ok) {
     throw new Error('Server Error');
   }
-  const members: User[] = (await response.json()) || [];
+  const members = ((await response.json()) || []) as User[];
 
   return members;
 };

@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type  */
+/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types */
 import { all, call, fork, put, takeLatest } from 'redux-saga/effects';
-
-import getMembers from 'domains/github/services/get-members';
-import { userSlice } from 'redux/user';
+import { userSlice } from 'features/user';
+import { User, getMembers } from 'domains/github';
 
 const {
   getMembersStarted,
@@ -16,7 +15,7 @@ function* runGetMembers(
   const { orgCode } = action.payload;
 
   try {
-    const users = yield call(getMembers, orgCode);
+    const users = (yield call(getMembers, orgCode)) as User[];
 
     yield put(
       getMembersSucceeded({
@@ -25,7 +24,9 @@ function* runGetMembers(
       }),
     );
   } catch (error) {
-    yield put(getMembersFailed({ params: { orgCode }, error }));
+    if (error instanceof Error) {
+      yield put(getMembersFailed({ params: { orgCode }, error }));
+    }
   }
 }
 

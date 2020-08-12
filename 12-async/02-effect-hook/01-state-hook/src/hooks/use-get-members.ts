@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import { User } from 'domains/github/models/user';
-import getMembers from 'domains/github/services/get-members';
+import { User, getMembers } from 'domains/github';
 
 type ReturnValue = {
   users: User[];
   isLoading: boolean;
 };
 
-const useMembersGot = (orgCode: string): ReturnValue => {
+const useGetMembers = (orgCode: string): ReturnValue => {
   const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,10 +25,10 @@ const useMembersGot = (orgCode: string): ReturnValue => {
       }
     };
 
-    load();
+    void load();
   }, [orgCode]);
 
   return { users, isLoading };
 };
 
-export default useMembersGot;
+export default useGetMembers;

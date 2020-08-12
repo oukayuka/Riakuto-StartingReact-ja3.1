@@ -6,7 +6,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 
 import App from './App';
-import { userSlice } from './redux/user';
+import { userSlice } from './features/user';
 import userSaga from './sagas/user-saga';
 import * as serviceWorker from './serviceWorker';
 

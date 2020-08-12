@@ -23,7 +23,7 @@ const counterReducer = (
     case CounterActionType.added:
       return {
         ...state,
-        count: state.count + (action.payload || 0),
+        count: state.count + (action.payload ?? 0),
       };
     case CounterActionType.decremented:
       return {

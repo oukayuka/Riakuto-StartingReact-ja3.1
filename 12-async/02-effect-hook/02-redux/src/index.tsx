@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 
+import { userSlice } from 'features/user';
 import App from './App';
-import { userSlice } from './redux/user';
 import * as serviceWorker from './serviceWorker';
 
 import 'semantic-ui-css/semantic.min.css';

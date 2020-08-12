@@ -48,25 +48,18 @@ module.exports = {
       'error',
       'always',
       {
-        exceptAfterSingleLine: true
-      }
+        exceptAfterSingleLine: true,
+      },
     ],
+    // should be rewritten as `['error: { 'allowAsStatement": true }]` in ESLint 7.x
+    // SEE: https://github.com/typescript-eslint/typescript-eslint/issues/1184
+    'no-void': 'off',
     'padding-line-between-statements': [
       'error',
       {
         blankLine: 'always',
         prev: '*',
         next: 'return',
-      },
-    ],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
       },
     ],
     '@typescript-eslint/no-unused-vars': [
@@ -77,6 +70,16 @@ module.exports = {
         'argsIgnorePattern': '_',
         'ignoreRestSiblings': false,
         'varsIgnorePattern': '_',
+      },
+    ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
       },
     ],
     'prefer-arrow/prefer-arrow-functions': [

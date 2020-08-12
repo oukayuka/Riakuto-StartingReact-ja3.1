@@ -11,7 +11,7 @@ const Home: FC<{ orgCodes: string[] }> = ({ orgCodes = [] }) => (
       <h1>会社一覧</h1>
     </header>
     <List celled relaxed>
-      {orgCodes.map(orgCode => (
+      {orgCodes.map((orgCode) => (
         <List.Item className="list-item" key={orgCode}>
           <List.Icon name="users" size="large" verticalAlign="middle" />
           <List.Content>

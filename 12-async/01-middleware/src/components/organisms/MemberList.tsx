@@ -3,21 +3,17 @@ import { Card, Image } from 'semantic-ui-react';
 
 import { User } from 'domains/github/models/user';
 
-export interface MemberListProps {
-  users: User[];
-}
-
-const MemberList: FC<MemberListProps> = ({ users = [] }) => (
+const MemberList: FC<{ users: User[] }> = ({ users = [] }) => (
   <>
     <Card.Group>
-      {users.map(user => (
+      {users.map((user) => (
         <Card
           key={user.id}
           href={`https://github.com/${user.login}`}
           target="_blank"
         >
           <Card.Content>
-            <Image floated="right" size="mini" src={user.avatar_url} />
+            <Image floated="right" size="mini" src={user.avatarUrl} />
             <Card.Header>{user.login}</Card.Header>
             <Card.Meta>GitHub ID: {user.id}</Card.Meta>
           </Card.Content>

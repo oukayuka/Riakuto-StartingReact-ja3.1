@@ -44,6 +44,9 @@ module.exports = {
         exceptAfterSingleLine: true
       }
     ],
+    // should be rewritten as `['error: { 'allowAsStatement": true }]` in ESLint 7.x
+    // SEE: https://github.com/typescript-eslint/typescript-eslint/issues/1184
+    'no-void': 'off',
     'padding-line-between-statements': [
       'error',
       {

@@ -29,8 +29,8 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 2020,
+    project: './tsconfig.eslint.json',
     sourceType: 'module',
-    project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
   plugins: [
@@ -48,15 +48,28 @@ module.exports = {
       'error',
       'always',
       {
-        exceptAfterSingleLine: true
-      }
+        exceptAfterSingleLine: true,
+      },
     ],
+    // should be rewritten as `['error: { 'allowAsStatement": true }]` in ESLint 7.x
+    // SEE: https://github.com/typescript-eslint/typescript-eslint/issues/1184
+    'no-void': 'off',
     'padding-line-between-statements': [
       'error',
       {
         blankLine: 'always',
         prev: '*',
         next: 'return',
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        'vars': 'all',
+        'args': 'after-used',
+        'argsIgnorePattern': '_',
+        'ignoreRestSiblings': false,
+        'varsIgnorePattern': '_',
       },
     ],
     'import/extensions': [
@@ -100,4 +113,11 @@ module.exports = {
       },
     },
   ],
+  'settings': {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+      },
+    },
+  },
 };
