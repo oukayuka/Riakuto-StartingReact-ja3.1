@@ -3,24 +3,14 @@ import ky from 'ky';
 import { Message } from 'semantic-ui-react';
 
 type StatusMessages = { [status: number]: string };
-type Props = {
-  statusMessages?: StatusMessages;
-};
-type State = {
-  hasError: boolean;
-  error: Error | null;
-};
-const DEFAULT_MESSAGES: StatusMessages = {
-  0: 'サーバエラーです',
-};
+type Props = { statusMessages?: StatusMessages };
+type State = { hasError: boolean; error: Error | null };
+const DEFAULT_MESSAGES: StatusMessages = { 0: 'サーバエラーです' };
 
 class ErrorBoundary extends PureComponent<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null, // eslint-disable-line react/no-unused-state
-    };
+    this.state = { hasError: false, error: null };
   }
 
   static getDerivedStateFromError = (error: Error): State => ({

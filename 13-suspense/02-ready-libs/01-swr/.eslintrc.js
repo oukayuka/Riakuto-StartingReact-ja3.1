@@ -2,21 +2,17 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true,
-    'jest/globals': true,
   },
   extends: [
-    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:jest/recommended',
-    'plugin:jest/style',
     'airbnb',
+    'airbnb/hooks',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
     'prettier',
     'prettier/@typescript-eslint',
@@ -32,12 +28,14 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
+    project: './tsconfig.eslint.json',
     sourceType: 'module',
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     '@typescript-eslint',
-    'jest',
+    'import',
     'jsx-a11y',
     'prefer-arrow',
     'prettier',
@@ -46,27 +44,22 @@ module.exports = {
   ],
   root: true,
   rules: {
-    // NOTE: for react-app-env.d.ts
-    // https://github.com/facebook/create-react-app/issues/6560
+    'lines-between-class-members': [
+      'error',
+      'always',
+      {
+        exceptAfterSingleLine: true,
+      },
+    ],
+    // should be rewritten as `['error: { 'allowAsStatement': true }]` in ESLint 7.x
+    // SEE: https://github.com/typescript-eslint/typescript-eslint/issues/1184
+    'no-void': 'off',
     'padding-line-between-statements': [
       'error',
       {
         blankLine: 'always',
         prev: '*',
         next: 'return',
-      },
-    ],
-    'spaced-comment': [
-      'error',
-      'always',
-      {
-        markers: ['/'],
-      },
-    ],
-    '@typescript-eslint/explicit-function-return-type': [
-      'warn',
-      {
-        allowExpressions: true,
       },
     ],
     '@typescript-eslint/no-unused-vars': [
@@ -89,26 +82,11 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          'src/setupTests.ts',
-          'spec/**',
-          'test/**',
-          'tests/**',
-          '**/__tests__/**',
-          '**/*.spec.{js,jsx,ts,tsx}',
-          '**/*.test.{js,jsx,ts,tsx}',
-        ],
-        peerDependencies: false,
-      },
-    ],
     'prefer-arrow/prefer-arrow-functions': [
       'error',
       {
         disallowPrototype: true,
-        singleReturnOnly: true,
+        singleReturnOnly: false,
         classPropertiesAllowed: false,
       },
     ],
@@ -126,20 +104,12 @@ module.exports = {
         explicitSpread: 'ignore',
       },
     ],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
   },
   'overrides': [
     {
       'files': ['*.tsx'],
       'rules': {
         'react/prop-types': 'off',
-      },
-    },
-    {
-      'files': ['*.jsx'],
-      'rules': {
-        '@typescript-eslint/explicit-function-return-type': 'off',
       },
     },
   ],

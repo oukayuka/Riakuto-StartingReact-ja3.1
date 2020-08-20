@@ -1,23 +1,21 @@
-import ky, { Options as KyOptions } from 'ky';
-import { User } from '../models/user';
-
-import { DEFAULT_API_OPTIONS } from './constants';
+import ky, { Options } from 'ky';
+import { DEFAULT_API_OPTIONS } from './config';
+import { isUsers, User } from '../models/user';
 
 const getMembers = async (
   orgCode: string,
-  options?: KyOptions,
+  options?: Options,
 ): Promise<User[]> => {
   const mergedOptions = {
     ...DEFAULT_API_OPTIONS,
     ...options,
   };
-
   const response = await ky.get(`orgs/${orgCode}/members`, mergedOptions);
+  const members = (await response.json()) as unknown[];
 
-  if (!response.ok) {
-    throw new Error('Server Error');
+  if (!isUsers(members)) {
+    throw Error('API type error');
   }
-  const members = ((await response.json()) || []) as User[];
 
   return members;
 };

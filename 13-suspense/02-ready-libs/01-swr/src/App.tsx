@@ -1,17 +1,18 @@
 import React, { FC } from 'react';
-import { Redirect, Route, Switch } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 
 import Home from 'containers/pages/Home';
 import Members from 'containers/pages/Members';
+
 import './App.css';
 
 const App: FC = () => (
   <>
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/:orgCode/members" component={Members} />
-      <Redirect to="/" />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/:orgCode/members" element={<Members />} />
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
   </>
 );
 
