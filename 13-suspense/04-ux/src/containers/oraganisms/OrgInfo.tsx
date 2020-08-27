@@ -7,7 +7,7 @@ import { getOrganization } from 'domains/github';
 const EnhancedOrgInfo: FC<{ orgCode: string }> = ({ orgCode }) => {
   const { data: org = null } = useQuery(
     [orgCode, 'organization'],
-    (code) => getOrganization(code),
+    getOrganization,
     { enabled: orgCode.length >= 2 },
   );
 

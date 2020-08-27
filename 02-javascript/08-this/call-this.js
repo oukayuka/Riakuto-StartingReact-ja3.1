@@ -1,5 +1,6 @@
 const Person = function (name) {
   this.name = name;
+
   return this;
 };
 

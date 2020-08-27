@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  ReactQueryConfigProvider,
-  ReactQueryProviderConfig,
-} from 'react-query';
+import { ReactQueryConfig, ReactQueryConfigProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query-devtools';
 
 import App from './App';
@@ -12,13 +9,14 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
-const queryConfig: ReactQueryProviderConfig = {
+const queryConfig: ReactQueryConfig = {
   shared: {
     suspense: true,
   },
   queries: {
-    staleTime: 60 * 1000,
     retry: 0,
+    staleTime: 60 * 1000,
+    useErrorBoundary: true,
   },
 };
 const root = document.getElementById('root') as HTMLElement;

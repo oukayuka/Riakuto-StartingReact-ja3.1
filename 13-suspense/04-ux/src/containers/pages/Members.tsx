@@ -12,12 +12,8 @@ const EnhancedMembers: FC<{ enablePrefetch?: boolean }> = ({
     const load = async (): Promise<void> => {
       try {
         await Promise.all([
-          queryCache.prefetchQuery([orgCode, 'organization'], (code) =>
-            getOrganization(code),
-          ),
-          queryCache.prefetchQuery([orgCode, 'members'], (code) =>
-            getMembers(code),
-          ),
+          queryCache.prefetchQuery([orgCode, 'organization'], getOrganization),
+          queryCache.prefetchQuery([orgCode, 'members'], getMembers),
         ]);
       } catch (error) {
         console.error(error); // eslint-disable-line no-console

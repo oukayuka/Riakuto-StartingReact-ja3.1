@@ -5,7 +5,7 @@ class Person:
 def greet(this):
   print("Hi, I'm " + this.name)
 
-Person.greet = greet
 minky = Person("Momo")
 greet(minky)
+Person.greet = greet
 minky.greet()
