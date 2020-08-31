@@ -4,8 +4,8 @@ import './Counter.css';
 
 const Counter: FC = () => {
   const [count, setCount] = useState(0);
-  const reset = (): void => setCount(0);
-  const increment = (): void => setCount((c) => c + 1);
+  const reset = () => setCount(0);
+  const increment = () => setCount((c) => c + 1);
 
   return (
     <Card>

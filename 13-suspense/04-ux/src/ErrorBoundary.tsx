@@ -25,7 +25,7 @@ class ErrorBoundary extends PureComponent<Props, State> {
     console.error(error, info); // eslint-disable-line no-console
   };
 
-  render = (): JSX.Element | ReactNode => {
+  render = (): ReactNode => {
     const { children, statusMessages = {} } = this.props;
     const { hasError, error } = this.state;
     const messages = { ...DEFAULT_MESSAGES, ...statusMessages };

@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    es2020: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -19,16 +19,12 @@ module.exports = {
     'prettier/react',
     'prettier/standard',
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    ecmaVersion: 2020,
+    ecmaVersion: 12,
     project: './tsconfig.eslint.json',
     sourceType: 'module',
     tsconfigRootDir: __dirname,
@@ -47,10 +43,10 @@ module.exports = {
       'error',
       'always',
       {
-        exceptAfterSingleLine: true
-      }
+        exceptAfterSingleLine: true,
+      },
     ],
-    // should be rewritten as `['error: { 'allowAsStatement': true }]` in ESLint 7.x
+    // should be rewritten as `['error', { allowAsStatement: true }]` in ESLint 7 or later
     // SEE: https://github.com/typescript-eslint/typescript-eslint/issues/1184
     'no-void': 'off',
     'padding-line-between-statements': [
@@ -84,7 +80,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       'error',
       {
-        "extensions": ['.jsx', '.tsx'],
+        extensions: ['.jsx', '.tsx'],
       },
     ],
     'react/jsx-props-no-spreading': [
@@ -96,7 +92,7 @@ module.exports = {
       },
     ],
   },
-  'overrides': [
+  overrides: [
     {
       'files': ['*.tsx'],
       'rules': {
@@ -104,7 +100,7 @@ module.exports = {
       },
     },
   ],
-  'settings': {
+  settings: {
     'import/resolver': {
       node: {
         paths: ['src'],

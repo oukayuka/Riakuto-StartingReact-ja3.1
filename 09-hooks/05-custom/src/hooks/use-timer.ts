@@ -6,10 +6,10 @@ const useTimer = (limit: number): [number, boolean, () => void] => {
   const primes = useMemo(() => getPrimes(limit), [limit]);
   const timerId = useRef<NodeJS.Timeout>();
   const reset = useCallback(() => setTimeLeft(limit), [limit]);
-  const tick = (): void => setTimeLeft((t) => t - 1);
+  const tick = () => setTimeLeft((t) => t - 1);
 
   useEffect(() => {
-    const clearTimer = (): void => {
+    const clearTimer = () => {
       if (timerId.current) clearInterval(timerId.current);
     };
 
