@@ -7,7 +7,7 @@ import { User } from 'domains/github/models/user';
 import Members from 'components/pages/Members';
 
 const EnhancedMembers: FC = () => {
-  const { orgCode = '' } = useParams();
+  const { orgCode = '' } = useParams<{ orgCode: string }>();
   const dispatch = useDispatch();
   const users = useSelector<UserState, User[]>((state) => state.users);
   const isLoading = useSelector<UserState, boolean>((state) => state.isLoading);

@@ -10,7 +10,7 @@ type Props = {
   increment?: () => void;
 };
 
-const Counter: FC<Props> = ({
+const CounterBoard: FC<Props> = ({
   count = 0,
   add = () => undefined,
   decrement = () => undefined,
@@ -39,4 +39,4 @@ const Counter: FC<Props> = ({
   </Card>
 );
 
-export default Counter;
+export default CounterBoard;

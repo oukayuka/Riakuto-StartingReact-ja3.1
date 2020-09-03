@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { unstable_createRoot as createRoot } from 'react-dom';
 import { ReactQueryConfig, ReactQueryConfigProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query-devtools';
 
@@ -16,12 +16,11 @@ const queryConfig: ReactQueryConfig = {
   queries: {
     retry: 0,
     staleTime: 60 * 1000,
-    useErrorBoundary: true,
   },
 };
 const root = document.getElementById('root') as HTMLElement;
 
-ReactDOM.unstable_createRoot(root).render(
+createRoot(root).render(
   <ReactQueryConfigProvider config={queryConfig}>
     <App />
     {process.env.NODE_ENV === 'development' && (

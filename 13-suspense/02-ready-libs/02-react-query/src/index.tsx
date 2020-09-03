@@ -16,7 +16,7 @@ const queryConfig: ReactQueryConfig = {
   },
   queries: {
     retry: 0,
-    useErrorBoundary: true,
+    // useErrorBoundary: true,
   },
 };
 
