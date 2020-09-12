@@ -9698,17 +9698,17 @@ react-popper@^1.3.7:
     typed-styles "^0.0.7"
     warning "^4.0.2"
 
-react-query-devtools@^2.4.5:
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/react-query-devtools/-/react-query-devtools-2.4.5.tgz#9f33cb1e85327e0b468081b553da86888822af9b"
-  integrity sha512-N6Y/JHy0FZWdcn1l+GGdcjos1LctyBTebJbMb11NJd/R9cL13ATqsICyRXlF07KdzcO0I9w4q3GHW0/h6zsx6Q==
+react-query-devtools@^2.4.7:
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/react-query-devtools/-/react-query-devtools-2.4.7.tgz#afc34d18d3e37be5c73fa143da8db803ae74cc4c"
+  integrity sha512-rjGTtiIvku8wHL2yQiItkFFAeI1bCfPuLrh9V2LzJN+vz7pFA/XDbF0ksBFZnUS/sv0sSNZtmudhrpcGmZDWEg==
   dependencies:
     match-sorter "^4.1.0"
 
-react-query@^2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.14.1.tgz#d4a0a721c6155fc7dc682e036c284243ff48f74e"
-  integrity sha512-3NONArLC0SrYSOmdJMHBGkQBNFo76YjLgN38bpWXz5NIeK0qaVxjwqobfipSX3N7dsHbLGFV9jImkky0DHLfoA==
+react-query@^2.15.4:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.16.1.tgz#ebcb24cf3eb9ac5b406e8f9017736ffdf2e87dab"
+  integrity sha512-VDR1+NpU2V2oHF6PS5ZElWGzHKM2QTGnMKOSFJiN/7vci3/tsOE2ydwFn3E62n8KkY7i1TwCh1xakEylAD8nEQ==
 
 react-router-dom@^6.0.0-beta.0:
   version "6.0.0-beta.0"
