@@ -172,6 +172,30 @@
 
 ![図 3: Googleトレンドでの各フレームワークの検索数比較（2020 年 9 月現在）](./images/05-01-keyword-trends.png)
 
+- 6-2 / p.71
+
+```diff
+  　それから、.prettierrc というファイルを次の内容でプロジェクトルートに作成する」
+
+- {#6-2-1-prettierrc caption=".prettierrc"} { "bracketSpacing": true, "printWidth": 80, "semi":
+- true, "singleQuote": true, "trailingComma": 'all', "useTabs": false, }
++ {
++   "bracketSpacing": true,
++   "printWidth": 80,
++   "semi": true,
++   "singleQuote": true,
++   "trailingComma": 'all',
++   "useTabs": false,
++ }
+```
+
+- 7-1 / p.83 / 注釈 93
+
+```diff
+- https://knockoutjs.com/
++ http://prototypejs.org/
+```
+
 - 8-3 / p.138
 
 ```diff
