@@ -153,6 +153,13 @@
 + ⅴ. 複数の高階関数を合成してひとつの関数にできる
 ```
 
+- 3-3 / p.130
+
+```diff
+- const greeter = (target) => () => console.log(`Hi, ${target}!)`;
++ const greeter = (target) => () => console.log(`Hi, ${target}!`);
+```
+
 - 3-4 / p.136
 
 ```diff
