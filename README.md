@@ -5,24 +5,29 @@
 ### BOOTH
 
 - [くるみ割り書房 - BOOTH](https://oukayuka.booth.pm/)
-    - [Ⅰ. 言語・環境編（電子版）](https://booth.pm/ja/items/2368045)
-    - [Ⅱ. React基礎編（電子版）](https://booth.pm/ja/items/2368019)
-    - [Ⅲ. React応用編（電子版）](https://booth.pm/ja/items/2368045)
+    - [Ⅰ. 言語・環境編（電子版 / 218p / ￥1,200）](https://booth.pm/ja/items/2368045)
+    - [Ⅱ. React基礎編（電子版 / 198p / ￥1,200）](https://booth.pm/ja/items/2368019)
+    - [Ⅲ. React応用編（電子版 / 211p / ￥1,200）](https://booth.pm/ja/items/2367992)
 
-### 技術書典オンラインマーケット
-
-- [くるみ割り書房 | 技術書典](https://techbookfest.org/organization/24430006)
-    - [Ⅰ. 言語・環境編（電子版／電子＋紙セット）](https://techbookfest.org/product/5436045076201472)
-    - [Ⅱ. React基礎編（電子版／電子＋紙セット）](https://booth.pm/ja/items/2368019)
-    - [Ⅲ. React応用編（電子版／電子＋紙セット）](https://booth.pm/ja/items/2368045)
+<a href="https://oukayuka.booth.pm/"><img src="./images/riakuto3-covers.png" /></a>
 
 <br />
 
 ## ■ 書籍の紹介
 
+### 概要
+
 本書『りあクト！ TypeScript で始めるつらくない React 開発』は[技術書典 5](https://techbookfest.org/event/tbf05) にて初版、[技術書典 6](https://techbookfest.org/event/tbf06) にて第 2 版が頒布され、その後の続編を加えるとシリーズ累計で 6,000 部を売り上げた、React の本格的な入門書『りあクト！ TypeScript で始めるつらくない React 開発』の改訂第 3 版です。
 
 各版の差分の概略については [CHANGELOG](./CHANGELOG.md) をご覧ください。
+
+### 無料サンプル
+
+それぞれ 50 ページほど無料でお読みいただけるサンプルを用意しています。ご自由にご覧ください。
+
+- [Ⅰ. 言語・環境編（PDF / 57p）](./samples/riakuto3pt1-sample.pdf)
+- [Ⅱ. React基礎編（PDF / 51p）](./samples/riakuto3pt2-sample.pdf)
+- [Ⅲ. React応用編（PDF / 58p）](./samples/riakuto3pt3-sample.pdf)
 
 <br />
 
