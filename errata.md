@@ -204,6 +204,14 @@
   はすごく重宝するよ。
 ```
 
+- 4-5 / p.182
+
+```diff
+  実際には @babel/preset-typescript234 というプリセット（プラグインを特定のカテゴリー
++ によって
+  まとめたもの）で TypeScript のコードから型情報を除去して
+```
+
 <br />
 
 ### 【Ⅱ. React 基礎編】
@@ -332,6 +340,14 @@
 <br />
 
 ### 【Ⅲ. React 応用編】
+
+- 10-2 / p.17 / 脚注2
+
+```diff
+  「How we improved Gatsby’s accessibility in v2 by switching to @reach/router」
+-  https://www.gatsbyjs.org/blog/2018-010-27-reach-router/
++  https://www.gatsbyjs.com/blog/2018-09-27-reach-router/
+```
 
 - 12-2 / p.119
 
