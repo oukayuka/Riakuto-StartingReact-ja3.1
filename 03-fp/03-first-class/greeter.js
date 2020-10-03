@@ -3,7 +3,7 @@ const greeter = (target) => {
     console.log(`Hi, ${target}!`);
   };
 
-  return sayHello();
+  return sayHello;
 };
 
 const greet = greeter('Jun');
