@@ -17,7 +17,7 @@
 
 ### 概要
 
-本書『りあクト！ TypeScript で始めるつらくない React 開発』は[技術書典 5](https://techbookfest.org/event/tbf05) にて初版、[技術書典 6](https://techbookfest.org/event/tbf06) にて第 2 版が頒布され、その後の続編を加えるとシリーズ累計で 6,000 部を売り上げた、React の本格的な入門書『りあクト！ TypeScript で始めるつらくない React 開発』の改訂第 3 版です。
+本書『りあクト！ TypeScript で始めるつらくない React 開発』は[技術書典 5](https://techbookfest.org/event/tbf05) にて初版、[技術書典 6](https://techbookfest.org/event/tbf06) にて第 2 版が頒布され、その後の続編を加えると同人では異例のシリーズ累計 1 万部を売り上げた、React の本格的な入門書『りあクト！ TypeScript で始めるつらくない React 開発』の改訂第 3 版です。
 
 各版の差分の概略については [CHANGELOG](./CHANGELOG.md) をご覧ください。
 
