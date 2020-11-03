@@ -1,7 +1,7 @@
-<!-- markdownlint-disable MD010 -->
-# 『りあクト！ TypeScript で始めるつらくない React 開発 第 3 版』の正誤表
+<!-- markdownlint-disable MD010 MD029 MD032 -->
+# 『りあクト！ TypeScriptで始めるつらくないReact開発 第3版』の正誤表
 
-最終更新日： 2020 年 10 月 27 日
+最終更新日： 2020 年 11 月 3 日
 
 - 正誤表の内容は随時アップデートされます。
 - 誤りが判明した部分は、電子版については随時修正が反映された新しいバージョンが配信されます。購入先のサイトをご確認ください。
@@ -351,7 +351,21 @@
   でそこに介入して、
 ```
 
-- 8-4 / p.144 / 「4. Error Handlingフェーズ」表内 `getDerivedStateFromError` 行
+- 8-4 / p.143-144 / 表
+- 「2. Updatingフェーズ」
+
+```diff
+- shouldComponentUpdates(nextPprops, nextState)
++ shouldComponentUpdates(nextProps, nextState)
+
+- getSnapShotBeforeUpdate(nextPprops, nextState)
++ getSnapShotBeforeUpdate(nextProps, nextState)
+
+- componentDidUpdate(prevPprops, prevState, snapshot?)
++ componentDidUpdate(prevProps, prevState, snapshot?)
+```
+
+- 「4. Error Handlingフェーズ」`getDerivedStateFromError` 行
 
 ```diff
   子孫コンポーネントで例外が起きたときに呼ばれ、戻り値で新しい
