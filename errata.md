@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD010 MD029 MD032 -->
 # 『りあクト！ TypeScriptで始めるつらくないReact開発 第3版』の正誤表
 
-最終更新日： 2020 年 11 月 3 日
+最終更新日： 2020 年 11 月 7 日
 
 - 正誤表の内容は随時アップデートされます。
 - 誤りが判明した部分は、電子版については随時修正が反映された新しいバージョンが配信されます。購入先のサイトをご確認ください。
@@ -453,7 +453,16 @@
 
 ### 【Ⅲ. React 応用編】
 
-- 10-2 / p.17 / 脚注2
+- 10-2 / p.17
+
+```diff
+  「んー、このあたりの経緯はちょっと入り組んでるんだよね。
+- React Router
++ Reach Router
+  は React Training という会社が提供してるんだけど、
+```
+
+- 脚注2
 
 ```diff
   「How we improved Gatsby’s accessibility in v2 by switching to @reach/router」
