@@ -7,6 +7,5 @@
   "editor.wordWrap": "on",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "npm.packageManager": "yarn",
-  "typescript.tsdk": "./node_modules/typescript/lib"
+  "npm.packageManager": "yarn"
 }

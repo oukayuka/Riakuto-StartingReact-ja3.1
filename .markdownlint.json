@@ -3,7 +3,6 @@
   "commands-show-output": false,
   "fenced-code-language": false,
   "first-line-heading": false,
-  "heading-style": "atx",
   "heading-increment": false,
   "line-length": false,
   "no-bare-urls": false,
