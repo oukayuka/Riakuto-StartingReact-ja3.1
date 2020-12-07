@@ -8,6 +8,7 @@
 - 「Visual Studio Code」の略称表記を「VSCode」から「VS Code」に修正
 - 「Mac OS」と表記していたものを「macOS」に修正
 - 「ビルトインオブジェクト」と表記していたものを「組み込みオブジェクト」に変更
+- 引用している npm trends の各グラフを 2020 年 12 月現在のものにアップデート
 - サンプルコードで採用していた UI キットを [Semantic UI React](https://react.semantic-ui.com/) から [Chakra UI](https://chakra-ui.com/) に変更
 
 ### 第1章&nbsp; こんにちは React

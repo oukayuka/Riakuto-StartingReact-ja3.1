@@ -1,4 +1,4 @@
-let frinedship = null;
+let frinedship;
 
 if (true) {
   const he = 'Kakeru';

@@ -6,5 +6,5 @@ const greeter = (target) => {
   return sayHello;
 };
 
-const greet = greeter('Jun');
+const greet = greeter('Step Jun');
 greet();
