@@ -7,11 +7,13 @@
 
 - 「Visual Studio Code」の略称表記を「VSCode」から「VS Code」に修正
 - 「Mac OS」と表記していたものを「macOS」に修正
+- 「ビルトインオブジェクト」と表記していたものを「組み込みオブジェクト」に変更
 - サンプルコードで採用していた UI キットを [Semantic UI React](https://react.semantic-ui.com/) から [Chakra UI](https://chakra-ui.com/) に変更
 
 ### 第1章&nbsp; こんにちは React
 
 - 従来 Mac のみで説明していた環境作成を Windows についても言及、WSL をベースにした手順を[オンラインドキュメント](../extract/build-win-wnv.md)として追加した
+- プロジェクトパッケージのロックファイルについて、Yarn に加え npm コマンド使用時の `package-lock.json` についても言及
 
 ## 第3版（2020-08-20）
 

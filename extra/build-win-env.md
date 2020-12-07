@@ -148,10 +148,10 @@ sudo apt-get install -y wget ca-certificates
 git clone git@github.com:oukayuka/Riakuto-StartingReact-ja3.1.git
 ```
 
-- WSL 側からコマンドラインでプロジェクトを VS Code で開く。すると初回起動時に WSL 接続に必要なパッケージが自動的にインストールされる
+- WSL 側からプロジェクトを VS Code で開く。すると初回起動時に必要なパッケージが自動的にインストールされ、 WSL 接続のための環境が作られる
 
 ```shell
-cd ./Riakuto-StartingReact-ja3.1.git/01-hello/02-hello-world
+cd ./Riakuto-StartingReact-ja3.1/01-hello/02-hello-world
 code .
 ```
 
@@ -159,7 +159,7 @@ code .
 
 ![Open a Remote Window](./open-remote.png)
 
-- ウィンドウ中央上に WSL 上のプロジェクトを開くためのセレクトボックスが開くので、「Remote-WSL: Open Folder in WSL...」を選択し、先ほどの `Riakuto-StartingReact-ja3.1.git/01-hello/02-hello-world` フォルダーを開く
+- ウィンドウ中央上に WSL 上のプロジェクトを開くための入力ボックスが開くので、「Remote-WSL: Open Folder in WSL...」を選択し、先ほどの `Riakuto-StartingReact-ja3.1.git/01-hello/02-hello-world` フォルダーを開く
 
 ![Open a Remote Window](./remote-wsl.png)
 
@@ -167,6 +167,6 @@ code .
 
 ![Open a Remote Window](./wsl-connected.png)
 
-- VS Code 拡張には WSL 上で動作するために WSL 側にインストールの必要があるものも多い。ローカルにインストール済みで WSL 側にインストールする必要のあるものは「Install in WSL: Ubuntu ⚠️ 」というボタンが表示されるので、それをクリックすればインストールできる
+- VS Code 拡張には WSL 上で動作させるために WSL 側の環境にインストールの必要があるものも多い。ローカルにインストール済みで WSL 側にインストールする必要のあるものは「Install in WSL: Ubuntu️」というボタンが表示されるので、それをクリックすればインストールできる
 
 ![Open a Remote Window](./wsl-extensions.png)
