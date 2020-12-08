@@ -4,20 +4,23 @@ interface Shape {
 }
 
 interface Quadrangle {
-  side: number;
+  sideA: number;
+  sideB?: number;
+  sideC?: number;
+  sideD?: number;
 }
 
 class Rectangle implements Shape, Quadrangle {
   readonly name = 'rectangle';
-  side: number;
+  sideA: number;
   sideB: number;
 
-  constructor(side: number, sideB: number) {
-    this.side = side;
+  constructor(sideA: number, sideB: number) {
+    this.sideA = sideA;
     this.sideB = sideB;
   }
 
-  getArea = (): number => this.side * this.sideB;
+  getArea = (): number => this.sideA * this.sideB;
 }
 
 const rect = new Rectangle(6, 5);
