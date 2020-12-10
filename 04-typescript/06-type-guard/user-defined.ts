@@ -16,6 +16,7 @@ const u2: unknown = JSON.parse('{ "username": "patty", "address": "Maple Town" }
 const u3: unknown = JSON.parse(
   '{ "username": "patty", "address": { "zipcode": "111", "town": "Maple Town" } }',
 );
+
 [u1, u2, u3].forEach((u) => {
   if (isUser(u)) {
     console.log(`${u.username} lives in ${u.address.town}`);

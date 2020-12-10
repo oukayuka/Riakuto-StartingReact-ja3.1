@@ -4,4 +4,4 @@ const merge = <T, U extends T>(obj1: T, obj2: U): T & U => ({
 });
 
 override({ a: 1 }, { a: 24, b: 8 });
-// override({ a: 15 }, { x: 73 });  /* compile error */
+// override({ a: 2 }, { x: 73 });  /* compile error */
