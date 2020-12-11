@@ -1,9 +1,10 @@
 {
   "editor.formatOnSave": false,
+  "editor.lineNumbers": "on",
+  "editor.rulers": [
+    80
+  ],
   "editor.tabSize": 2,
-  "editor.tokenColorCustomizations": {
-    "semanticHighlighting": true
-  },
   "editor.wordWrap": "on",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
