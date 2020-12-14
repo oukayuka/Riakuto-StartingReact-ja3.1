@@ -10,7 +10,6 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
@@ -19,20 +18,22 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2020,
+    ecmaVersion: 12,
     project: './tsconfig.eslint.json',
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
   plugins: [
-    '@typescript-eslint',
-    'import',
-    'jsx-a11y',
     'react',
-    'react-hooks',
+    '@typescript-eslint',
   ],
   root: true,
   rules: {
+    // occur error in `import React from 'react'` with react-scripts 4.0.1
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+    ],
     'lines-between-class-members': [
       'error',
       'always',
@@ -40,9 +41,12 @@ module.exports = {
         exceptAfterSingleLine: true,
       },
     ],
-    // should be rewritten as `['error', { allowAsStatement: true }]` in ESLint 7 or later
-    // SEE: https://github.com/typescript-eslint/typescript-eslint/issues/1184
-    'no-void': 'off',
+    'no-void': [
+      'error',
+      {
+        allowAsStatement: true,
+      },
+    ],
     'padding-line-between-statements': [
       'error',
       {
@@ -85,6 +89,7 @@ module.exports = {
         explicitSpread: 'ignore',
       },
     ],
+    'react/react-in-jsx-scope': 'off',
   },
   overrides: [
     {
