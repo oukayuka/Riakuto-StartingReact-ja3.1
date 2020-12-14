@@ -21,14 +21,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fix": "npm run -s format && npm run -s style:fix && npm run -s lint:fix",
+    "fix": "npm run -s format && npm run -s lint:fix",
     "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx}'",
     "lint": "npm run -s lint:style; npm run -s lint:es",
+    "lint:fix": "npm run -s lint:style:fix && npm run -s lint:es:fix",
     "lint:es": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:es:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:conflict": "eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'",
-    "lint:style": "stylelint 'src/**/*.{css,less,scss}'",
-    "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,scss}'",
+    "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
+    "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'",
     "postinstall": "typesync"
   },
   "eslintConfig": {

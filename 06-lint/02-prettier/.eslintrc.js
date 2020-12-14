@@ -27,8 +27,11 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   plugins: [
-    'react',
     '@typescript-eslint',
+    'import',
+    'jsx-a11y',
+    'react',
+    'react-hooks',
   ],
   root: true,
   rules: {
