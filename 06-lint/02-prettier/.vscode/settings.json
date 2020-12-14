@@ -26,7 +26,6 @@
   "editor.rulers": [
     80
   ],
-  "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "eslint.packageManager": "yarn",
   "files.insertFinalNewline": true,
