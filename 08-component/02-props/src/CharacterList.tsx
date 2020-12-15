@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Header, Icon, Item } from 'semantic-ui-react';
 
 export type Character = {
