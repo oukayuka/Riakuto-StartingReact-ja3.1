@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import { Component, ReactElement } from 'react';
 import CharacterList, { Character } from './CharacterList';
 import './App.css';
 

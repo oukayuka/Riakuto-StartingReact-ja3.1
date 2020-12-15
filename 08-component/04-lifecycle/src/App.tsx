@@ -1,12 +1,9 @@
-import React, { Component, ReactElement } from 'react';
+import { Component, ReactElement } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
 import './App.css';
 
 const LIMIT = 60;
-
-type State = {
-  timeLeft: number;
-};
+type State = { timeLeft: number };
 
 class App extends Component<unknown, State> {
   timerId: NodeJS.Timer | null = null;
@@ -15,14 +12,6 @@ class App extends Component<unknown, State> {
     super(props);
     this.state = { timeLeft: LIMIT };
   }
-
-  reset = (): void => {
-    this.setState({ timeLeft: LIMIT });
-  };
-
-  tick = (): void => {
-    this.setState((prevState) => ({ timeLeft: prevState.timeLeft - 1 }));
-  };
 
   componentDidMount = (): void => {
     this.timerId = setInterval(this.tick, 1000);
@@ -35,6 +24,21 @@ class App extends Component<unknown, State> {
 
   componentWillUnmount = (): void => {
     if (this.timerId) clearInterval(this.timerId);
+  };
+
+  tick = (): void => {
+    this.setState((prevState) => ({ timeLeft: prevState.timeLeft - 1 }));
+  };
+
+  reset = (): void => {
+    const { timeLeft } = this.state;
+
+    if (timeLeft > 0 && this.timerId) {
+      clearInterval(this.timerId);
+      this.timerId = setInterval(this.tick, 1000);
+    }
+
+    this.setState({ timeLeft: LIMIT });
   };
 
   render = (): ReactElement => {

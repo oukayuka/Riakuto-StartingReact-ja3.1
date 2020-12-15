@@ -1,5 +1,5 @@
 /* eslint-disable react/prefer-stateless-function */
-import React, { Component, ReactElement } from 'react';
+import { Component, ReactElement } from 'react';
 import { Header, Icon, Item } from 'semantic-ui-react';
 
 export type Character = {
