@@ -26,20 +26,10 @@ class App extends Component<unknown, State> {
     if (this.timerId) clearInterval(this.timerId);
   };
 
-  tick = (): void => {
+  tick = (): void =>
     this.setState((prevState) => ({ timeLeft: prevState.timeLeft - 1 }));
-  };
 
-  reset = (): void => {
-    const { timeLeft } = this.state;
-
-    if (timeLeft > 0 && this.timerId) {
-      clearInterval(this.timerId);
-      this.timerId = setInterval(this.tick, 1000);
-    }
-
-    this.setState({ timeLeft: LIMIT });
-  };
+  reset = (): void => this.setState({ timeLeft: LIMIT });
 
   render = (): ReactElement => {
     const { timeLeft } = this.state;
