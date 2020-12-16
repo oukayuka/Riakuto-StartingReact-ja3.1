@@ -1,11 +1,11 @@
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
 import './Timer.css';
 
 const Timer: FC<{ limit: number }> = ({ limit }) => {
   const [timeLeft, setTimeLeft] = useState(limit);
-  const reset = (): void => setTimeLeft(limit);
   const tick = (): void => setTimeLeft((t) => t - 1);
+  const reset = (): void => setTimeLeft(limit);
 
   useEffect(() => {
     const timerId = setInterval(tick, 1000);
