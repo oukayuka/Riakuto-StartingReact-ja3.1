@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import useTimer from 'hooks/use-timer';
+import { FC } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
+import useTimer from 'hooks/use-timer';
 import 'components/Timer.css';
 
 const Timer: FC<{ limit: number }> = ({ limit }) => {

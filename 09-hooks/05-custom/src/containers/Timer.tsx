@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import useTimer from 'hooks/use-timer';
 import Timer from 'components/Timer';
 
