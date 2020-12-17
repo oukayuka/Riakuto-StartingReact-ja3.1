@@ -4,8 +4,8 @@ import './Timer.css';
 
 const Timer: FC<{ limit: number }> = ({ limit }) => {
   const [timeLeft, setTimeLeft] = useState(limit);
-  const tick = (): void => setTimeLeft((t) => t - 1);
   const reset = (): void => setTimeLeft(limit);
+  const tick = (): void => setTimeLeft((t) => t - 1);
 
   useEffect(() => {
     const timerId = setInterval(tick, 1000);

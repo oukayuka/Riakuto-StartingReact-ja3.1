@@ -1,4 +1,4 @@
-import React, { FC, SyntheticEvent, useEffect, useRef } from 'react';
+import { FC, SyntheticEvent, useEffect, useRef } from 'react';
 
 const TextInput: FC = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
