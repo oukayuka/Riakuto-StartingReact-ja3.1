@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'semantic-ui-react';
 

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Icon, Item } from 'semantic-ui-react';
 
 import Spinner from 'components/molecules/Spinner';

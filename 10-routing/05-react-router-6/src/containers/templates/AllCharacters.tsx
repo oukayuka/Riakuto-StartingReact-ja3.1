@@ -1,13 +1,13 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useLocation } from 'react-router-dom';
-import { parse } from 'query-string';
 
 import AllCharacters from 'components/templates/AllCharacters';
 import { charactersData } from 'data/characters';
 
 const EnhancedAllCharacters: FC = () => {
   const { search } = useLocation();
-  const isLoading = !!parse(search)?.loading;
+  const queryParams = new URLSearchParams(search);
+  const isLoading = !!queryParams.get('loading');
   const characters = Object.values(charactersData)
     .map((v) => v.players)
     .flat()
