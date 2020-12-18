@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Button, Icon } from 'semantic-ui-react';
 
 const HomeButton: FC<{ redirectToHome?: () => void }> = ({

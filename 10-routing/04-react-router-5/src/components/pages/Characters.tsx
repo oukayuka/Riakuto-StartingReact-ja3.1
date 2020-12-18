@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Redirect, Route, Switch, RouteComponentProps } from 'react-router';
 import { Divider } from 'semantic-ui-react';
 

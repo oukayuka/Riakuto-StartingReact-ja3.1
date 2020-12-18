@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router';
 
 import Home from 'components/pages/Home';

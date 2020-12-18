@@ -10,9 +10,7 @@ type SchoolPlayers = {
   players: Character[];
 };
 
-export type CharactersData = {
-  [schoolCode: string]: SchoolPlayers;
-};
+export type CharactersData = { [schoolCode: string]: SchoolPlayers };
 
 export const charactersData: CharactersData = {
   shohoku: {
