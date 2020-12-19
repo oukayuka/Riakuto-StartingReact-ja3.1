@@ -5,10 +5,7 @@ import { add, decrement, increment } from 'actions';
 import { CounterState } from 'reducer';
 import Counter from 'components/organisms/CounterBoard';
 
-type StateProps = {
-  count: number;
-};
-
+type StateProps = { count: number };
 type DispatchProps = {
   add: (amount: number) => void;
   decrement: () => void;

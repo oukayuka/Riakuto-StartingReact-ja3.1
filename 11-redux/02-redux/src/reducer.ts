@@ -1,10 +1,7 @@
 import { Reducer } from 'redux';
 import { CounterAction, CounterActionType as Type } from 'actions';
 
-export type CounterState = {
-  count: number;
-};
-
+export type CounterState = { count: number };
 export const initialState: CounterState = { count: 0 };
 
 export const counterReducer: Reducer<CounterState, CounterAction> = (

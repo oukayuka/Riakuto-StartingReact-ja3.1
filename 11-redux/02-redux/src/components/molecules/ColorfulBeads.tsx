@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Container, Label, SemanticCOLORS } from 'semantic-ui-react';
 
 import './ColorfulBeads.css';
