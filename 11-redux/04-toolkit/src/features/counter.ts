@@ -1,8 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type CounterState = {
-  count: number;
-};
+export type CounterState = { count: number };
 const initialState: CounterState = { count: 0 };
 
 export const counterSlice = createSlice({

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import ColorfulBeads from 'containers/molecules/ColorfulBeads';
 import CounterBoard from 'containers/organisms/CounterBoard';
