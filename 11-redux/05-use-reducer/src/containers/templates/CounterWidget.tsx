@@ -1,4 +1,4 @@
-import React, { FC, useReducer } from 'react';
+import { FC, useReducer } from 'react';
 import CounterWidget from 'components/templates/CounterWidget';
 
 const CounterActionType = {

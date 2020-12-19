@@ -1,4 +1,4 @@
-import React, { FC, useReducer } from 'react';
+import { FC, useReducer } from 'react';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import CounterWidget from 'components/templates/CounterWidget';
 
