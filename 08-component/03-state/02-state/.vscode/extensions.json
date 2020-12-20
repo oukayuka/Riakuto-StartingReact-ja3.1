@@ -12,7 +12,8 @@
     "oderwat.indent-rainbow",
     "stylelint.vscode-stylelint",
     "VisualStudioExptTeam.vscodeintellicode",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "wix.vscode-import-cost"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []
