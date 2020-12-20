@@ -36,6 +36,10 @@
 - 「6-1. ESLint」節の内容を ESLint 7 に対応したものに変更
 - 「6-2. Prettier」節「ESLint のプラグインとして Prettier をインストール」を「Prettier の環境を作る」に変更。Prettier 公式が eslint-plugin-prettier を非推奨としたため、Prettier  を ESLint のプラグインではなく直接実行する形での環境構築に内容を変更
 
+### 第12章&nbsp; React は非同期処理とどう戦ってきたか
+
+- Recoil を使ったサンプルコードを収録
+
 ## 第3版（2020-08-20）
 
 ### 第1章&nbsp; こんにちは React
