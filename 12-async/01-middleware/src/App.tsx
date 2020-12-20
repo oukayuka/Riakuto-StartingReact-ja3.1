@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 
 import Home from 'containers/pages/Home';

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Dimmer, Loader, Segment } from 'semantic-ui-react';
 
 import './Spinner.css';

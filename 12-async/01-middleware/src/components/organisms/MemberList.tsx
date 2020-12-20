@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Card, Image } from 'semantic-ui-react';
 
 import { User } from 'domains/github/models/user';
