@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useParams } from 'react-router';
 
 import usemembersGotten from 'hooks/use-get-members';

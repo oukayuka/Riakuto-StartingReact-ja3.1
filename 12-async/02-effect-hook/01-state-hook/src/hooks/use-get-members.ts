@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { User, getMembers } from 'domains/github';
 
 type ReturnValue = {
