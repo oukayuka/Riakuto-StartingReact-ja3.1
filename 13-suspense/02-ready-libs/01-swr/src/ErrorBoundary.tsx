@@ -1,4 +1,4 @@
-import React, { ErrorInfo, PureComponent, ReactNode } from 'react';
+import { ErrorInfo, PureComponent, ReactNode } from 'react';
 import ky from 'ky';
 import { Message } from 'semantic-ui-react';
 

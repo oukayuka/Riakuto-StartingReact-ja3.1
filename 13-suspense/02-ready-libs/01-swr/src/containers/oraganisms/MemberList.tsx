@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import useSWR from 'swr';
 
 import MemberList from 'components/organisms/MemberList';

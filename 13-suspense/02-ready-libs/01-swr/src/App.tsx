@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 
 import Home from 'containers/pages/Home';

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Loader, SemanticSIZES } from 'semantic-ui-react';
 
 import './Spinner.css';

@@ -1,17 +1,16 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { ConfigInterface, SWRConfig } from 'swr';
+import { SWRConfig } from 'swr';
 
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import reportWebVitals from './reportWebVitals';
 
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
-const swrConfig: ConfigInterface = {
+const swrConfig = {
   suspense: true,
-  shouldRetryOnError: false,
+  errorRetryCount: 3,
 };
 
 ReactDOM.render(
@@ -23,4 +22,4 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement,
 );
 
-serviceWorker.unregister();
+reportWebVitals();

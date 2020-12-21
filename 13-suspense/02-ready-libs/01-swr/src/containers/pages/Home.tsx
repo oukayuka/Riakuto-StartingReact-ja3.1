@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import Home from 'components/pages/Home';
 import orgCodes from 'data/org-codes';
