@@ -5,7 +5,7 @@ import camelcaseKeys from 'camelcase-keys';
 export const DEFAULT_API_OPTIONS: Options = {
   prefixUrl: 'https://api.github.com',
   timeout: 7000,
-  retry: 2,
+  retry: 0,
   hooks: {
     afterResponse: [
       async (

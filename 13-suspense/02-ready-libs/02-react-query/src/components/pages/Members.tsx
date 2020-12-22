@@ -1,4 +1,4 @@
-import React, { FC, Suspense } from 'react';
+import { FC, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import capitalize from 'lodash/capitalize';
 import { Divider } from 'semantic-ui-react';
