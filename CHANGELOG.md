@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD024 -->
 # 各版における内容の変更
 
-## 第3.1版（2020-12-24）
+## 第3.1版（2020-12-26）
 
 ### 全体
 
@@ -10,6 +10,7 @@
     - **Create React App**　3.4.3 → 4.0.1
     - **TypeScript**　4.0.2 → 4.1.3
     - **ESLint**　6.8.2 → 7.14.0
+    - **React Query**　2.15.4 → 3.4.0
 - 「Visual Studio Code」の略称表記を「VSCode」から「VS Code」に修正
 - 「Mac OS」と表記していたものを「macOS」に修正
 - 「ビルトインオブジェクト」と表記していたものを「組み込みオブジェクト」に変更
@@ -39,6 +40,12 @@
 ### 第12章&nbsp; React は非同期処理とどう戦ってきたか
 
 - Recoil を使ったサンプルコードを収録
+
+### 第13章&nbsp; データ取得の次世代標準 Suspense
+
+- React Query に関する説明をバージョン 3 系にアップデート
+- 「13-4. Suspense と Concurrent モードが革新する UX」節にて、`useTransition` および `useDeferredValue` の設定オプションから `timeoutMs` が削除されたため、説明もそれに合わせて変更
+- 「13-4. Suspense と Concurrent モードが革新する UX」節「Concurrent モードで先進的 UI を実現する」項にて、error boundary のリセットに React Query の `useQueryErrorResetBoundary` を使ったサンプルを追加
 
 ## 第3版（2020-08-20）
 

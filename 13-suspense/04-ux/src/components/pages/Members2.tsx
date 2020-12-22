@@ -3,14 +3,14 @@ import {
   FormEvent,
   Suspense,
   unstable_SuspenseList as SuspenseList,
-  useRef,
   useState,
   unstable_useTransition as useTransition,
 } from 'react';
-import { Button, Divider, Input, Menu } from 'semantic-ui-react';
+import { useQueryErrorResetBoundary } from 'react-query';
+import { ErrorBoundary } from 'react-error-boundary';
+import { Button, Divider, Input, Menu, Message } from 'semantic-ui-react';
 import capitalize from 'lodash/capitalize';
 
-import ErrorBoundary from 'ErrorBoundary';
 import Spinner from 'components/molecules/Spinner';
 import OrgInfo from 'containers/oraganisms/OrgInfo';
 import MemberList from 'containers/oraganisms/MemberList';
@@ -25,7 +25,7 @@ const Members: FC<Props> = ({ orgCodeList, prefetch = () => undefined }) => {
   const [orgCode, setOrgCode] = useState('');
   const [input, setInput] = useState('');
   const [startTransition, isPending] = useTransition();
-  const ebKey = useRef(0);
+  const { reset } = useQueryErrorResetBoundary();
 
   const menuItems = orgCodeList.map((code) => ({
     key: code,
@@ -68,13 +68,17 @@ const Members: FC<Props> = ({ orgCodeList, prefetch = () => undefined }) => {
       <Divider />
       <div className={isPending ? 'loading' : ''}>
         <ErrorBoundary
-          statusMessages={{
-            404: `‘${orgCode}’ というコードの組織は見つかりません`,
-          }}
-          onError={() => {
-            ebKey.current += 1;
-          }}
-          key={ebKey.current}
+          fallbackRender={({ resetErrorBoundary }) => (
+            <>
+              <Message warning>
+                {orgCode} というコードの組織は見つかりません
+              </Message>
+              <Button color="olive" onClick={() => resetErrorBoundary()}>
+                エラーをリセット
+              </Button>
+            </>
+          )}
+          onReset={() => reset()}
         >
           <SuspenseList revealOrder="forwards">
             <Suspense fallback={<Spinner size="small" />}>

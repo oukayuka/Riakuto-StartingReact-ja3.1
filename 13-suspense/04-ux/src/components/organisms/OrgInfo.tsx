@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Icon, Item, Label } from 'semantic-ui-react';
 
 import { Organization } from 'domains/github';

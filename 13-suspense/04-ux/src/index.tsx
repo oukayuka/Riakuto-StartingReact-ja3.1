@@ -1,32 +1,33 @@
-import React from 'react';
 import { unstable_createRoot as createRoot } from 'react-dom';
-import { ReactQueryConfig, ReactQueryConfigProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query-devtools';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import reportWebVitals from './reportWebVitals';
 
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
-const queryConfig: ReactQueryConfig = {
-  shared: {
-    suspense: true,
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 0,
+      suspense: true,
+    },
+    mutations: {
+      retry: 0,
+    },
   },
-  queries: {
-    retry: 0,
-    staleTime: 60 * 1000,
-  },
-};
+});
 const root = document.getElementById('root') as HTMLElement;
 
 createRoot(root).render(
-  <ReactQueryConfigProvider config={queryConfig}>
+  <QueryClientProvider client={queryClient}>
     <App />
     {process.env.NODE_ENV === 'development' && (
       <ReactQueryDevtools initialIsOpen={false} />
     )}
-  </ReactQueryConfigProvider>,
+  </QueryClientProvider>,
 );
 
-serviceWorker.unregister();
+reportWebVitals();

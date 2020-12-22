@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { queryCache } from 'react-query';
+import { FC } from 'react';
+import { useQueryClient } from 'react-query';
 
 import orgCodeList from 'data/org-code-list';
 import { getOrganization, getMembers } from 'domains/github';
@@ -8,12 +8,17 @@ import Members from 'components/pages/Members';
 const EnhancedMembers: FC<{ enablePrefetch?: boolean }> = ({
   enablePrefetch = false,
 }) => {
+  const queryClient = useQueryClient();
   const prefetch = (orgCode: string): void => {
     const load = async (): Promise<void> => {
       try {
         await Promise.all([
-          queryCache.prefetchQuery([orgCode, 'organization'], getOrganization),
-          queryCache.prefetchQuery([orgCode, 'members'], getMembers),
+          queryClient.prefetchQuery([orgCode, 'organization'], () =>
+            getOrganization(orgCode),
+          ),
+          queryClient.prefetchQuery([orgCode, 'members'], () =>
+            getMembers(orgCode),
+          ),
         ]);
       } catch (error) {
         console.error(error); // eslint-disable-line no-console
