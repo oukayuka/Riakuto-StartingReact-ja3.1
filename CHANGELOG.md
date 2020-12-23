@@ -10,7 +10,7 @@
     - **Create React App**　3.4.3 → 4.0.1
     - **TypeScript**　4.0.2 → 4.1.3
     - **ESLint**　6.8.2 → 7.14.0
-    - **React Query**　2.15.4 → 3.4.0
+    - **React Query**　2.15.4 → 3.5.0
 - 「Visual Studio Code」の略称表記を「VSCode」から「VS Code」に修正
 - 「Mac OS」と表記していたものを「macOS」に修正
 - 「ビルトインオブジェクト」と表記していたものを「組み込みオブジェクト」に変更
