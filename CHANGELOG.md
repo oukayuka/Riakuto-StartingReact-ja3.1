@@ -10,7 +10,7 @@
     - **Create React App**　3.4.3 → 4.0.1
     - **TypeScript**　4.0.2 → 4.1.3
     - **ESLint**　6.8.2 → 7.14.0
-    - **React Query**　2.15.4 → 3.5.0
+    - **React Query**　2.15.4 → 3.5.4
 - 「Visual Studio Code」の略称表記を「VSCode」から「VS Code」に修正
 - 「Mac OS」と表記していたものを「macOS」に修正
 - 「ビルトインオブジェクト」と表記していたものを「組み込みオブジェクト」に変更
@@ -18,24 +18,24 @@
 
 ### 第1章&nbsp; こんにちは React
 
-- 「1-1. 基本環境の構築」節の「Node.js をインストールする」項にて、従来 Mac のみで説明していた環境作成を Windows についても言及、WSL をベースにした手順を[オンラインドキュメント](../extract/build-win-wnv.md)として追加した
+- 「1-1. 基本環境の構築」節の「Node.js をインストールする」項にて、従来 Mac のみで説明していた環境作成を Windows についても言及、WSL をベースにした手順を[オンラインドキュメント](./extra/build-win-env.md)として追加した
 - 「1-3. アプリを管理するためのコマンドやスクリプト」節「Yarn コマンド」項にて、プロジェクトパッケージのロックファイルについて、npm コマンド使用時の `package-lock.json` についても言及
 
 ### 第4章&nbsp; TypeScript で型を強める
 
 - 「ユニオン型」を「共用体型」に、「インターセクション型」を「交差型」に呼び方を変更
 - 「4-5. さらに高度な型表現」の「型表現に使われる演算子」項にて、配列の要素から型を作成する書き方の説明を追加
-- 「4-5. さらに高度な型表現」節に新しく「条件付き型とテンプレートリテラル型」項を追加
+- 「4-5. さらに高度な型表現」節に新しく「**条件付き型とテンプレートリテラル型**」項を追加
 - 「4-5. さらに高度な型表現」節の「組み込みユーティリティ型」項にて、`Record` 型および文字列リテラルの各ユーティリティ型についての説明を追加
 
 ### 第5章&nbsp; JSX で UI を表現する
 
-- [新しい JSX 変換形式](https://ja.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)についての説明を随所に追加
+- [**新しい JSX 変換形式**](https://ja.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) についての説明を随所に追加
 
 ### 第6章&nbsp; Linter と フォーマッタでコード美人に
 
-- 「6-1. ESLint」節の内容を ESLint 7 に対応したものに変更
-- 「6-2. Prettier」節「ESLint のプラグインとして Prettier をインストール」を「Prettier の環境を作る」に変更。Prettier 公式が eslint-plugin-prettier を非推奨としたため、Prettier  を ESLint のプラグインではなく直接実行する形での環境構築に内容を変更
+- 「6-1. ESLint」節の内容を ESLint 7 に対応したものにアップデート
+- 「6-2. Prettier」節「ESLint のプラグインとして Prettier をインストール」を「Prettier の環境を作る」に変更。[Prettier 公式が eslint-plugin-prettier を非推奨とした](https://prettier.io/docs/en/integrating-with-linters.html#notes)ため、**Prettier  を ESLint のプラグインではなく直接実行する形式**での環境構築に内容を変更
 
 ### 第12章&nbsp; React は非同期処理とどう戦ってきたか
 
@@ -43,7 +43,7 @@
 
 ### 第13章&nbsp; データ取得の次世代標準 Suspense
 
-- React Query に関する説明をバージョン 3 系にアップデート
+- React Query に関する説明をバージョン 3.2 以降のものにアップデート
 - 「13-4. Suspense と Concurrent モードが革新する UX」節にて、`useTransition` および `useDeferredValue` の設定オプションから `timeoutMs` が削除されたため、説明もそれに合わせて変更
 - 「13-4. Suspense と Concurrent モードが革新する UX」節「Concurrent モードで先進的 UI を実現する」項にて、error boundary のリセットに React Query の `useQueryErrorResetBoundary` を使ったサンプルを追加
 
