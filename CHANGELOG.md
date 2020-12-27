@@ -25,7 +25,7 @@
 - 「1-1. 基本環境の構築」節の「Node.js をインストールする」項にて、従来 Mac のみで説明していた環境作成について Windows でのケースも言及。**WSL をベースにした Windows での環境手順**を[オンラインドキュメント](./extra/build-win-env.md)として追加した
 - 「1-3. アプリを管理するためのコマンドやスクリプト」節「Yarn コマンド」項にて、プロジェクトパッケージのロックファイルについて、npm コマンド使用時の `package-lock.json` についても言及
 
-### 第4章&nbsp; TypeScript で型を強める
+### 第4章&nbsp; TypeScript で型をご安全に
 
 - 「4-5. さらに高度な型表現」の「型表現に使われる演算子」項にて、配列の要素から型を作成する書き方の説明を追加
 - 「4-5. さらに高度な型表現」節に新しく「**条件付き型とテンプレートリテラル型**」項を追加
@@ -33,12 +33,17 @@
 
 ### 第5章&nbsp; JSX で UI を表現する
 
-- [**新しい JSX 変換形式**](https://ja.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) についての説明を随所に追加
+- [**新しい JSX 変換形式**](https://ja.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) についての説明を随所に追加。以降の章のサンプルコードはすべてこの変換形式を用いた書き方に変更
 
 ### 第6章&nbsp; Linter と フォーマッタでコード美人に
 
-- 「6-1. ESLint」節の内容を ESLint 7 に対応したものにアップデート
-- 「6-2. Prettier」節「ESLint のプラグインとして Prettier をインストール」を「Prettier の環境を作る」に変更。[Prettier 公式が eslint-plugin-prettier を非推奨とした](https://prettier.io/docs/en/integrating-with-linters.html#notes)ため、**Prettier  を ESLint のプラグインではなく直接実行する形式**での環境構築に内容を変更
+- 「6-1. ESLint」節の内容を ESLint 7 系に対応したものにアップデート
+- 「6-2. Prettier」節「ESLint のプラグインとして Prettier をインストール」項を「Prettier の環境を作る」に改名。[Prettier 公式が eslint-plugin-prettier を非推奨とした](https://prettier.io/docs/en/integrating-with-linters.html#notes)ため、**Prettier  を ESLint のプラグインではなく直接実行する形式**での環境構築に内容を変更
+- ESLint のキャッシュファイル等が Git リポジトリに登録されてしまうことを防ぐため、以降のサンプルコードの `.gitignore` ファイルを [gibo](https://github.com/simonwhitaker/gibo) を使って生成したものにリプレース
+
+### 第10章&nbsp; React におけるルーティング
+
+- 「10-4. React Router をアプリケーションで使う」と「10-5. React Router バージョン 5 から 6 への移行」節のサンプルコードにおける URL のクエリパラメータを [query-string](https://github.com/sindresorhus/query-string) と optional chaining を用いて抽出する手法は [@typescript-eslint/no-unsafe-call](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md) および [@typescript-eslint/no-unsafe-member-access](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md) のルールに抵触するようになったため、JavaScript 標準の [URLSearchParams](https://developer.mozilla.org/ja/docs/Web/API/URLSearchParams) オブジェクトを使った手法に変更
 
 ### 第12章&nbsp; React は非同期処理とどう戦ってきたか
 
@@ -79,7 +84,7 @@
 - 旧「3-6. ジェネレータ」の節を削除、簡略化した説明を第11章の「自走式重対空砲 redux-saga」にあらためて記述
 - 2章から内容を移動した「3-4. JavaScript での非同期処理」にて、説明とサンプルコードを全て刷新。`Promise` オブジェクトの作成法から始まり、通信ライブラリが返す `Promise` オブジェクトを扱う実践的な内容に
 
-### 第4章&nbsp; TypeScript で型を強める
+### 第4章&nbsp; TypeScript で型をご安全に
 
 - 章題を「型のある TypeScript は開発者の味方」から変更し、内容を全面的に再構成。ボリュームも従来の3倍以上に
 - 旧「4-3. 配列とオブジェクト」の内容は「4-4. 型の名前と型合成」に吸収
