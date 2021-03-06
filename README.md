@@ -1,13 +1,14 @@
-# 『りあクト！ TypeScript で始めるつらくない React 開発 第3.1版』サポートページ
+# 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第3.1版』サポートページ
 
-このリポジトリは、『りあクト！ TypeScript で始めるつらくない React 開発 第3.1版』（2020 年 12 月 25 日刊行）のサンプルコードおよび正誤表を提供するものです。なお、本書は以下のサイトにて販売中です。
+このリポジトリは、『りあクト！ TypeScript で始めるつらくない React 開発 第3.1版』（2020 年 12 月 26 日刊行）のサンプルコードおよび正誤表を提供するものです。なお、本書は以下のショップにて販売中です。
 
-### BOOTH
+### [BOOTH](https://oukayuka.booth.pm/)
 
-- [くるみ割り書房 - BOOTH](https://oukayuka.booth.pm/)
-    - [Ⅰ. 言語・環境編（電子版 / 226p / ￥1,200）](https://booth.pm/ja/items/2368045)
-    - [Ⅱ. React基礎編（電子版 / 203p / ￥1,200）](https://booth.pm/ja/items/2368019)
-    - [Ⅲ. React応用編（電子版 / 215p / ￥1,200）](https://booth.pm/ja/items/2367992)
+- [Ⅰ. 言語・環境編（B5版・226ページ）](https://booth.pm/ja/items/2368045)
+- [Ⅱ. React基礎編（B5版・203ページ）](https://booth.pm/ja/items/2368019)
+- [Ⅲ. React応用編（B5版・216ページ）](https://booth.pm/ja/items/2367992)
+
+各部とも電子版 ￥1,200、紙＋電子セット ￥1,380（送料別）
 
 <a href="https://oukayuka.booth.pm/"><img src="./images/riakuto31-covers.png" /></a>
 
@@ -17,7 +18,7 @@
 
 ### 概要
 
-本書『りあクト！ TypeScript で始めるつらくない React 開発』は[技術書典 5](https://techbookfest.org/event/tbf05) にて初版、[技術書典 6](https://techbookfest.org/event/tbf06) にて第 2 版が頒布され、その後の続編を加えると同人では異例のシリーズ累計 12,000 部以上を売り上げている、React の本格的な入門書『りあクト！ TypeScript で始めるつらくない React 開発』の改訂第 3.1 版です。
+本書『りあクト！ TypeScript で始めるつらくない React 開発』は 2018 年 10 月に開催された [技術書典 5](https://techbookfest.org/event/tbf05) にて初版、翌年の [技術書典 6](https://techbookfest.org/event/tbf06) にて第 2 版が頒布され、その後の続編を加えると同人では異例のシリーズ累計 1.4 万部以上を売り上げている、React の本格的な入門書『りあクト！ TypeScript で始めるつらくない React 開発』の改訂第 3.1 版です。
 
 各版の差分の概略については [CHANGELOG](./CHANGELOG.md) をご覧ください。
 
@@ -25,16 +26,20 @@
 
 それぞれ 50 ページほど無料でお読みいただけるサンプルを用意しています。ご自由にご覧ください。
 
-- [Ⅰ. 言語・環境編（PDF / 58p）](./samples/riakuto31pt1-sample.pdf)
-- [Ⅱ. React基礎編（PDF / 50p）](./samples/riakuto31pt2-sample.pdf)
-- [Ⅲ. React応用編（PDF / 56p）](./samples/riakuto31pt3-sample.pdf)
+- [Ⅰ. 言語・環境編（PDF / 58ページ）](./samples/riakuto31pt1-sample.pdf)
+- [Ⅱ. React基礎編（PDF / 50ページ）](./samples/riakuto31pt2-sample.pdf)
+- [Ⅲ. React応用編（PDF / 56ページ）](./samples/riakuto31pt3-sample.pdf)
+
+### 電子版の閲覧について
+
+本書の電子版は **PDF** と **EPUB（リフロー型）** の 2 つのフォーマットで提供されています。閲覧の方法については[「よりよい環境で電子版をお読みいただくために」](./ebook-tips.md)をご覧ください。
 
 <br />
 
-## ■ 正誤表
+## ■ 正誤表・更新情報
 
-電子版は随時アップデートをかけていますので、購入サイトから最新版をダウンロードしてください。（最終更新日：2020 年 12 月 25 日）  
-紙の本の正誤表につきましては、[こちらのページ](./errata.md)をご覧ください。
+電子版は随時アップデートをかけていますので、購入サイトから最新版をダウンロードしてください。（最終更新日：2021 年 3 月 6 日）  
+紙の本の正誤表・更新情報につきましては、[こちらのページ](./errata.md)をご覧ください。
 
 <br />
 
