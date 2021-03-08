@@ -1,0 +1,252 @@
+@charset 'utf-8';
+
+/* Stylesheet for Riakuto with MOBI ver 1.0.0 2020-03-03 */
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Helvetica Neue Regular'), local('HelveticaNeue-Regular');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Helvetica Neue Medium'), local('HelveticaNeue-Medium');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Helvetica Neue Bold'), local('HelveticaNeue-Bold');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Helvetica Neue Bold'), local('HelveticaNeue-Bold');
+}
+
+html {
+  font-size: 85%;
+}
+
+body {
+  font-family: TsukuMin, serif;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif;
+  text-align: start;
+}
+
+h1 {
+  padding-bottom: 0.1em;
+  margin-bottom: 1.25em;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  border-bottom: 1px solid;
+}
+
+h2 {
+  font-size: 1.33em;
+  line-height: 1.3em;
+}
+
+h3 {
+  line-height: 1.4em;
+}
+
+h4 {
+  margin: 2em 0 0;
+  line-height: 1.4em;
+}
+
+/* stylelint-disable no-descending-specificity */
+em,
+em em em,
+em em em em em { font-style: italic; }
+
+em em,
+em em em em { font-style: normal; }
+
+code {
+  font-family: Courier, monospace;
+  font-size: 0.8em;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+:not(pre) > code {
+  padding: 0.15em 0.1em 0;
+  word-break: normal;
+  vertical-align: 0.06em;
+  background-color: #eee;
+}
+
+pre,
+pre.sourceCode {
+  padding: 0.5em;
+  margin: 2.25em 0 2.5em;
+  line-height: 1.5em;
+  background-color: #eee;
+}
+
+.listing p {
+  margin: 1rem 0.75rem 0;
+  font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif;
+  font-size: 0.85em;
+  line-height: 1.25em;
+  text-align: right;
+}
+
+.listing p + pre {
+  margin-top: 0.5em;
+}
+
+span.smallcaps { font-variant: small-caps; }
+span.underline { text-decoration: underline; }
+q { quotes: '“' '”' '‘' '’'; }
+
+div.column {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+div.hanging-indent {
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+a {
+  color: #701d1d;
+  text-decoration: none;
+}
+
+a.footnote-ref {
+  margin: 0 0.1em;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+blockquote {
+  padding: 0.75em 0.85em;
+  margin: 1.75em 1.5%;
+  font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif;
+  font-size: 0.95em;
+  line-height: 1.9em;
+  border-left: 6px solid #ccc;
+}
+
+blockquote p { display: inline; }
+blockquote h4 { margin: 0 0 0.66em; }
+
+section.footnotes {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+ul,
+ol {
+  padding-left: 2.5em;
+  margin: 1.4em 0.75em 1.6em 0;
+}
+
+li {
+  font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif;
+  line-height: 1.66em;
+}
+li:not(:last-child) { margin-bottom: 0.75em; }
+
+figure {
+  margin: 2.15em 0 2em;
+  text-align: center;
+}
+
+figcaption {
+  font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif;
+  font-size: 0.85em;
+  line-height: 1.25em;
+}
+
+figure img { border: 1px solid #aaa; }
+
+nav#toc ol,
+nav#landmarks ol {
+  padding: 0;
+  margin-left: 1em;
+}
+
+nav#toc ol li,
+nav#landmarks ol li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+table {
+  margin: 0.5em 0.5em 2em 1em;
+  font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif;
+  line-height: 1.25em;
+  border-collapse: collapse;
+}
+
+table tr th {
+  padding: 0.4em 0.5em;
+  font-size: 0.8em;
+  font-weight: normal;
+  text-align: center;
+  background-color: #eee;
+  border: 1px #aaa solid;
+}
+
+table tr td {
+  padding: 0.4em 0.5em;
+  font-size: 0.8em;
+  text-align: start;
+  border: 1px #aaa solid;
+}
+
+hr.pagebreak {
+  height: 0;
+  visibility: hidden;
+  border: 0;
+  page-break-after: always;
+}
+
+.fullimage {
+  align-items: center;
+  width: 100%;
+}
+
+.fullimage img { width: 100%; }
+.pr h2 { text-align: center; }
+
+.pagecenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4em 0;
+  text-align: center;
+}
+
+@media screen { /* Workaround for iBooks issue; see #6242 */
+  .sourceCode {
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+  }
+}

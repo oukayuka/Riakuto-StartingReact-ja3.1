@@ -30,7 +30,9 @@
 - [Ⅱ. React基礎編（PDF / 50ページ）](./samples/riakuto31pt2-sample.pdf)
 - [Ⅲ. React応用編（PDF / 56ページ）](./samples/riakuto31pt3-sample.pdf)
 
-### 電子版の閲覧について
+<br />
+
+## ■ 電子版の閲覧について
 
 本書の電子版は **PDF** と **EPUB（リフロー型）** の 2 つのフォーマットで提供されています。閲覧の方法については[「よりよい環境で電子版をお読みいただくために」](./ebook-tips.md)をご覧ください。
 
