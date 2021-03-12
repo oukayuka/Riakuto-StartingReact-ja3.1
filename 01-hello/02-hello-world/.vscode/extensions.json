@@ -4,7 +4,7 @@
 
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
-    "coenraads.bracket-pair-colorizer",
+    "CoenraadS.bracket-pair-colorizer-2",
     "dbaeumer.vscode-eslint",
     "donjayamanne.githistory",
     "esbenp.prettier-vscode",
