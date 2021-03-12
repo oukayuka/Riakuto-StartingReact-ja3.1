@@ -1,4 +1,3 @@
-import React from 'react';
 import Greets from './components/Greets';
 import SummaryText from './components/SummaryText';
 import TextInput from './components/TextInput';
