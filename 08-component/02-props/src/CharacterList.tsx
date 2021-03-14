@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Header, Icon, Item } from 'semantic-ui-react';
 
 export type Character = {
@@ -13,7 +13,7 @@ type Props = {
   characters: Character[];
 };
 
-const CharacterList: FC<Props> = (props) => {
+const CharacterList: VFC<Props> = (props) => {
   const { school, characters } = props;
 
   return (

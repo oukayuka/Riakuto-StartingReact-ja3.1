@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import CharacterList, { Character } from './CharacterList';
 import './App.css';
 
-const App: FC = () => {
+const App: VFC = () => {
   const characters: Character[] = [
     {
       id: 1,
