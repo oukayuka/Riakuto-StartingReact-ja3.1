@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
 import useTimer from 'hooks/use-timer';
 import 'components/Timer.css';
 
-const Timer: FC<{ limit: number }> = ({ limit }) => {
+const Timer: VFC<{ limit: number }> = ({ limit }) => {
   const [timeLeft, isPrime, reset] = useTimer(limit);
 
   return (

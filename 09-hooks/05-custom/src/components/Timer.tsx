@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
 import './Timer.css';
 
@@ -8,7 +8,7 @@ type Props = {
   reset?: () => void;
 };
 
-const Timer: FC<Props> = ({
+const Timer: VFC<Props> = ({
   timeLeft = 0,
   isPrime = false,
   reset = () => undefined,

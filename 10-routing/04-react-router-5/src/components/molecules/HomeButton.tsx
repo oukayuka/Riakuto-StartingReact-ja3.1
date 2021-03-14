@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Button, Icon } from 'semantic-ui-react';
 
-const HomeButton: FC<{ redirectToHome?: () => void }> = ({
+const HomeButton: VFC<{ redirectToHome?: () => void }> = ({
   redirectToHome = () => undefined,
 }) => (
   <Button basic color="grey" onClick={redirectToHome}>

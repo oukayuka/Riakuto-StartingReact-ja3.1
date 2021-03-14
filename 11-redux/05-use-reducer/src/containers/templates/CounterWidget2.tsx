@@ -1,4 +1,4 @@
-import { FC, useReducer } from 'react';
+import { VFC, useReducer } from 'react';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import CounterWidget from 'components/templates/CounterWidget';
 
@@ -18,7 +18,7 @@ const counterSlice = createSlice({
   },
 });
 
-const EnhancedCounterWidget: FC<{ initialCount?: number }> = ({
+const EnhancedCounterWidget: VFC<{ initialCount?: number }> = ({
   initialCount = 0,
 }) => {
   const [state, dispatch] = useReducer(

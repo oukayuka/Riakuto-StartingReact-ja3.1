@@ -1,5 +1,5 @@
 import {
-  FC,
+  VFC,
   FormEvent,
   Suspense,
   unstable_SuspenseList as SuspenseList,
@@ -21,7 +21,7 @@ type Props = {
   prefetch?: (orgCode: string) => void;
 };
 
-const Members: FC<Props> = ({ orgCodeList, prefetch = () => undefined }) => {
+const Members: VFC<Props> = ({ orgCodeList, prefetch = () => undefined }) => {
   const [orgCode, setOrgCode] = useState('');
   const [input, setInput] = useState('');
   const [startTransition, isPending] = useTransition();

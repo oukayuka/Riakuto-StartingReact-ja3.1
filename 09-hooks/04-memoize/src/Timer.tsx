@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useState } from 'react';
+import { VFC, useEffect, useMemo, useState } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
 import { getPrimes } from 'utils/math-tool';
 import './Timer.css';
@@ -7,7 +7,7 @@ type TimerProps = {
   limit: number;
 };
 
-const Timer: FC<TimerProps> = ({ limit }) => {
+const Timer: VFC<TimerProps> = ({ limit }) => {
   const [timeLeft, setTimeLeft] = useState(limit);
   const primes = useMemo(() => getPrimes(limit), [limit]);
   const reset = () => setTimeLeft(limit);

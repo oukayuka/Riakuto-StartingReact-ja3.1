@@ -1,14 +1,21 @@
 <!-- markdownlint-disable MD010 MD029 MD032 -->
 # 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第3.1版』の正誤表・更新情報
 
-最終更新日： 2021 年 3 月 6 日
+最終更新日： 2021 年 3 月 25 日
 
 - 正誤表の内容は随時アップデートされます。
 - 電子版については随時、修正やアップデートが反映された新しいバージョンが配信されます。購入先のサイトをご確認ください。なお現時点での最新版は以下の通りです。
     - 【Ⅰ. 言語・環境編】バージョン 1.2.1（2021-03-06）
-    - 【Ⅱ. React 基礎編】バージョン 1.2.2（2021-03-06）
-    - 【Ⅲ. React 応用編】バージョン 1.1.4（2021-03-11）
+    - 【Ⅱ. React 基礎編】バージョン 2.1.0（2021-03-20）
+    - 【Ⅲ. React 応用編】バージョン 2.0.0（2021-03-20）
 - 本文内の各所で引用している [The State of JavaScript](https://stateofjs.com/) の調査結果およびその説明を、電子版では 2019 から 2020 のものへアップデートしています（2021-01-20）
+- 本文内の各所で引用している [npm trends](hhttps://www.npmtrends.com/) の統計およびその説明を、電子版では 2021 年 3 月のものへアップデートしています（2021-03-25）
+
+### 電子版のバージョニングについて
+
+- **整数の位** …… 紙の本の「刷」番号に対応しています。「バージョン 2.0.0」であれば、初版第 2 刷の内容と完全に一致します
+- **小数点第 1 位** …… メジャーバージョン番号。各技術のアップデートや情勢の変化に合わせて内容が更新されたときに変更されます
+- **小数点第 2 位** …… マイナーバージョン番号。誤植の修正があったときに変更されます
 
 <br />
 
@@ -71,6 +78,17 @@
 
 ### 【Ⅱ. React 基礎編】
 
+- 「5-2. JSX の書き方」節の「JSX の基本的な文法」項の冒頭（p.29〜31）における説明を、Create React App がバージョン 4.0.2 でインストールする TypeScript のバージョンを 4.1 系に上げたため、その事情に合わせて更新。  
+:warning: 該当部分の内容は、2021 年 3 月 25 日刊行の電子版バージョン 2.0.0 以降を参照してください。なお紙の本でも初版第 2 刷以降は新しい内容になっています。
+
+- 6-1 / p.48 / 脚注
+
+```diff
+  47 「JSCS — end of the line - Oleg Gaidarenko - Medium」
+- https://medium.com/[@markelog/jscs-end-of-the-line-bc9bf0b3fdb2]
++ https://medium.com/@markelog/jscs-end-of-the-line-bc9bf0b3fdb2
+```
+
 - 6-1 / p.51  
 （該当コマンドのアップグレードの対象から TypeScript が外されたため、別途アップグレードを実行するよう手順を追加）
 
@@ -82,8 +100,32 @@
 + $ yarn upgrade typescript@latest
 ```
 
-- 「6-1. ESLint」の「ESLint の環境を作る」項および「ESLint の適用ルールをカスタマイズする」項の冒頭（p.50〜57）における ESLint の環境構築のやり方を最新版に対応。初期化時に eslint-config-airbnb を併せてインストールするように手順を変更した。  
-:warning: 該当部分の内容は、2021 年 1 月 12 日刊行の電子版バージョン 1.1.0 以降を参照してください
+- 6-1 / p.50〜57  
+「6-1. ESLint」節の「ESLint の環境を作る」項および「ESLint の適用ルールをカスタマイズする」項の冒頭における ESLint の環境構築のやり方を最新版に対応。初期化時に eslint-config-airbnb を併せてインストールするように手順を変更した。  
+:warning: 該当部分の内容は、2021 年 1 月 12 日刊行の電子版バージョン 1.1.0 以降を参照してください。なお紙の本でも初版第 2 刷以降は新しい内容になっています。
+
+- 6-1 / p.66
+
+```diff
+  これが共有設定
+- ‘plugin:[@typescript-eslint/recommended]’
++ plugin:@typescript-eslint/recommended
+  で 'warn' になってるので警告が出てたわけ。
+```
+
+- 6-2 / p.73  
+eslint-config-prettier が[バージョン 8.0.0](https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md#version-800-2021-02-21) から `.eslintrc` でのプラグイン設定をひとつにまとめることができるようになったため、該当の設定内容を更新
+
+```diff
+  +   'prettier',
+- +   'prettier/@typescript-eslint',
+- +   'prettier/react',
+    ],
+```
+
+- 6-4 / p.84  
+husky がバージョン 5 系より pre-commit のフックを `package.json` や `.huskyrc` に書く方式から `.husky/pre-commit` ファイルに記述するように変更されたため（[公式ブログの記事](https://dev.to/typicode/what-s-new-in-husky-5-32g5)）、それに合わせて本文の設定内容を更新  
+:warning: 該当部分の内容は、2021 年 3 月 25 日刊行の電子版バージョン 2.1.0 以降を参照してください。
 
 - 7-5 / p.122  
 
@@ -94,9 +136,17 @@
   は本気で LitElement を普及させる気があるのかと疑いたくなるよ」
 ```
 
+- 8-2 / p.130  
+関数コンポーネントの型定義に `FC` を使っていたのを、現状のコミュニティのトレンドに合わせて `VFC` に変更。  
+:warning: 該当部分の内容は、2021 年 3 月 25 日刊行の電子版バージョン 2.0.0 以降を参照してください。なお紙の本でも初版第 2 刷以降は新しい内容になっています。
+
 <br />
 
 ### 【Ⅲ. React 応用編】
+
+- 12-3 / p.134  
+実験的 API である `useContextSelector` の話題を追加  
+:warning: 該当部分の内容は、2021 年 3 月 25 日刊行の電子版バージョン 2.0.0 以降を参照してください。なお紙の本でも初版第 2 刷以降は新しい内容になっています。
 
 - 13-1 / p.146
 
@@ -157,4 +207,12 @@
 - render-as-you-fecth パターン
 + render-as-you-fetch パターン
   の最終的な所要時間はfetch-on-renderのときとほとんど変わらないけどね」
+```
+
+- 13-4 / p.210 / 脚注
+
+```diff
+  197 「The Suspense is Killing Redux. At my latest workshops I've been… | by Ryan Florence | Medium」
+- https://medium.com/[@ryanflorence/the-suspense-is-killing-redux-e888f9692430]
++ https://medium.com/@ryanflorence/the-suspense-is-killing-redux-e888f9692430
 ```

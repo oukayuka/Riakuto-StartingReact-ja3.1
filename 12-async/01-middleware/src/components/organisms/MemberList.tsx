@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Card, Image } from 'semantic-ui-react';
 
 import { User } from 'domains/github/models/user';
 
-const MemberList: FC<{ users: User[] }> = ({ users = [] }) => (
+const MemberList: VFC<{ users: User[] }> = ({ users = [] }) => (
   <>
     <Card.Group>
       {users.map((user) => (

@@ -1,10 +1,10 @@
-import { FC, useEffect, useState } from 'react';
+import { VFC, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 import { User, getMembers } from 'domains/github';
 import Members from 'components/pages/Members';
 
-const EnhancedMembers: FC = () => {
+const EnhancedMembers: VFC = () => {
   const { orgCode = '' } = useParams();
   const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(false);

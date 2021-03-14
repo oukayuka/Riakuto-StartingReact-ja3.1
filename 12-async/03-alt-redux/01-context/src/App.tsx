@@ -1,10 +1,10 @@
-import { FC, useContext } from 'react';
+import { VFC, useContext } from 'react';
 
 import { ThemeContext } from './context';
 import ThemeProvider from './ThemeProvider';
 import './App.css';
 
-const ThemedButton: FC = () => {
+const ThemedButton: VFC = () => {
   const { key, styles, toggle } = useContext(ThemeContext);
 
   return (
@@ -19,7 +19,7 @@ const ThemedButton: FC = () => {
   );
 };
 
-const App: FC = () => (
+const App: VFC = () => (
   <div className="container">
     <ThemeProvider>
       <div>

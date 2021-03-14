@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 
 import Home from 'containers/pages/Home';
@@ -6,7 +6,7 @@ import Members from 'containers/pages/Members';
 
 import './App.css';
 
-const App: FC = () => (
+const App: VFC = () => (
   <>
     <Routes>
       <Route path="/" element={<Home />} />

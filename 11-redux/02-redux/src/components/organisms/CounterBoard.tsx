@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Button, Card, Statistic } from 'semantic-ui-react';
 import './CounterBoard.css';
 
@@ -10,7 +10,7 @@ type Props = {
   increment?: () => void;
 };
 
-const CounterBoard: FC<Props> = ({
+const CounterBoard: VFC<Props> = ({
   count = 0,
   add = () => undefined,
   decrement = () => undefined,

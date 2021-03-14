@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Redirect, useLocation, useParams } from 'react-router-dom';
 
 import SchoolCharacters from 'components/templates/SchoolCharacters';
 import { charactersData } from 'data/characters';
 
-const EnhancedSchoolCharacters: FC = () => {
+const EnhancedSchoolCharacters: VFC = () => {
   const { schoolCode } = useParams<{ schoolCode: string }>();
   const schoolCodeList = Object.keys(charactersData);
 

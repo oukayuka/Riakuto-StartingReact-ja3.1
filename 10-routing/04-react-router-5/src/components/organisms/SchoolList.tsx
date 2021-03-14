@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Link } from 'react-router-dom';
 import { List } from 'semantic-ui-react';
 
@@ -7,7 +7,7 @@ type School = {
   name: string;
 };
 
-const SchoolList: FC<{ schools: School[] }> = ({ schools }) => (
+const SchoolList: VFC<{ schools: School[] }> = ({ schools }) => (
   <>
     <h2>登場人物</h2>
     <List as="ul">

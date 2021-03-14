@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import Timer from './Timer';
 import './App.css';
 
-const App: FC = () => (
+const App: VFC = () => (
   <div className="container">
     <header>
       <h1>タイマー</h1>

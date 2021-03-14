@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import ColorfulBeads from 'components/molecules/ColorfulBeads';
 import CounterBoard, {
   CounterBoardProps,
 } from 'components/organisms/CounterBoard';
 
-const CounterWidget: FC<Required<CounterBoardProps>> = ({
+const CounterWidget: VFC<Required<CounterBoardProps>> = ({
   count = 0,
   add = () => undefined,
   decrement = () => undefined,

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Icon, Item } from 'semantic-ui-react';
 
 import Spinner from 'components/molecules/Spinner';
@@ -9,7 +9,7 @@ type Props = {
   isLoading?: boolean;
 };
 
-const CharactersList: FC<Props> = ({ characters = [], isLoading = false }) => (
+const CharactersList: VFC<Props> = ({ characters = [], isLoading = false }) => (
   <>
     {isLoading ? (
       <Spinner />
@@ -20,7 +20,10 @@ const CharactersList: FC<Props> = ({ characters = [], isLoading = false }) => (
             <Icon name="user circle" size="huge" />
             <Item.Content>
               <Item.Header>{character.name}</Item.Header>
-              <Item.Meta>{character.grade}年生</Item.Meta>
+              <Item.Meta>
+                {character.grade}
+                年生
+              </Item.Meta>
               <Item.Meta>
                 {character.height ? character.height : '???'}
                 cm

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Helmet } from 'react-helmet';
 import capitalize from 'lodash/capitalize';
 import { Divider } from 'semantic-ui-react';
@@ -14,7 +14,7 @@ type Props = {
   isLoading?: boolean;
 };
 
-const Members: FC<Props> = ({
+const Members: VFC<Props> = ({
   orgCode = 'UnknownCompany',
   users = [],
   isLoading = false,

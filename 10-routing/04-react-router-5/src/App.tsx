@@ -1,11 +1,11 @@
-import { FC, useEffect } from 'react';
+import { VFC, useEffect } from 'react';
 import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router';
 
 import Home from 'components/pages/Home';
 import Characters from 'components/pages/Characters';
 import './App.css';
 
-const App: FC = () => {
+const App: VFC = () => {
   const { hash, pathname } = useLocation();
   const { action } = useHistory();
 
@@ -22,7 +22,7 @@ const App: FC = () => {
           <Home />
         </Route>
         <Route path="/characters" component={Characters} />
-        <Redirect to="/" />;
+        <Redirect to="/" />
       </Switch>
     </div>
   );

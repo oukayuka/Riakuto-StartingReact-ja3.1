@@ -1,8 +1,8 @@
-import { FC, useState } from 'react';
+import { VFC, useState } from 'react';
 import { Button, Card, Statistic } from 'semantic-ui-react';
 import './Counter.css';
 
-const Counter: FC = () => {
+const Counter: VFC = () => {
   const [count, setCount] = useState(0);
   const increment = () => setCount((c) => c + 1);
   const reset = () => setCount(0);

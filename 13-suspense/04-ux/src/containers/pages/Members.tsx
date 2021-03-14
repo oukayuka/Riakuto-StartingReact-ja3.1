@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { useQueryClient } from 'react-query';
 
 import orgCodeList from 'data/org-code-list';
 import { getOrganization, getMembers } from 'domains/github';
 import Members from 'components/pages/Members';
 
-const EnhancedMembers: FC<{ enablePrefetch?: boolean }> = ({
+const EnhancedMembers: VFC<{ enablePrefetch?: boolean }> = ({
   enablePrefetch = false,
 }) => {
   const queryClient = useQueryClient();

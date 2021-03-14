@@ -1,4 +1,4 @@
-import { FC, useReducer } from 'react';
+import { VFC, useReducer } from 'react';
 import CounterWidget from 'components/templates/CounterWidget';
 
 const CounterActionType = {
@@ -54,7 +54,7 @@ const increment = (): CounterAction => ({
   type: CounterActionType.incremented,
 });
 
-const EnhancedCounterWidget: FC<{ initialCount?: number }> = ({
+const EnhancedCounterWidget: VFC<{ initialCount?: number }> = ({
   initialCount = 0,
 }) => {
   const [state, dispatch] = useReducer(

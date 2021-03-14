@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Helmet } from 'react-helmet';
 import { Header } from 'semantic-ui-react';
 
@@ -11,7 +11,7 @@ type Props = {
   isLoading?: boolean;
 };
 
-const SchoolCharacters: FC<Props> = ({
+const SchoolCharacters: VFC<Props> = ({
   school,
   characters,
   isLoading = false,

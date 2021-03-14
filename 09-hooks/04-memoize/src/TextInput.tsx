@@ -1,6 +1,6 @@
-import { FC, SyntheticEvent, useEffect, useRef } from 'react';
+import { VFC, SyntheticEvent, useEffect, useRef } from 'react';
 
-const TextInput: FC = () => {
+const TextInput: VFC = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const handleClick = (e: SyntheticEvent): void => {
     e.preventDefault();

@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import AllCharacters from 'components/templates/AllCharacters';
 import { charactersData } from 'data/characters';
 
-const EnhancedAllCharacters: FC = () => {
+const EnhancedAllCharacters: VFC = () => {
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const isLoading = !!queryParams.get('loading');

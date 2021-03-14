@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 
 import CounterWidget from 'containers/templates/CounterWidget';
 
 import './App.css';
 
-const App: FC = () => (
+const App: VFC = () => (
   <div className="container">
     <header>
       <h1>ビーズカウンター</h1>

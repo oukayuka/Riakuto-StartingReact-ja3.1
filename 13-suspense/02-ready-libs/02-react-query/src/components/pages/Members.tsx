@@ -1,4 +1,4 @@
-import { FC, Suspense } from 'react';
+import { VFC, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import capitalize from 'lodash/capitalize';
 import { Divider } from 'semantic-ui-react';
@@ -8,7 +8,7 @@ import HomeButton from 'components/molecules/HomeButton';
 import MemberList from 'containers/oraganisms/MemberList';
 import ErrorBoundary from 'ErrorBoundary';
 
-const Members: FC<{ orgCode: string }> = ({ orgCode = 'UnknownCompany' }) => {
+const Members: VFC<{ orgCode: string }> = ({ orgCode = 'UnknownCompany' }) => {
   const title = `${capitalize(orgCode)} の開発メンバー`;
 
   return (

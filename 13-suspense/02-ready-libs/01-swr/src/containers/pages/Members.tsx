@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { useParams } from 'react-router';
 
 import Members from 'components/pages/Members';
 
-const EnhancedMembers: FC = () => {
+const EnhancedMembers: VFC = () => {
   const { orgCode = '' } = useParams();
 
   return <Members orgCode={orgCode} />;

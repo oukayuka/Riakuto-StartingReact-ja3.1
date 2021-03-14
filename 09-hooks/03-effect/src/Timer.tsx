@@ -1,8 +1,8 @@
-import { FC, useEffect, useState } from 'react';
+import { VFC, useEffect, useState } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
 import './Timer.css';
 
-const Timer: FC<{ limit: number }> = ({ limit }) => {
+const Timer: VFC<{ limit: number }> = ({ limit }) => {
   const [timeLeft, setTimeLeft] = useState(limit);
   const reset = (): void => setTimeLeft(limit);
   const tick = (): void => setTimeLeft((t) => t - 1);

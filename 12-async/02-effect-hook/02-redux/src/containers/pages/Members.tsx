@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { useParams } from 'react-router';
 
 import usemembersGotten from 'hooks/use-get-members';
 import Members from 'components/pages/Members';
 
-const EnhancedMembers: FC = () => {
+const EnhancedMembers: VFC = () => {
   const { orgCode = '' } = useParams();
   const { users, isLoading } = usemembersGotten(orgCode);
 

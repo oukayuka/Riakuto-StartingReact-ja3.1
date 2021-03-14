@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Container, Label, SemanticCOLORS } from 'semantic-ui-react';
 
 import './ColorfulBeads.css';
@@ -24,7 +24,7 @@ const colors: SemanticCOLORS[] = [
   'black',
 ];
 
-const ColorfulBeads: FC<{ count?: number }> = ({ count = 0 }) => (
+const ColorfulBeads: VFC<{ count?: number }> = ({ count = 0 }) => (
   <Container className="beads-box">
     {range(count).map((n: number) => (
       <Label circular color={colors[n % colors.length]} key={n} />

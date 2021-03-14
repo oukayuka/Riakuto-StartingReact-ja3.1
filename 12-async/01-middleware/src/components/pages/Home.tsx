@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Link } from 'react-router-dom';
 import capitalize from 'lodash/capitalize';
 import { List } from 'semantic-ui-react';
 
 import './Home.css';
 
-const Home: FC<{ orgCodes: string[] }> = ({ orgCodes = [] }) => (
+const Home: VFC<{ orgCodes: string[] }> = ({ orgCodes = [] }) => (
   <>
     <header className="app-header">
       <h1>会社一覧</h1>

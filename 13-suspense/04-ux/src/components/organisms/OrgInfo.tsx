@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { Icon, Item, Label } from 'semantic-ui-react';
 
 import { Organization } from 'domains/github';
 import './OrgInfo.css';
 
-const OrgInfo: FC<{ org: Organization | null }> = ({ org = null }) =>
+const OrgInfo: VFC<{ org: Organization | null }> = ({ org = null }) =>
   org ? (
     <>
       <Item.Group>

@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HomeButton from 'components/molecules/HomeButton';
 
-const EnhancedHomeButton: FC = () => {
+const EnhancedHomeButton: VFC = () => {
   const navigate = useNavigate();
 
   return <HomeButton redirectToHome={() => navigate('/')} />;

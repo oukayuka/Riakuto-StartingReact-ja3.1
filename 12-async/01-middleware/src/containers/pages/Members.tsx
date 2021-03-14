@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { VFC, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 
@@ -6,7 +6,7 @@ import { userSlice, UserState } from 'features/user';
 import { User } from 'domains/github/models/user';
 import Members from 'components/pages/Members';
 
-const EnhancedMembers: FC = () => {
+const EnhancedMembers: VFC = () => {
   const { orgCode = '' } = useParams<{ orgCode: string }>();
   const dispatch = useDispatch();
   const users = useSelector<UserState, User[]>((state) => state.users);

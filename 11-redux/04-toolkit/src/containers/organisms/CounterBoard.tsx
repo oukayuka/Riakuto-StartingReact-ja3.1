@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { VFC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { counterSlice, CounterState } from 'features/counter';
 import CounterBoard from 'components/organisms/CounterBoard';
 
-const EnhancedCounterBoard: FC = () => {
+const EnhancedCounterBoard: VFC = () => {
   const count = useSelector<CounterState, number>((state) => state.count);
   const dispatch = useDispatch();
   const { added, decremented, incremented } = counterSlice.actions;

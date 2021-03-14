@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { VFC, useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router';
 
 import Home from 'components/pages/Home';
@@ -7,7 +7,7 @@ import AllCharacters from 'containers/templates/AllCharacters';
 import SchoolCharacters from 'containers/templates/SchoolCharacters';
 import './App.css';
 
-const App: FC = () => {
+const App: VFC = () => {
   const { hash, pathname } = useLocation();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const App: FC = () => {
           <Route path="/" element={<AllCharacters />} />
           <Route path=":schoolCode" element={<SchoolCharacters />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" replace />} />;
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );
