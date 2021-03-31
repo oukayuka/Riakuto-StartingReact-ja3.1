@@ -29,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "fix": "npm run -s format && npm run -s lint:fix",
-    "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,gql,graphql,json}'",
+    "format": "prettier --write --loglevel=warn '{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'",
     "lint": "npm run -s lint:style; npm run -s lint:es",
     "lint:fix": "npm run -s lint:style:fix && npm run -s lint:es:fix",
     "lint:es": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
@@ -37,7 +37,8 @@
     "lint:conflict": "eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
     "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'",
-    "postinstall": "typesync"
+    "preinstall": "typesync || :",
+    "prepare": "simple-git-hooks > /dev/null"
   },
   "eslintConfig": {
     "extends": [
@@ -66,8 +67,8 @@
     "@types/stylelint": "^9.10.1",
     "@types/testing-library__jest-dom": "^5.9.5",
     "@types/testing-library__user-event": "^4.2.0",
-    "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
@@ -75,29 +76,28 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "4.2.0",
-    "husky": "^4.3.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
+    "simple-git-hooks": "^2.2.0",
     "stylelint": "^13.12.0",
     "stylelint-config-recess-order": "^2.3.0",
     "stylelint-config-standard": "^21.0.0",
-    "stylelint-order": "^4.1.0"
+    "stylelint-order": "^4.1.0",
+    "typesync": "^0.8.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "simple-git-hooks": {
+    "pre-commit": ". ./lint-staged-around"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write --loglevel=warn",
-      "eslint --fix"
+      "prettier --write --loglevel=error",
+      "eslint --fix --quiet"
     ],
     "src/**/*.{css,less,sass,scss}": [
-      "stylelint --fix"
+      "stylelint --fix --quiet"
     ],
-    "src/**/*.{gql,graphql,json}": [
-      "prettier --write --loglevel=warn"
+    "{public,src}/**/*.{html,gql,graphql,json}": [
+      "prettier --write --loglevel=error"
     ]
   }
 }
