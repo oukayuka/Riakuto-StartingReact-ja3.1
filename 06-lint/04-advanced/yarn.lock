@@ -11538,10 +11538,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-simple-git-hooks@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/simple-git-hooks/-/simple-git-hooks-2.2.0.tgz#97fd946dba9c9c31db495f4f335094d0c3988425"
-  integrity sha512-bxXq98GQvXAORuugWDhL0ZcydpWE6384nS/qTpqZ5NTd4GECx+HtvaqfU0wu+PHhBQT+HhektpZEpTM5b3VuBA==
+simple-git-hooks@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/simple-git-hooks/-/simple-git-hooks-2.3.1.tgz#cd400893fe7683d8cb07c357d20b3a2a9d75dd65"
+  integrity sha512-t1ZP5y6yGZmWjceOmTEr37g+TTot96DaAYYCnWOLu55squ/z60CiDV3Gdz2kEzmynEzgxyg4fCeJnsQWZdL4yg==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"

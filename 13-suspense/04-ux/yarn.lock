@@ -2381,10 +2381,10 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^11.2.5":
-  version "11.2.5"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-11.2.5.tgz#ae1c36a66c7790ddb6662c416c27863d87818eb9"
-  integrity sha512-yEx7oIa/UWLe2F2dqK0FtMF9sJWNXD+2PPtp39BvE0Kh9MJ9Kl0HrZAgEuhUJR+Lx8Di6Xz+rKwSdEPY2UV8ZQ==
+"@testing-library/react@^11.2.6":
+  version "11.2.6"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-11.2.6.tgz#586a23adc63615985d85be0c903f374dab19200b"
+  integrity sha512-TXMCg0jT8xmuU8BkKMtp8l7Z50Ykew5WNX8UoIKTaLFwKkP2+1YDhOLA2Ga3wY4x29jyntk7EWfum0kjlYiSjQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
@@ -2396,10 +2396,10 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"@testing-library/user-event@^13.0.16":
-  version "13.0.16"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.0.16.tgz#c027a9656f1984cf05f9c94c8f7168c06e85792c"
-  integrity sha512-plXL8lGR2H0xm0fHE0Dfz37ke2UtBI1wAmaWIo6BP7+pGt+BxdBQrITHAMGcac0a3PtBi5CXNPth8S53ISO1Ew==
+"@testing-library/user-event@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.1.1.tgz#1e011de944cf4d2a917cef6c3046c26389943e24"
+  integrity sha512-B4roX+0mpXKGj8ndd38YoIo3IV9pmTTWxr/2cOke5apTtrNabEUE0KMBccpcAcYlfPcr7uMu+dxeeC3HdXd9qQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
@@ -10761,14 +10761,14 @@ react-dev-utils@^11.0.3:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^0.0.0-experimental-634cc52e6:
-  version "0.0.0-experimental-634cc52e6"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.0.0-experimental-634cc52e6.tgz#cc9f8f486a470d39c93c06e38796a2e9b8b02ac9"
-  integrity sha512-vKVvf/DVIKl/Om6YnJHF19ArO34sSORDe01YMqEMRYaLs3veywvxzzoLq7eMfZYA27l4C7jQU8A6UNJmxDMmLg==
+react-dom@^0.0.0-experimental-b4f119cdf:
+  version "0.0.0-experimental-b4f119cdf"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.0.0-experimental-b4f119cdf.tgz#50f5e6fbdd254ea7107a5abd0736172d96cbecca"
+  integrity sha512-uQrmmBBzxU8+OZxKRlg4FfytZON41S1TZigj2ieM4Pf1sqhMqi8ZsyPeGMcdG14Lmh+KscPVKemiNu39s4TDfA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    scheduler "0.0.0-experimental-634cc52e6"
+    scheduler "0.0.0-experimental-b4f119cdf"
 
 react-error-boundary@^3.1.1:
   version "3.1.1"
@@ -10815,10 +10815,10 @@ react-popper@^2.2.4:
     react-fast-compare "^3.0.1"
     warning "^4.0.2"
 
-react-query@^3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.13.0.tgz#b42561392a8fcf3252336222332c4c94fae2e33e"
-  integrity sha512-CzBvgjMh8jNJMSPhXCE92DBIFbE31j8PA2k7ipR1F8DlcNAEsZwLsUzh1cTtzpDaS2+r6sntgmM6qKnCD6E5zQ==
+react-query@^3.13.4:
+  version "3.13.4"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.13.4.tgz#8924c4453bf8e1332bfec994390e734c41ce8dc2"
+  integrity sha512-tSjUQpZ8/Fvu2xe2WSLa3Qn7yn+199HTqnz0iPakR9J7/5uSv6JwHPO0AkH/mSpBhc7IZos842kXbGCxwLoJGg==
   dependencies:
     "@babel/runtime" "^7.5.5"
     broadcast-channel "^3.4.1"
@@ -10915,10 +10915,10 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
-react@^0.0.0-experimental-634cc52e6:
-  version "0.0.0-experimental-634cc52e6"
-  resolved "https://registry.yarnpkg.com/react/-/react-0.0.0-experimental-634cc52e6.tgz#a79e8b1daa26e9553382cc3790e5880eb064c7bb"
-  integrity sha512-Vp/QaZiW4BUsez6YDBLbWZG4ji2Jdq6ZHRAtAZ4C/UvnWkMDxSAIyeMUJDGYm/1oRqLeSRX0m31qOUxAxEfL6g==
+react@^0.0.0-experimental-b4f119cdf:
+  version "0.0.0-experimental-b4f119cdf"
+  resolved "https://registry.yarnpkg.com/react/-/react-0.0.0-experimental-b4f119cdf.tgz#3d79d13abde69451d10f483bff33b210ea88007c"
+  integrity sha512-uvxYBAQZ59gqgTj7lRqFUCi+ZzQdWMIwP0YvRQLkSRL1jMcFMxSxSTVOpclxtcbWTU/TSiyydwo9TVZV5Io6NA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -11497,10 +11497,10 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@0.0.0-experimental-634cc52e6:
-  version "0.0.0-experimental-634cc52e6"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.0.0-experimental-634cc52e6.tgz#8bfddf5756f630b7e71684d527dbe9812b9916a4"
-  integrity sha512-kf9Q5f9i2F0GkBUgBn2geUNefKTwh4vWR4ss8ZqQ6O2OFnSAt49kMgdhDk/Tgt/5O4Xyf/cngSQWvki6oXeg4w==
+scheduler@0.0.0-experimental-b4f119cdf:
+  version "0.0.0-experimental-b4f119cdf"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.0.0-experimental-b4f119cdf.tgz#1a4d0cc2cb79df7d4a4a3ace9cabb1c793d72edd"
+  integrity sha512-e4rUVDwz1RFTvS4Nv3f7ZH9OMy+qgcDs5stJxdMLnoTKRgPd03z82gB5UsNwwwPGAXEyIqFXyf9aXTvAQqG+Kw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -11757,10 +11757,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-simple-git-hooks@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/simple-git-hooks/-/simple-git-hooks-2.2.0.tgz#97fd946dba9c9c31db495f4f335094d0c3988425"
-  integrity sha512-bxXq98GQvXAORuugWDhL0ZcydpWE6384nS/qTpqZ5NTd4GECx+HtvaqfU0wu+PHhBQT+HhektpZEpTM5b3VuBA==
+simple-git-hooks@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/simple-git-hooks/-/simple-git-hooks-2.3.1.tgz#cd400893fe7683d8cb07c357d20b3a2a9d75dd65"
+  integrity sha512-t1ZP5y6yGZmWjceOmTEr37g+TTot96DaAYYCnWOLu55squ/z60CiDV3Gdz2kEzmynEzgxyg4fCeJnsQWZdL4yg==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"

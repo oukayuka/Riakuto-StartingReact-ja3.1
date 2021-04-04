@@ -5,8 +5,8 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^13.0.16",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.1",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
@@ -65,8 +65,8 @@
     "@types/stylelint": "^9.10.1",
     "@types/testing-library__jest-dom": "^5.9.5",
     "@types/testing-library__user-event": "^4.2.0",
-    "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
@@ -74,9 +74,8 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "4.2.0",
-    "husky": "^4.3.0",
     "prettier": "^2.2.1",
-    "simple-git-hooks": "^2.2.0",
+    "simple-git-hooks": "^2.3.1",
     "stylelint": "^13.12.0",
     "stylelint-config-recess-order": "^2.3.0",
     "stylelint-config-standard": "^21.0.0",
@@ -84,7 +83,8 @@
     "typesync": "^0.8.0"
   },
   "simple-git-hooks": {
-    "pre-commit": ". ./lint-staged-around"
+    "pre-commit": ". ./lint-staged-around",
+    "pre-push": ". ./test-around"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
