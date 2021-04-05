@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-/* Stylesheet for Riakuto with MOBI ver 1.0.0 2020-03-03 */
+/* Stylesheet for Riakuto with MOBI ver 1.0.1 2021-03-24 */
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-family: TsukuMin, serif;
+  font-family: Palatino, TsukuMin, serif;
   font-size: 1em;
   line-height: 2em;
   text-align: justify;
