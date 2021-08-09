@@ -1,4 +1,4 @@
-const merge = <T, U extends T>(obj1: T, obj2: U): T & U => ({
+const override = <T, U extends T>(obj1: T, obj2: U): T & U => ({
   ...obj1,
   ...obj2,
 });
