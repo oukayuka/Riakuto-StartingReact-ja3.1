@@ -19,7 +19,7 @@ const App: VFC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="characters" element={<Characters />}>
-          <Route path="/" element={<AllCharacters />} />
+          <Route path="" element={<AllCharacters />} />
           <Route path=":schoolCode" element={<SchoolCharacters />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />

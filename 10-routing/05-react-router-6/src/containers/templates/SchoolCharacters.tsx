@@ -5,7 +5,7 @@ import SchoolCharacters from 'components/templates/SchoolCharacters';
 import { charactersData } from 'data/characters';
 
 const EnhancedSchoolCharacters: VFC = () => {
-  const { schoolCode } = useParams();
+  const { schoolCode = '' } = useParams();
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const isLoading = !!queryParams.get('loading');

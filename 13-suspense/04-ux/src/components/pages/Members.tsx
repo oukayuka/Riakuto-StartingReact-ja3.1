@@ -2,10 +2,10 @@ import {
   VFC,
   FormEvent,
   Suspense,
-  unstable_SuspenseList as SuspenseList,
+  SuspenseList,
   useRef,
   useState,
-  unstable_useTransition as useTransition,
+  useTransition,
 } from 'react';
 import { Button, Divider, Input, Menu } from 'semantic-ui-react';
 import capitalize from 'lodash/capitalize';
@@ -24,7 +24,7 @@ type Props = {
 const Members: VFC<Props> = ({ orgCodeList, prefetch = () => undefined }) => {
   const [orgCode, setOrgCode] = useState('');
   const [input, setInput] = useState('');
-  const [startTransition, isPending] = useTransition();
+  const [isPending, startTransition] = useTransition();
   const ebKey = useRef(0);
 
   const menuItems = orgCodeList.map((code) => ({

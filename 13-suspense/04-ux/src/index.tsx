@@ -1,4 +1,4 @@
-import { unstable_createRoot as createRoot } from 'react-dom';
+import { createRoot } from 'react-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 

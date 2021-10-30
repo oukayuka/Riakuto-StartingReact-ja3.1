@@ -1,5 +1,5 @@
 import { ErrorInfo, PureComponent, ReactNode } from 'react';
-import ky from 'ky';
+import { HTTPError } from 'ky';
 import { Message } from 'semantic-ui-react';
 
 type StatusMessages = { [status: number]: string };
@@ -31,7 +31,7 @@ class ErrorBoundary extends PureComponent<Props, State> {
     const messages = { ...DEFAULT_MESSAGES, ...statusMessages };
 
     if (hasError) {
-      const statusCode = (error as ky.HTTPError)?.response?.status;
+      const statusCode = (error as HTTPError)?.response?.status;
 
       if (statusCode && Object.keys(messages).includes(String(statusCode))) {
         return <Message warning>{messages[statusCode]}</Message>;

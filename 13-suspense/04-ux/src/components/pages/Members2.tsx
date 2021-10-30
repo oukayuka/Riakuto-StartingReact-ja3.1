@@ -2,9 +2,9 @@ import {
   VFC,
   FormEvent,
   Suspense,
-  unstable_SuspenseList as SuspenseList,
+  SuspenseList,
   useState,
-  unstable_useTransition as useTransition,
+  useTransition,
 } from 'react';
 import { useQueryErrorResetBoundary } from 'react-query';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -24,7 +24,7 @@ type Props = {
 const Members: VFC<Props> = ({ orgCodeList, prefetch = () => undefined }) => {
   const [orgCode, setOrgCode] = useState('');
   const [input, setInput] = useState('');
-  const [startTransition, isPending] = useTransition();
+  const [isPending, startTransition] = useTransition();
   const { reset } = useQueryErrorResetBoundary();
 
   const menuItems = orgCodeList.map((code) => ({
