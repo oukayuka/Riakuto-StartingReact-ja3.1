@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD010 MD029 MD032 -->
-# 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第3.1版』の正誤表・更新情報
+# 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第3.1版』第3刷の正誤表・更新情報
 
 最終更新日： 2021 年 9 月 10 日
 
@@ -23,7 +23,33 @@
 
 ## 【Ⅰ. 言語・環境編】
 
+- 1-1 / p.23 / コマンドサンプル
+
+```diff
+- $ mkdir -p "$(nodenv root)"/plugins
++ $ mkdir -p "$(nodenv root)/plugins"
+```
+
+- 1-1 / p.25 / 脚注
+
+```diff
+- 27 「RLead-Eval-Print Loop」の略で、
++ 27 「Read-Eval-Print Loop」の略で、
+```
+
+- 1-3 / p.46
+
+```diff
+- ・postuninstall …… パッケージがアンインストールされた後に実行される
+```
+
 - 2-3 / p.63
+
+```diff
+  ・正規表現リテラル
+-   …… `/pattern/frags` の形式で記述する。
++   …… `/pattern/flags` の形式で記述する。
+```
 
 ```diff
 ・配列リテラル
@@ -31,6 +57,52 @@
 - n-1 番め
 + n+1 番め
 の要素にアクセスできる。
+```
+
+- 2-3 / p.63
+
+```diff
+後者は代入した変数の名前と、
+- 関数そのもの名前が
++ 関数そのものの名前が
+異なるので変な感じだけど、
+```
+
+- 2-7 / p.92 / リスト28
+
+```diff
+- for (u of users) {
++ for (const u of users) {
+```
+
+```diff
+  途中のプロパティが存在していなかったら、
+- そこで式が短絡されて
+- そこで式が短絡評価されて
+  undefined を返してくれるの」
+```
+
+- 2-8 / p.102 / リスト33
+
+```diff
+- minky.greet(); // TypeError: Cannot read property 'name' of undefined
++ minky.greet(); # TypeError: Cannot read property 'name' of undefined
+```
+
+- 同 / リスト34
+
+```diff
+- minky.greet() // Hi, I'm Momo
++ minky.greet() # Hi, I'm Momo
+```
+
+- 3-4 / p.145 / リスト58
+
+```diff
+  .catch((error) => {
+-   console.log(error);
++   console.error(error);
+  })
 ```
 
 <br />

@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD010 MD029 MD032 -->
-# 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第3.1版』の正誤表・更新情報
+# 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第3.1版』第2刷の正誤表・更新情報
 
 最終更新日： 2021 年 9 月 18 日
 
