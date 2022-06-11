@@ -1,5 +1,6 @@
 <!-- markdownlint-disable MD010 MD029 MD032 -->
-# 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第3.1版』第3刷の正誤表・更新情報
+
+# 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第 3.1 版』第 3 刷の正誤表・更新情報
 
 最終更新日： 2021 年 9 月 10 日
 
@@ -9,9 +10,9 @@
 - 正誤表の内容は随時アップデートされます。
 - 記述しているページ番号は、紙の第 3 刷に対応していますが、電子版では内容の更新によりお持ちのバージョンによって前後することがあります。
 - 電子版については随時、修正やアップデートが反映された新しいバージョンが配信されます。購入先のサイトをご確認ください。なお現時点での最新版は以下の通りです。
-    - 【Ⅰ. 言語・環境編】バージョン 3.0.1（2021-09-10）
-    - 【Ⅱ. React 基礎編】バージョン 2.1.1（2021-04-18）
-    - 【Ⅲ. React 応用編】バージョン 2.0.2（2021-04-18）
+  - 【Ⅰ. 言語・環境編】バージョン 3.0.1（2021-09-10）
+  - 【Ⅱ. React 基礎編】バージョン 2.1.1（2021-04-18）
+  - 【Ⅲ. React 応用編】バージョン 2.0.2（2021-04-18）
 
 ### 電子版のバージョニングについて
 
@@ -68,7 +69,7 @@
 異なるので変な感じだけど、
 ```
 
-- 2-7 / p.92 / リスト28
+- 2-7 / p.92 / リスト 28
 
 ```diff
 - for (u of users) {
@@ -82,21 +83,21 @@
   undefined を返してくれるの」
 ```
 
-- 2-8 / p.102 / リスト33
+- 2-8 / p.102 / リスト 33
 
 ```diff
 - minky.greet(); // TypeError: Cannot read property 'name' of undefined
 + minky.greet(); # TypeError: Cannot read property 'name' of undefined
 ```
 
-- 同 / リスト34
+- 同 / リスト 34
 
 ```diff
 - minky.greet() // Hi, I'm Momo
 + minky.greet() # Hi, I'm Momo
 ```
 
-- 3-4 / p.145 / リスト58
+- 3-4 / p.145 / リスト 58
 
 ```diff
   .catch((error) => {
@@ -109,7 +110,156 @@
 
 ## 【Ⅱ. React 基礎編】
 
-現在のところ、修正・更新部分はありません。
+- 5-2 / p.43
+
+```diff
+  ブラウザで実行させている状態から JavaScript コンソールを開いてみてくれる？」
++ 「あれっ？　warning が出てますね。key が何とかいわれてますけど」
++ 「うん。繰り返し処理で同階層に同じ要素のリストを表示させる際、React はユニークな key 属性値を必要とするのね。使える値は文字列もしくは数値。key としての理想的な値は、そのコレクションの各要素が持つユニーク ID なんだけど、ここではそれがないので key には繰り返しのインデックスを使うことにしよう」
++
++ コード：Greets.tsx の差分
++ - {[...Array(times)].map((_) => (
++ - <p>Hello, {name}! {children}</p>
++ + {[...Array(times)].map((_, i) => (
++ + <p key={i}>Hello, {name}! {children}</p>
++
+  「あ、warning が消えましたね！」
+```
+
+- 6-2 / p.71
+
+```diff
+これ以上にカスタマイズする必要はないと思う。この
+- 2 つ
++ 3 つ
+以外はデフォルト値が適用されるので、いちおう公式ドキュメントで確認しておいてね」
+```
+
+- 6-3 / p.75-76 / サンプルコマンド
+
+```diff
+  $ yarn add -D stylelint stylelint-config-standard stylelint-order stylelint-config-recess-order
+- $ (typesync)
+- $ yarn
+```
+
+- 6-3 / p.78 / サンプルコード
+
+```diff
+  +   "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+-     "lint:conflict": "eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'",
++     "lint:conflict": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+  +   "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
+```
+
+- 6-4 / p.83
+
+```diff
+  たとえばそこに pre-commit というファイルがあればコミット前に、pre-push という
++ ファイル
+  があればプッシュ前に実行してくれる。
+```
+
+- 7-1 / p.88
+
+```diff
+  「Backbone.js はこの中ではもっとも軽量なライブラリで、従来の jQuery による DOM 操作をベースとしたアプリケーションに Model と View の秩序を与えるための最低限の実装に、
+- REStful API
++ RESTful API
+  とルーティングの機能を加えたものだった。
+```
+
+- 同 / p.92
+
+```diff
+  Google は他のブラウザベンダー、Apple や Mozilla、
+- Micorosoft
++ Microsoft
+  といった各社と調整しないまま Web Components を発表し、さらに先行してドラフトの仕様を Chrome に実装していった。
+```
+
+- 7-4 / p.106
+
+```diff
+  タブの数が多いと隠れて見えないこともあるので、そういうときは右端の『≫』ドロップダウン
+- に格納されてる
++ ボタンを押すと格納されてるメニューが表示されるよ」
+```
+
+- 8-2 / p.131
+
+```diff
+  まず React の関数コンポーネントの型インターフェースには FunctionComponent が用意されてる。これはより短い名前の
+- VFC
++ FC
+  でエイリアスされてるんだけど、
+```
+
+- 8-4 / p.150 / 表内
+
+```diff
+  メソッド
+- shouldComponentUpdates(nextProps, nextState)
++ shouldComponentUpdate(nextProps, nextState)
+```
+
+```diff
+  メソッド
+- getSnapShotBeforeUpdate(prevProps, prevState)
++ getSnapshotBeforeUpdate(prevProps, prevState)
+  戻り値
+- SnapShot | null
++ Snapshot | null
+```
+
+- 9-1 / p.160 / リスト 29
+
+```diff
+  const CounterMixin = {
+-   getInitialState: () => ({ count: 0 });
++   getInitialState: () => ({ count: 0 }),
+    reset: () => {
+```
+
+- 同 / p.164
+
+```diff
+  でも HOC によって count、reset、increment にロジックを注入できるようにしておく必要があるので、その 3 つを
+- み込みユーティリティ型
++ 組み込みユーティリティ型
+  の Partial で省略可能な形にして合成してるのよ。
+```
+
+- 9-3 / p.184
+
+```diff
+  でも指摘内容はおおむね適切なので、まずは自分の判断だけで無効化せず
+- エラーにないような
++ エラーにならないような
+  コードを書くよう心がけましょう。やり方はおいおい教えていくから」
+```
+
+- 9-4 / p.192 / 差分コード
+
+```diff
+- - const reset = (): void => setTimeLeft(limit);
++ - const reset = () => setTimeLeft(limit);
+  + const reset = useCallback(() => setTimeLeft(limit), [limit]);
+```
+
+- 同 / p.194 / 差分コード
+
+```diff
+    ︙
+-   const Timer: VFC<{ limit: number }> = ({ limit }) => {
++   const Timer: VFC<TimerProps> = ({ limit }) => {
+      const [timeLeft, setTimeLeft] = useState(limit);
+      const primes = useMemo(() => getPrimes(limit), [limit]);
+  +   const timerId = useRef<NodeJS.Timeout>();
+      const reset = useCallback(() => setTimeLeft(limit), [limit]);
+-     const tick = (): void => setTimeLeft(prevTime => prevTime - 1);
++     const tick = () => setTimeLeft(prevTime => prevTime - 1);
+```
 
 <br />
 

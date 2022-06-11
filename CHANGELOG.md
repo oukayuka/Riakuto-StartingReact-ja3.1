@@ -1,60 +1,61 @@
 <!-- markdownlint-disable MD024 -->
+
 # 各版・各刷における内容の変更
 
-## 第3.1版 第3刷（2021-09 発行）
+## 第 3.1 版 第 3 刷（2021-09 発行）
 
 ### ■ 対応パッケージのアップデート
 
 - 主なパッケージの対応バージョンを以下にアップデート
-    - **TypeScript**　4.2.3 → 4.4.2
+  - **TypeScript**　 4.2.3 → 4.4.2
 
-### 第1章&nbsp; こんにちは React
+### 第 1 章&nbsp; こんにちは React
 
 #### 1-2. プロジェクトを作成する
 
 - 脚注における winget（Windows Package Manager）について、2021 年 5 月 26 日にバージョン 1.0 が正式にリリースされたため、説明をアップデート。
 
-### 第2章&nbsp; エッジでディープな JavaScript の世界
+### 第 2 章&nbsp; エッジでディープな JavaScript の世界
 
 #### 2-1. あらためて JavaScript ってどんな言語？
 
 - ES2021 の正式仕様が 2021 年 6 月 21 日にリリースされたので、ECMAScript 最新版についての記述をアップデート。
 - Stackoverflow Developer Survey の結果についての説明を 2020 のものから 2021 にアップデート。
 
-### 第4章&nbsp; TypeScript で型をご安全に
+### 第 4 章&nbsp; TypeScript で型をご安全に
 
 #### 4-1. TypeScript はイケイケの人気言語？
 
 - GitHut、Stack Overflow Developer Survey の結果についての説明を 2020 のものから 2021 にアップデート。
 - TypeScript 4.3 においてコンパイルターゲットに `es2021` が追加され、`esnext` が ES2021 に相当するようになったため、説明をアップデート。
 
-### 第7章&nbsp; React をめぐるフロントエンドの歴史
+### 第 7 章&nbsp; React をめぐるフロントエンドの歴史
 
 #### 7-5. 他のフレームワークとの比較
 
 - Angular が TSLint → ESLint への移行を公式でやることを断念、将来的にデフォルト linter を廃止し Angular ESLint と連携することになったため、説明をアップデート。
 - LitElement がバージョンアップで lit-html を統合・リブランディングして Lit 2.0 になったため、説明をアップデート。
 
-### 第10章&nbsp; React におけるルーティング
+### 第 10 章&nbsp; React におけるルーティング
 
 #### 10-2. ルーティングライブラリの選定
 
 - 1 年ほど停滞していた React Router の開発が 2021 年 8 月に再開されたため、見通しに関する記述をアップデート。
 
-### 第13章&nbsp; Suspense でデータ取得の宣言的 UI を実現する
+### 第 13 章&nbsp; Suspense でデータ取得の宣言的 UI を実現する
 
 #### 13-4. Suspense と Concurrent Mode が革新する UX
 
 - 各 Concurrent Mode API から `unstable_` プレフィックスが取り除かれたので、それに合わせて記述をアップデート。
 
-## 第3.1版 第2刷（2021-04-01 発行）
+## 第 3.1 版 第 2 刷（2021-04-01 発行）
 
 ### ■ 対応パッケージのアップデート
 
 - 主なパッケージの対応バージョンを以下にアップデート
-    - **React**　17.0.1 → 17.0.2
-    - **Create React App**　4.0.1 → 4.0.3
-    - **TypeScript**　4.1.3 → 4.2.3
+  - **React**　 17.0.1 → 17.0.2
+  - **Create React App**　 4.0.1 → 4.0.3
+  - **TypeScript**　 4.1.3 → 4.2.3
 
 ### ■ 引用しているトレンド情報のアップデート
 
@@ -65,7 +66,7 @@
 
 - 「フォルダ」を一律、「ディレクトリ」に修正。
 
-### 第1章&nbsp; こんにちは React
+### 第 1 章&nbsp; こんにちは React
 
 #### 1-2. プロジェクトを作成する
 
@@ -75,25 +76,25 @@
 
 - 旧「npm-scripts」項について、npm の公式がすでに[「npm-scripts」という呼称を使わなくなっている](https://docs.npmjs.com/cli/v7/using-npm/scripts)ため、項タイトルを「npm-scripts」から「npm の Scripts」に変更。また `prepare` スクリプトの説明を追加し、全体的に内容を整理。
 
-### 第3章&nbsp; 関数型プログラミングでいこう
+### 第 3 章&nbsp; 関数型プログラミングでいこう
 
 #### 3-2. コレクションの反復処理
 
 - 「配列の反復処理」項にて、`sort` メソッドが破壊的であることの注意と、JavaScript で破壊的メソッドを非破壊的に運用するための方法の説明を追加。
 
-### 第4章&nbsp; TypeScript で型をご安全に
+### 第 4 章&nbsp; TypeScript で型をご安全に
 
 #### 4-2. TypeScript の基本的な型
 
 - 「タプル型」項にて、TypeScript 4.2 で導入された[レストパラメータをタプルの定義に使う方法](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-2.html#leadingmiddle-rest-elements-in-tuple-types)の説明を追加。
 
-### 第5章&nbsp; JSX で UI を表現する
+### 第 5 章&nbsp; JSX で UI を表現する
 
 #### 5-2. JSX の書き方
 
 - 「JSX の基本的な文法」項にて、`import React from 'react'` を必要としない[新しい JSX 変換形式](https://ja.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)の説明を追加。
 
-### 第6章&nbsp; Linter とフォーマッタでコード美人に
+### 第 6 章&nbsp; Linter とフォーマッタでコード美人に
 
 #### 6-1. ESLint
 
@@ -111,7 +112,7 @@
 - Git Hooks についての説明を追加
 - 使用する Git Hooks 管理ツールを husky から [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) に乗り換え、説明もそれに合わせて変更。
 
-### 第8章&nbsp; 何はなくともコンポーネント
+### 第 8 章&nbsp; 何はなくともコンポーネント
 
 #### 8-2. コンポーネントと Props
 
@@ -119,16 +120,16 @@
 
 <br />
 
-## 第3.1版 第1刷（2020-12-26 発行）
+## 第 3.1 版 第 1 刷（2020-12-26 発行）
 
 ### ■ 対応パッケージのアップデート
 
 - 主なパッケージの対応バージョンを以下にアップデート
-    - **React**　17.0.0 RC1 → 17.0.1
-    - **Create React App**　3.4.3 → 4.0.1
-    - **TypeScript**　4.0.2 → 4.1.3
-    - **ESLint**　6.8.2 → 7.14.0
-    - **React Query**　2.15.4 → 3.5.5
+  - **React**　 17.0.0 RC1 → 17.0.1
+  - **Create React App**　 3.4.3 → 4.0.1
+  - **TypeScript**　 4.0.2 → 4.1.3
+  - **ESLint**　 6.8.2 → 7.14.0
+  - **React Query**　 2.15.4 → 3.5.5
 
 ### ■ 引用しているトレンド情報のアップデート
 
@@ -141,7 +142,7 @@
 - 「Visual Studio Code」の略称表記を「VSCode」から「VS Code」に修正。
 - TypeScript の「ユニオン型」を「共用体型」に、「インターセクション型」を「交差型」に変更。
 
-### 第1章&nbsp; こんにちは React
+### 第 1 章&nbsp; こんにちは React
 
 #### 1-1. 基本環境の構築
 
@@ -151,7 +152,7 @@
 
 - 「Yarn コマンド」項にて、プロジェクトパッケージのロックファイルについて、npm コマンド使用時の `package-lock.json` についても言及。
 
-### 第4章&nbsp; TypeScript で型をご安全に
+### 第 4 章&nbsp; TypeScript で型をご安全に
 
 #### 4-5. さらに高度な型表現
 
@@ -159,11 +160,11 @@
 - 新しく「**条件付き型とテンプレートリテラル型**」項を追加。
 - 「組み込みユーティリティ型」項にて、`Record` 型および文字列リテラルの各ユーティリティ型についての説明を追加。
 
-### 第5章&nbsp; JSX で UI を表現する
+### 第 5 章&nbsp; JSX で UI を表現する
 
 - [**新しい JSX 変換形式**](https://ja.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) についての説明を随所に追加。以降の章のサンプルコードはすべてこの変換形式を用いた書き方に変更。
 
-### 第6章&nbsp; Linter と フォーマッタでコード美人に
+### 第 6 章&nbsp; Linter と フォーマッタでコード美人に
 
 #### 6-1. ESLint
 
@@ -171,20 +172,20 @@
 
 #### 6-2. Prettier
 
-- ESLint のプラグインとして Prettier をインストール」項を「Prettier の環境を作る」に改名。[Prettier 公式が eslint-plugin-prettier を非推奨とした](https://prettier.io/docs/en/integrating-with-linters.html#notes)ため、**Prettier  を ESLint のプラグインではなく直接実行する形式**での環境構築に内容を変更。
+- ESLint のプラグインとして Prettier をインストール」項を「Prettier の環境を作る」に改名。[Prettier 公式が eslint-plugin-prettier を非推奨とした](https://prettier.io/docs/en/integrating-with-linters.html#notes)ため、**Prettier を ESLint のプラグインではなく直接実行する形式**での環境構築に内容を変更。
 - ESLint のキャッシュファイル等が Git リポジトリに登録されてしまうことを防ぐため、以降のサンプルコードの `.gitignore` ファイルを [gibo](https://github.com/simonwhitaker/gibo) を使って生成したものにリプレース。
 
-### 第10章&nbsp; React におけるルーティング
+### 第 10 章&nbsp; React におけるルーティング
 
 #### 10-4. React Router をアプリケーションで使う ／ 10-5. React Router バージョン 5 から 6 への移行
 
 - サンプルコードにおける URL のクエリパラメータを [query-string](https://github.com/sindresorhus/query-string) と optional chaining を用いて抽出する手法は [@typescript-eslint/no-unsafe-call](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md) および [@typescript-eslint/no-unsafe-member-access](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md) のルールに抵触するようになったため、JavaScript 標準の [URLSearchParams](https://developer.mozilla.org/ja/docs/Web/API/URLSearchParams) オブジェクトを使った手法に変更。
 
-### 第12章&nbsp; React は非同期処理とどう戦ってきたか
+### 第 12 章&nbsp; React は非同期処理とどう戦ってきたか
 
 - Recoil を使ったサンプルコードを収録。
 
-### 第13章&nbsp; データ取得の次世代標準 Suspense
+### 第 13 章&nbsp; データ取得の次世代標準 Suspense
 
 #### 13-2. “Suspense Ready”なデータ取得ライブラリ
 
@@ -197,13 +198,13 @@
 
 <br />
 
-## 第3版（2020-08-20 発行）
+## 第 3 版（2020-08-20 発行）
 
 ### ■ 概要
 
-前版からボリュームが約 3 倍に増量したため内容を「Ⅰ. 言語・環境編」「Ⅱ. React基礎編」「Ⅲ. React応用編」の 3 冊に分割し、全 13 章の三部作とした。
+前版からボリュームが約 3 倍に増量したため内容を「Ⅰ. 言語・環境編」「Ⅱ. React 基礎編」「Ⅲ. React 応用編」の 3 冊に分割し、全 13 章の三部作とした。
 
-### 第1章&nbsp; こんにちは React
+### 第 1 章&nbsp; こんにちは React
 
 #### 1-1. 基本環境の構築
 
@@ -219,10 +220,10 @@
 
 - 同節を新規に追加。Yarn コマンドに加え、npm-scripts や react-scripts についても詳細に説明。
 
-### 第2章&nbsp; エッジでディープな JavaScript の世界
+### 第 2 章&nbsp; エッジでディープな JavaScript の世界
 
 - 章題を「ナウでモダンな JavaScript」から変更し、内容を全体的に再構成。ボリュームも従来の 5 倍以上に。
-- 旧「2-6. 非同期処理を扱う」を第3章に「3-4. JavaScript での非同期処理」として移動。
+- 旧「2-6. 非同期処理を扱う」を第 3 章に「3-4. JavaScript での非同期処理」として移動。
 
 #### 2-1. あらためて JavaScript ってどんな言語？
 
@@ -248,9 +249,9 @@
 
 - 同節を新規にを追加。`import` と `export` の使い方に加え、ESM 周辺の特殊事情についても説明。
 
-### 第3章&nbsp; 関数型プログラミングでいこう
+### 第 3 章&nbsp; 関数型プログラミングでいこう
 
-- 旧「3-6. ジェネレータ」の節を削除、簡略化した説明を第11章の「自走式重対空砲 redux-saga」にあらためて記述。
+- 旧「3-6. ジェネレータ」の節を削除、簡略化した説明を第 11 章の「自走式重対空砲 redux-saga」にあらためて記述。
 - 旧 2 章から内容を移動した「3-4. JavaScript での非同期処理」にて、説明とサンプルコードを全て刷新。`Promise` オブジェクトの作成法から始まり、通信ライブラリが返す `Promise` オブジェクトを扱う実践的な内容に変更。
 
 #### 3-1. 関数型プログラミングは何がうれしい？
@@ -265,9 +266,9 @@
 
 - 旧「3-3. 関数型プログラミングの概要」「3-4. 高階関数」「3-5. クロージャ」の節を同節として統合。
 
-### 第4章&nbsp; TypeScript で型をご安全に
+### 第 4 章&nbsp; TypeScript で型をご安全に
 
-- 章題を「型のある TypeScript は開発者の味方」から変更し、内容を全面的に再構成。ボリュームも従来の3倍以上に。
+- 章題を「型のある TypeScript は開発者の味方」から変更し、内容を全面的に再構成。ボリュームも従来の 3 倍以上に。
 - 旧「4-3. 配列とオブジェクト」の内容は「4-4. 型の名前と型合成」に吸収。
 - 旧「4-5. コンパイル設定」の内容は「4-8. TypeScript の環境設定」に吸収。
 
@@ -275,17 +276,17 @@
 
 - 上記 4 つの節を新規に追加。
 
-### 第5章&nbsp; 強力な拡張記法 JSX
+### 第 5 章&nbsp; 強力な拡張記法 JSX
 
 #### 5-1. JSX とは何であるか、何ではないのか
 
 - 引用している統計指標をアップデートし、説明をよりくわしく拡充。
 
-### 第6章&nbsp; Linter とフォーマッタでコード美人に
+### 第 6 章&nbsp; Linter とフォーマッタでコード美人に
 
 #### 6-1. ESLint
 
-- JavaScript および TypeScript における linter の歴史を紹介。さらに  `yarn eslint --init` から始める設定ファイル作成の方法、各プラグインや共有設定、カスタマイズしているルール、ESLint を無効化するコメントの書き方についても新しく追加。
+- JavaScript および TypeScript における linter の歴史を紹介。さらに `yarn eslint --init` から始める設定ファイル作成の方法、各プラグインや共有設定、カスタマイズしているルール、ESLint を無効化するコメントの書き方についても新しく追加。
 
 #### 6-2. Prettier
 
@@ -295,11 +296,11 @@
 
 - stylelint についての説明を節として独立、内容を充実させた。
 
-### 第7章&nbsp; React をめぐるフロントエンドの歴史
+### 第 7 章&nbsp; React をめぐるフロントエンドの歴史
 
 - 章として新しく追加。
 
-### 第8章&nbsp; 何はなくともコンポーネント
+### 第 8 章&nbsp; 何はなくともコンポーネント
 
 - 章全体で関数コンポーネントをベースにして、クラスコンポーネントをその対比で説明するという形に変更したため、旧「7-5. 関数コンポーネント」節を削除。
 
@@ -307,7 +308,7 @@
 
 - 旧「7-1. React の基本思想」の内容を新 7 章に吸収、コンポートの概念を説明するため同節を新しく追加。
 
-### 第9章&nbsp; Hooks、関数コンポーネントの合体強化パーツ
+### 第 9 章&nbsp; Hooks、関数コンポーネントの合体強化パーツ
 
 #### 9-1. Hooks に至るまでの物語
 
@@ -317,7 +318,7 @@
 
 - 同節を新規に追加、Hooks のメモ化について 1 節をさいて説明。
 
-### 第10章&nbsp; React におけるルーティング
+### 第 10 章&nbsp; React におけるルーティング
 
 #### 10-2. ルーティングライブラリの選定
 
@@ -327,11 +328,11 @@
 
 - 旧「9-3. React Router の使い方」の、サンプルコードを利用した説明の部分を同節として独立させた。
 
-#### 10-5.  React Router バージョン 5 から 6 への移行
+#### 10-5. React Router バージョン 5 から 6 への移行
 
 - 同節を新規に追加。
 
-### 第11章&nbsp; Redux でグローバルな状態を扱う
+### 第 11 章&nbsp; Redux でグローバルな状態を扱う
 
 - 章タイトルを「Redux でアプリの状態を管理する」から改題。
 
@@ -344,7 +345,7 @@
 
 - 上記 3 節を新規に追加。
 
-### 第12章&nbsp; React は非同期処理とどう戦ってきたか
+### 第 12 章&nbsp; React は非同期処理とどう戦ってきたか
 
 - 章タイトルを「Redux で非同期処理を扱う」から改題。
 
@@ -352,35 +353,35 @@
 
 - 上記 2 節を新規追加。
 
-### 第13章&nbsp; データ取得の次世代標準 Suspense
+### 第 13 章&nbsp; データ取得の次世代標準 Suspense
 
 - 章として新しく追加。
 
 <br />
 
-## 第2版（2019-04-14 発行）
+## 第 2 版（2019-04-14 発行）
 
 ### ■ 対応パッケージのアップデート
 
 - 使用している主なパッケージを、2019 年 3 月時点の最新バージョンにアップデート。
 
-### 第1章&nbsp; こんにちは React
+### 第 1 章&nbsp; こんにちは React
 
 - Create React App 本家が TypeScript を直接サポートし、[create-react-app-typescript](https://github.com/wmonk/create-react-app-typescript) はパッケージそのものが非推奨になったため、create-react-app-typescript を使用していた部分を create-react-app に入れ替えた。
 
-### 第2章&nbsp; ナウでモダンな JavaScript
+### 第 2 章&nbsp; ナウでモダンな JavaScript
 
 #### 2-5. 便利な配列やオブジェクのトリテラル
 
 - 分割代入についての説明を追加。
 
-### 第3章&nbsp; 関数型プログラミングでいこう
+### 第 3 章&nbsp; 関数型プログラミングでいこう
 
 #### 3-5. クロージャ ／ 3-6. ジェネレータ
 
 - 上記 2 節を新規追加。
 
-### 第4章&nbsp; 型のある TypeScript は強い味方
+### 第 4 章&nbsp; 型のある TypeScript は強い味方
 
 #### 4-2. 型のバリエーション
 
@@ -394,27 +395,27 @@
 
 - 絶対パスインポートについての説明を追加。
 
-### 第6章&nbsp; Lint と Prettier でコードをクリーンに
+### 第 6 章&nbsp; Lint と Prettier でコードをクリーンに
 
 #### 6-1. ESLint
 
-- TypeScript の構文チェックツール TSLint については ESLint への統合プランが発表され1、近い将来に非推奨になるとアナウンスがあったため、旧「6-1. TSLint」節の内容を同節に変更。加えて全てのサンプルコードの TSLint の環境を ESLint に移行。
+- TypeScript の構文チェックツール TSLint については ESLint への統合プランが発表され 1、近い将来に非推奨になるとアナウンスがあったため、旧「6-1. TSLint」節の内容を同節に変更。加えて全てのサンプルコードの TSLint の環境を ESLint に移行。
 
-### 第7章&nbsp; 何はなくともコンポーネント
+### 第 7 章&nbsp; 何はなくともコンポーネント
 
 #### 7-5. 関数コンポーネント
 
 - Stateless Functional Component（SFC）の呼称を Function Component（FC）に変更。
 
-### 第8章&nbsp; Hooks で関数コンポーネントを強化する
+### 第 8 章&nbsp; Hooks で関数コンポーネントを強化する
 
 - Hooks が導入され Recompose の開発中止が宣告されたため、同章の内容を「合成するぞ Recompose」から「Hooks で関数コンポーネントを強化する」に置き換える形で刷新。
 
-### 第10章&nbsp; Redux でアプリの状態を管理する
+### 第 10 章&nbsp; Redux でアプリの状態を管理する
 
-#### 10-3. Reduxの使い方
+#### 10-3. Redux の使い方
 
-- 最新のReduxおよびReact Reduxに対応した型解決の記述法に切り替えた。
+- 最新の Redux および React Redux に対応した型解決の記述法に切り替えた。
 
 #### 10-4. Flux Standard Action
 
@@ -422,8 +423,8 @@
 
 #### 10-5. Redux DevTools
 
-- 内容を[『りあクト！ TypeScriptで極める現場のReact開発』](https://oukayuka.booth.pm/items/1312815)に委譲。
+- 内容を[『りあクト！ TypeScript で極める現場の React 開発』](https://oukayuka.booth.pm/items/1312815)に委譲。
 
-### 第11章&nbsp; Reduxで非同期処理を扱う
+### 第 11 章&nbsp; Redux で非同期処理を扱う
 
 - 章として新規追加。

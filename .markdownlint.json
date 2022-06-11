@@ -4,10 +4,8 @@
   "fenced-code-language": false,
   "first-line-heading": false,
   "heading-increment": false,
+  "heading-style": { "style": "atx" },
   "line-length": false,
   "no-bare-urls": false,
-  "no-inline-html": false,
-  "ul-indent": {
-    "indent": 4
-  }
+  "no-inline-html": false
 }
