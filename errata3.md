@@ -2,7 +2,7 @@
 
 # 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第 3.1 版』第 3 刷の正誤表・更新情報
 
-最終更新日： 2021 年 9 月 10 日
+最終更新日： 2022 年 6 月 14 日
 
 ### ご注意点
 
@@ -95,6 +95,15 @@
 ```diff
 - minky.greet() // Hi, I'm Momo
 + minky.greet() # Hi, I'm Momo
+```
+
+- 3-3 / p.136 / サンプルコード
+
+```diff
+- let frinedship = null;
++ let friendship = null;
+
+  if (true) {
 ```
 
 - 3-4 / p.145 / リスト 58

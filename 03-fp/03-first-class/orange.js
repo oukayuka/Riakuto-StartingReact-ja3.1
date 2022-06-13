@@ -1,4 +1,4 @@
-let frinedship;
+let friendship;
 
 if (true) {
   const he = 'Kakeru';
