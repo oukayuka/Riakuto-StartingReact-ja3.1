@@ -2,7 +2,7 @@
 
 # 『りあクト！ TypeScript で始めるつらくない React 開発 &nbsp;第 3.1 版』第 3 刷の正誤表・更新情報
 
-最終更新日： 2022 年 6 月 28 日
+最終更新日： 2022 年 7 月 19 日
 
 ### ご注意点
 
@@ -290,4 +290,106 @@
 
 ## 【Ⅲ. React 応用編】
 
-現在のところ、修正・更新部分はありません。
+- 10-3 / p.27
+
+```diff
+  8 桁の数字または小文字アルファベットに限定したいなら
+- "/user/:userId([0-9a-f]{8})"
++ "/user/:userId([0-9a-z]{8})"
+  のように指定する」
+```
+
+- 10-3 / p.31 / リスト 7
+
+```diff
+- import { VFC } from 'react';
++ import { VFC, useEffect, useLocation } from 'react';
+    ︙
+- export default usePageViews;
++ export default App;
+```
+
+- 10-4 / p.39
+
+```diff
+  えーっと、まずこのコンポーネントの冒頭で useParams でパスから :schoolCode の値を抽出してるんですよね。
+- その 3 つ下で定義してる
++ その下で定義してる
+  schoolCodeList というのは charactersData から抽出した schoolCode の一覧。
+```
+
+- 10-5 / p.50 / サンプルコード
+
+```diff
+- <Navigate to=`/Home` replace />
++ <Navigate to="/Home" replace />
+```
+
+- 11-2 / p.74
+
+```diff
+  そうしてできた関数を元の presentational component に
+- 適用してるしてるってだけだから。
++ 適用してるってだけだから。
+  ただ Hooks で書いたほうが直感的でわかりやすいのはたしかだけど」
+```
+
+- 11-3 / p.83
+
+```diff
+  ただここに挙げられてる
+- ルールー
++ ルール
+  だけで 17 個もあったので、おぼえきれるかどうか……」
+```
+
+- 12-3 / p.139
+
+```
+インターフェースもよく似てる。簡単なサンプルを示してみよう[^12-3-23]」
+```
+
+脚注の内容： https://github.com/oukayuka/Riakuto-StartingReact-ja3.1/tree/master/12-async/03-alt-redux/02-recoil
+
+- 13-4 / p.192
+
+```diff
+  ・SuspenseList
+  ・useTransition
+- ・useDefferedValue
++ ・useDeferredValue
+```
+
+- 13-4 / p.193 / 脚注 190
+
+```diff
+- 「SuspenseList tail property not working on re-renders · Issue #一万七千七百七十九· facebook/react」
++ 「SuspenseList tail property not working on re-renders · Issue #17779· facebook/react」
+```
+
+- 13-4 / p.195
+
+```diff
+  word が変更されると SerchResult でその都度、検索が走って結果がレンダリングされるわけだけど、それが終わる前に word の値が変更されると
+- defferedValue
++ deferredWord
+  の変更をその完了まで待ってくれる。
+```
+
+- 13-4 / p.207
+
+```diff
+  API の頭にはことごとく
+- unstabel_
++ unstable_
+  がついてますし……」
+```
+
+- 13-4 / p.209
+
+```diff
+  Vue.js も、次期メジャーアップデートの 3.0 で
+- Susense
++ Suspense
+  の機能を提供するらしいしね」
+```
