@@ -20,6 +20,8 @@ export const withResult = <T, A extends any[], E extends Error>(
   } catch (error) {
     if (error instanceof Error) {
       return new Err(error as E);
+    } else {
+      return new Err(new Error() as E);
     }
   }
 };
